@@ -1,0 +1,103 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    name:
+        label: Şirkətin adı
+        span: auto
+    email:
+        label: Email ünvanı
+        span: auto
+    phone:
+        label: Əlaqə nömrəsi
+        span: auto
+    google_map:
+        label: Xəritə (link)
+        span: auto
+    address:
+        label: Ünvan
+
+tabs:
+    fields:
+        favicon:
+            label: Favicon
+            type: mediafinder
+            mode: image
+            imageHeight: 100
+            imageWidth: 100
+            tab: Məlumatlar
+            span: storm
+            cssClass: col-md-2
+
+        structure_person:
+            type: repeater
+            prompt: Təşkilati struktur üzvü əlavə et
+            tab: Təşkilatı struktur
+            form:
+                fields:
+                    name:
+                        label: Təşkilati struktur üzvün adı
+                        span: storm
+                        cssClass: col-md-6
+                    post:
+                        label: Təşkilati struktur üzvün vəzifəsi
+                        span: storm
+                        cssClass: col-md-6
+                    photo:
+                        type: mediafinder
+                        label: Təşkilati struktur üzvün şəkili
+        structure_image:
+            tab: Təşkilatı struktur 
+            type: mediafinder
+            label: Təşkilati strukturun sxema-şəkili
+        
+        appeal_board:
+            tab: Appelyasiya şürası
+            type: repeater 
+            prompt: Appelyasiya şürası haqqında məlumat əlavə et
+            form:
+                fields:
+                    name:
+                        label: Appelyasiya şürası haqqında sənədin adı
+                    url: 
+                        label: Appelyasiya şürası haqqında sənəd
+                        type: mediafinder
+        certificates:
+            tab: Siyasətimiz və sertifikatlarımız
+            type: repeater
+            prompt: Sənəd əlavə et
+            form:
+                fields:
+                    url:
+                        type: mediafinder
+                        label: Sənəd əlavə et
+        finance:
+            tab: Maliyyə hesabatları
+            type: repeater
+            prompt: Maliyyə hesabat əlavə et  
+            form:
+                fields:
+                    name:
+                        label: Sənədin adı
+                    url:
+                        type: mediafinder
+                        label: Sənəd əlavə et
+        
+        normativ:
+            tab: Normativ hüquqi baza
+            type: repeater
+            prompt: Maliyyə hesabat əlavə et  
+            form:
+                fields:
+                    name:
+                        label: Sənədin adı
+                    url:
+                        type: mediafinder
+                        label: Sənəd əlavə et
+
+
+
+        
+                
