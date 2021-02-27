@@ -2,6 +2,12 @@ title = "Bizim Haqqimizda"
 url = "/bizim-haqqimizda"
 layout = "default"
 is_hidden = 0
+
+[Company]
+
+[viewBag]
+localeTitle[en] = "About Us"
+localeUrl[en] = "/about-us"
 ==
 {% partial 'inner_header' %}
 <div class="gramotech-content">
@@ -14,59 +20,8 @@ is_hidden = 0
             <div class="blog-single-content">
               <div class="post-main-content">
                 <h3>{{'Haqqımızda' |_}}</h3>
-                <p>{{ 'Abşeron regionundakı mövcud ekoloji problemlərin planlı surətdə həll edilməsi məqsədilə
-                  Azərbaycan Respublikasının
-                  Prezidenti tərəfindən 28 sentyabr 2006-cı il tarixində «Azərbaycan Respublikasında ekoloji vəziyyətin
-                  yaxşılaşdırılmasına dair 2006-2010-cu illər üçün Kompleks Tədbirlər Planı» təsdiq olunmuşdur. Bakı və
-                  Abşeron
-                  yarımadasının ekoloji durumunun sağlamlaşdırılmasında bu tədbirlər planının böyük əhəmiyəti
-                  vardır.Kompleks Tədbirlər
-                  Planında ətraf mühitin mövcud vəziyyətinin bərpasına yönəldilmiş bütün əsas fəaliyyət istiqamətləri öz
-                  əksini tapmışdır.
-                  Belə ki, Bakı Buxtasının, Bibi Heybət zonasının, H. Əliyev adına Beynəlxalq Hava Limanının ətrafının,
-                  Abşeron
-                  yarımadasının göllərinin, neftlə çirklənmiş torpaqların, lay suları altında qalmış sahələrin və digər
-                  istehsal
-                  tullantıları ilə çirklənmiş ərazilərin ekoloji vəziyyətinin yaxşılaşdırılması və digər məsələlər
-                  tədbirlər planında əks
-                  olunmuşdur. ' |_ }}
-                </p>
-                <p>{{ 'Kompleks Tədbirlər Planı üzrə təsdiq olunmuş vəzifələr üzrə Abşeron yarımadasında məişət
-                  tullantılarının yığılması,
-                  daşınması, yerləşdirilməsi ilə bağlı məsələlərin həll olunması da bu vəzifələr arasındadır.
-                </p>
-                <p>Kompleks Tədbirlər Planı üzrə təsdiq olunmuş vəzifələr üzrə Abşeron yarımadasında məişət
-                  tullantılarının yığılması,
-                  daşınması, yerləşdirilməsi ilə bağlı məsələlərin həll olunması da bu vəzifələr arasındadır.' | _ }}
-                </p>
-                <p> {{ 'Azərbaycan Respublikası Prezidenti cənab İlham Əliyevin 2008-ci il 6 avqust tarixli “Bakı
-                  şəhərində məişət tullantıları
-                  ilə bağlı idarəetmənin təkmilləşdirilməsi haqqında” sərəncama görə Bakı şəhərinin ərazisində
-                  əmələgəlmə mənbəyindən
-                  asılı olmayaraq, bütün bərk məişət tullantılarının yığılması, daşınması Bakı Şəhər İcra Hakimiyyətinə
-                  səlahiyyətində
-                  qalır. Sərəncama əsasən təsis olunan “Təmiz Şəhər” Açıq Səhmdar Cəmiyyəti isə Bakının ərazisində əmələ
-                  gələn bərk məişət
-                  tullantılarının yerləşdirilməsi və zərərsizləşdirilməsi sistemini müasir standartlara uyğun qurmaq və
-                  idarə etməklə
-                  şəhərin ekoloji vəziyyətinin yaxşılaşdırılması işlərini həyata keçirir. ' |_ }}
-                </p>
-                <p>{{ '12 mart 2009-cu ildə “Təmiz Şəhər” ASC dövlət qeydiyyatına alınmış və öz fəaliyyətinə
-                  başlamışdır. “Təmiz Şəhər” ASC
-                  dövlət müəssisəsi olmaqla, öz təsərrüfat fəaliyyətini müstəqil qurmuşdur, onun ümumi idarəetmə və
-                  fəaliyyətinə nəzarət
-                  səlahiyyətləri təsisçi qismində Əmlak Məsələləri üzrə Dövlət Komitəsi və İqtisadi İnkişaf Nazirliyi,
-                  həmçinin İqtisadi
-                  İnkişaf Nazirliyinin formalaşdırdığı Müşahidə Şurası tərəfindən həyata keçirilir.' |_ }}
-                </p>
-                <p>{{ 'Cəmiyyətə tullantıların yerləşdirilməsini və utilizasiyasını müasir standartlara cavab verən
-                  şəkildə qurmaq və idarə
-                  etmək, bu prosesi mütəşəkkil qaydada həyata keçirmək, həmçinin şəhərin ekoloji vəziyyətini
-                  yaxşılaşdırmaq və qeyd olunan
-                  sahənin gələcəkdə mərhələlərlə bazar iqtisadiyyatı prinsipləri əsasında inkişaf etdirmək həvalə
-                  olunmuşdur.' |_ }}
-                </p>
-                <a href="#" style="color: green">{{ 'Vətəndaşların qəbulu qrafiki' |_ }}</a>
+                {{ company.about | raw}}
+                <a href="{{ company.receive | media }}" style="color: green">{{ 'Vətəndaşların qəbulu qrafiki' |_ }}</a>
               </div>
             </div>
             <!--Blog Single Content End-->

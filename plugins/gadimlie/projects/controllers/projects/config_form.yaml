@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Project
+
+# Model Form Field configuration
+form: $/gadimlie/projects/models/project/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Projects\Models\Project
+
+# Default redirect location
+defaultRedirect: gadimlie/projects/projects
+
+# Create page
+create:
+    title: Create Project
+    redirect: gadimlie/projects/projects/update/:id
+    redirectClose: gadimlie/projects/projects
+
+# Update page
+update:
+    title: Edit Project
+    redirect: gadimlie/projects/projects
+    redirectClose: gadimlie/projects/projects
+
+# Preview page
+preview:
+    title: Preview Project

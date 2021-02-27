@@ -1,0 +1,4 @@
+1.0.1: 
+    - 'Initialize plugin.'
+    - First version of Tenders
+    - create_tenders_table.php

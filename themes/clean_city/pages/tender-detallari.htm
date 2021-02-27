@@ -1,0 +1,388 @@
+title = "Tender Detalları"
+url = "/tenderler/:id"
+layout = "default"
+is_hidden = 0
+
+[tenders]
+
+[viewBag]
+localeUrl[en] = "/tenders/:id"
+==
+use Gadimlie\Tenders\Models\Tender;
+public function onStart() {
+$tender = Tender::find($this->param('id'));
+$this['tender'] = $tender;
+}
+
+==
+{% partial 'inner_header' %}
+<div class="gramotech-content">
+  <div class="blog-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-8 pull-left">
+          <!--Blog Single Content Start-->
+          <div class="blog-single-content">
+            <div class="blog-single-thumb">
+
+            </div>
+            <h3>{{ tender.title | raw }}</h3>
+            <ul class="post-meta">
+              <li> <a href="https://gramotech.net/wp/ecova/2019/01/17/"><i class="fas fa-calendar-alt"></i> {{
+                  tender.date | date ("Y,m,d") }}</a> </li>
+            </ul>
+            <p>
+              {{ tender.text | raw }}
+            </p>
+
+          </div>
+          <!--Blog Single Content End-->
+        </div>
+        <div class="col-lg-3 col-md-4 pull-right">
+          <div class="sidebar">
+            <div id="search-2" class="side-widget widget_search gramotech-widget">
+              <form class="search-area" method="get" action="index.html">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="s" placeholder="Enter Your Search ..." value="" />
+                </div>
+                <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+              </form>
+            </div>
+            <div id="text-8" class="side-widget widget_text gramotech-widget">
+              <h5 class="widget-title">About Ecova</h5>
+              <div class="textwidget">
+                <p>We are Ecova: eco &#038; environmental community. We need your support and help to Stop Globar
+                  Warning. Few generations ago it to seemed like world’s resources were infinite, and the people needed
+                  only to access them to create business, Lorem ipsum dolor it amet consect adipiscing.</p>
+              </div>
+            </div>
+            <div id="recent_posts-5" class="side-widget widget_recent_posts gramotech-widget">
+              <h5 class="widget-title">News &#038; Articles</h5>
+              <ul class="lastest-products">
+                <li>
+                  <img src="{{ 'assets/wp-content/uploads/2019/01/bsmall1-1-100x100.jpg' | theme }}" width="68"
+                    height="68" alt="img">
+                  <strong><a href="index.html@p=1835.html">Sed dapibus dui vehicula neque varius </a></strong>
+                  <span class="pdate"><i>Posted:</i> 31 January, 2019</span>
+                </li>
+                <li>
+                  <img src="{{ 'assets/wp-content/uploads/2019/01/bsmall2-1-100x100.jpg' | theme }}" width="68"
+                    height="68" alt="img">
+                  <strong><a href="index.html@p=1834.html">Vestibulum et leo sed odio blandit ele </a></strong>
+                  <span class="pdate"><i>Posted:</i> 31 January, 2019</span>
+                </li>
+                <li>
+                  <img src="{{ 'assets/wp-content/uploads/2019/01/gmasnry1-1-100x100.jpg' | theme }}" width="68"
+                    height="68" alt="img">
+                  <strong><a href="index.html@p=1833.html">Nulla hendrerit neque ut eros blandit </a></strong>
+                  <span class="pdate"><i>Posted:</i> 31 January, 2019</span>
+                </li>
+              </ul>
+            </div>
+            <div id="projects_list-5" class="side-widget widget_projects_list gramotech-widget">
+              <div class="project-list-widget">
+                <h5 class="widget-title">Current Projects</h5>
+                <ul>
+
+                  <li><a href="index.html@p=1678.html">Implement Solar &amp;#03</a></li>
+
+                  <li><a href="index.html@p=613.html">Saving Wildlife And </a></li>
+
+                  <li><a href="index.html@p=611.html">Solar And Wind Energ</a></li>
+
+                  <li><a href="index.html@p=609.html">The repeated floodin</a></li>
+
+                  <li><a href="index.html@p=607.html">Forest And Tree Plan</a></li>
+
+                  <li><a href="index.html@p=594.html">Implement Solar &amp;#03</a></li>
+
+                  <li><a href="index.html@p=592.html">Save Plants &#038; F</a></li>
+
+                  <li><a href="index.html@p=590.html">Recycling &#038; Was</a></li>
+
+                  <li><a href="index.html@p=587.html">Save Water Resource</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="tag_cloud-5" class="side-widget widget_tag_cloud gramotech-widget">
+              <h5 class="widget-title">Tags</h5>
+              <div class="tagcloud">
+                <ul class='wp-tag-cloud' role='list'>
+                  <li><a href="tag/eco-ideas/index.html" class="tag-cloud-link tag-link-32 tag-link-position-1"
+                      style="font-size: 1em;">Eco Ideas</a></li>
+                  <li><a href="tag/plant/index.html" class="tag-cloud-link tag-link-33 tag-link-position-2"
+                      style="font-size: 1em;">Plant</a></li>
+                  <li><a href="tag/plant-energy/index.html" class="tag-cloud-link tag-link-34 tag-link-position-3"
+                      style="font-size: 1em;">Plant Energy</a></li>
+                  <li><a href="tag/recycling/index.html" class="tag-cloud-link tag-link-35 tag-link-position-4"
+                      style="font-size: 1em;">Recycling</a></li>
+                  <li><a href="tag/solor-energy/index.html" class="tag-cloud-link tag-link-36 tag-link-position-5"
+                      style="font-size: 1em;">Solor Energy</a></li>
+                  <li><a href="tag/trees/index.html" class="tag-cloud-link tag-link-37 tag-link-position-6"
+                      style="font-size: 1em;">Trees</a></li>
+                  <li><a href="tag/water/index.html" class="tag-cloud-link tag-link-38 tag-link-position-7"
+                      style="font-size: 1em;">Water</a></li>
+                  <li><a href="tag/wild-life/index.html" class="tag-cloud-link tag-link-39 tag-link-position-8"
+                      style="font-size: 1em;">Wild Life</a></li>
+                  <li><a href="tag/wind-energy/index.html" class="tag-cloud-link tag-link-40 tag-link-position-9"
+                      style="font-size: 1em;">Wind Energy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="recent_projects-4" class="side-widget widget_recent_projects gramotech-widget">
+
+              <h5 class="widget-title">Recent Work</h5>
+              <div id="side-slider" class="owl-carousel owl-theme">
+
+                <div class="item">
+                  <div class="pro-box">
+                    <img width="278" height="378"
+                      src="{{ 'assets/wp-content/uploads/2019/01/48-3-278x378.jpg' | theme }}"
+                      class="attachment-gramotech-current-projects size-gramotech-current-projects wp-post-image" alt=""
+                      loading="lazy"
+                      srcset="{{ 'assets/wp-content/uploads/2019/01/48-3-278x378.jpg' | theme }} 278w, {{ 'assets/wp-content/uploads/2019/01/48-3-360x490.jpg' | theme }} 360w"
+                      sizes="(max-width: 278px) 100vw, 278px" />
+                    <h5>Implement Solar &#038; Wind En</h5>
+                    <div class="pro-hover">
+                      <h6>Implement Solar &#038; Wind En</h6>
+                      <p> The environment includes; the surface of the earth, natural re­sources, land and w</p>
+                      <a href="index.html@p=1678.html">Read More</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="pro-box">
+                    <img width="278" height="378"
+                      src="{{ 'assets/wp-content/uploads/2019/01/33-3-278x378.jpg' | theme }}"
+                      class="attachment-gramotech-current-projects size-gramotech-current-projects wp-post-image" alt=""
+                      loading="lazy"
+                      srcset="{{ 'assets/wp-content/uploads/2019/01/33-3-278x378.jpg' | theme }} 278w, {{ 'assets/wp-content/uploads/2019/01/33-3-360x490.jpg' | theme }} 360w"
+                      sizes="(max-width: 278px) 100vw, 278px" />
+                    <h5>Implement Solar &#038; Wind En</h5>
+                    <div class="pro-hover">
+                      <h6>Implement Solar &#038; Wind En</h6>
+                      <p> The environment includes; the surface of the earth, natural re­sources, land and w</p>
+                      <a href="index.html@p=1677.html">Read More</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="pro-box">
+                    <img width="278" height="378"
+                      src="{{ 'assets/wp-content/uploads/2019/01/58-3-278x378.jpg' | theme }}"
+                      class="attachment-gramotech-current-projects size-gramotech-current-projects wp-post-image" alt=""
+                      loading="lazy"
+                      srcset="{{ 'assets/wp-content/uploads/2019/01/58-3-278x378.jpg' | theme }} 278w, {{ 'assets/wp-content/uploads/2019/01/58-3-360x490.jpg' | theme }} 360w"
+                      sizes="(max-width: 278px) 100vw, 278px" />
+                    <h5>Save Plants &#038; Forest Plan</h5>
+                    <div class="pro-hover">
+                      <h6>Save Plants &#038; Forest Plan</h6>
+                      <p> The environment includes; the surface of the earth, natural re­sources, land and w</p>
+                      <a href="index.html@p=1676.html">Read More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="archives-3" class="side-widget widget_archive gramotech-widget">
+              <h5 class="widget-title">Archives</h5>
+              <ul>
+                <li><a href='2019/01/index.html'>January 2019</a></li>
+              </ul>
+
+            </div>
+            <div id="give_forms_widget-2" class="side-widget widget_give_forms_widget gramotech-widget">
+              <h5 class="widget-title">Make a Donation</h5>
+              <div id="give-form-2056-wrap" class="give-form-wrap give-display-modal">
+                <h2 class="give-form-title">Stop Global Warming</h2>
+                <div class="give-goal-progress">
+                  <div class="raised">
+                    <span class="income" data-amounts="{
+    &quot;USD&quot;: &quot;4150&quot;
+}">&#036;4,150</span> of <span class="goal-text" data-amounts="{
+    &quot;USD&quot;: 9050
+}">&#036;9,050</span> raised
+                  </div>
+
+
+                  <div class="give-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+                    aria-valuenow="45.86">
+                    <span style="width: 45.86%;
+										   background-color:#66bb6a			"></span>
+                  </div><!-- /.give-progress-bar -->
+
+                </div><!-- /.goal-progress -->
+                <form id="give-form-2056-1" class="give-form give-form-2056 give-form-type-multi"
+                  action="https://gramotech.net/wp/ecova/projects/implement-solar-wind-energies-3/?payment-mode=manual"
+                  data-id="2056-1" data-currency_symbol="&#36;" data-currency_code="USD" data-currency_position="before"
+                  data-thousands_separator="," data-decimal_separator="." data-number_decimals="0"
+                  data-publishable-key="" data-account="" method="post">
+                  <!-- The following field is for robots only, invisible to humans: -->
+                  <span class="give-hidden" style="display: none !important;">
+                    <label for="give-form-honeypot-2056"></label>
+                    <input id="give-form-honeypot-2056" type="text" name="give-honeypot"
+                      class="give-honeypot give-hidden" />
+                  </span>
+
+                  <input type="hidden" name="give-form-id-prefix" value="2056-1" />
+                  <input type="hidden" name="give-form-id" value="2056" />
+                  <input type="hidden" name="give-form-title" value="Stop Global Warming" />
+                  <input type="hidden" name="give-current-url"
+                    value="https://gramotech.net/wp/ecova/projects/implement-solar-wind-energies-3/" />
+                  <input type="hidden" name="give-form-url"
+                    value="https://gramotech.net/wp/ecova/projects/implement-solar-wind-energies-3/" />
+                  <input type="hidden" name="give-form-minimum" value="1" />
+                  <input type="hidden" name="give-form-maximum" value="1000000" />
+                  <input type="hidden" name="give-form-hash" value="4763b72471" data-time="1613393092"
+                    data-nonce-life="86400" data-donor-session="0" /><input type="hidden" name="give-price-id"
+                    value="0" />
+                  <div class="give-total-wrap">
+                    <div class="give-donation-amount form-row-wide">
+                      <span class="give-currency-symbol give-currency-position-before">&#36;</span> <label
+                        class="give-hidden" for="give-amount">Donation Amount:</label>
+                      <input class="give-text-input give-amount-top" id="give-amount" name="give-amount" type="tel"
+                        placeholder="" value="5" autocomplete="off">
+                    </div>
+                  </div>
+                  <ul id="give-donation-level-button-wrap" class="give-donation-levels-wrap give-list-inline">
+                    <li><button type="button" data-price-id="0"
+                        class="give-donation-level-btn give-btn give-btn-level-0 give-default-level" value="5"
+                        data-default="1">&#36;5</button></li>
+                    <li><button type="button" data-price-id="1"
+                        class="give-donation-level-btn give-btn give-btn-level-1 " value="20"
+                        data-default="0">&#36;20</button></li>
+                    <li><button type="button" data-price-id="2"
+                        class="give-donation-level-btn give-btn give-btn-level-2 " value="50"
+                        data-default="0">&#36;50</button></li>
+                    <li><button type="button" data-price-id="3"
+                        class="give-donation-level-btn give-btn give-btn-level-3 " value="100"
+                        data-default="0">&#36;100</button></li>
+                    <li><button type="button" data-price-id="4"
+                        class="give-donation-level-btn give-btn give-btn-level-4 " value="250"
+                        data-default="0">&#36;250</button></li>
+                    <li><button type="button" data-price-id="5"
+                        class="give-donation-level-btn give-btn give-btn-level-5 " value="500"
+                        data-default="0">&#36;500</button></li>
+                    <li><button type="button" data-price-id="6"
+                        class="give-donation-level-btn give-btn give-btn-level-6 " value="1,000"
+                        data-default="0">&#36;1,000</button></li>
+                    <li><button type="button" data-price-id="custom"
+                        class="give-donation-level-btn give-btn give-btn-level-custom" value="custom">$ Other</button>
+                    </li>
+                  </ul><button type="button" class="give-btn give-btn-modal">Continue to Donate</button><input
+                    id="give-stripe-payment-method-2056-1" type="hidden" name="give_stripe_payment_method" value="">
+                  <fieldset id="give-payment-mode-select">
+                    <legend class="give-payment-mode-label">Select Payment Method <span class="give-loading-text"><span
+                          class="give-loading-animation"></span>
+                      </span>
+                    </legend>
+
+                    <div id="give-payment-mode-wrap">
+                      <ul id="give-gateway-radio-list">
+                        <li class="give-gateway-option-selected">
+                          <input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-manual-2056-1"
+                            value="manual" checked='checked'>
+
+                          <label for="give-gateway-manual-2056-1" class="give-gateway-option"
+                            id="give-gateway-option-manual"> Test Donation</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-offline-2056-1"
+                            value="offline">
+
+                          <label for="give-gateway-offline-2056-1" class="give-gateway-option"
+                            id="give-gateway-option-offline"> Offline Donation</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-paypal-2056-1"
+                            value="paypal">
+
+                          <label for="give-gateway-paypal-2056-1" class="give-gateway-option"
+                            id="give-gateway-option-paypal"> PayPal</label>
+                        </li>
+                        <li>
+                          <input type="radio" name="payment-mode" class="give-gateway" id="give-gateway-stripe-2056-1"
+                            value="stripe">
+
+                          <label for="give-gateway-stripe-2056-1" class="give-gateway-option"
+                            id="give-gateway-option-stripe"> Credit Card</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+
+
+                  <div id="give_purchase_form_wrap">
+
+                    <fieldset id="give_checkout_user_info" class="">
+                      <legend>
+                        Personal Info </legend>
+
+
+                      <p id="give-first-name-wrap" class="form-row form-row-first form-row-responsive">
+                        <label class="give-label" for="give-first">
+                          First Name <span class="give-required-indicator">*</span>
+                          <span class="give-tooltip hint--top hint--medium hint--bounce"
+                            aria-label="First Name is used to personalize your donation record." rel="tooltip"><i
+                              class="give-icon give-icon-question"></i></span> </label>
+                        <input class="give-input required" type="text" name="give_first" autocomplete="given-name"
+                          placeholder="First Name" id="give-first" value="" required aria-required="true" />
+                      </p>
+
+                      <p id="give-last-name-wrap" class="form-row form-row-last form-row-responsive">
+                        <label class="give-label" for="give-last">
+                          Last Name <span class="give-tooltip hint--top hint--medium hint--bounce"
+                            aria-label="Last Name is used to personalize your donation record." rel="tooltip"><i
+                              class="give-icon give-icon-question"></i></span> </label>
+
+                        <input class="give-input" type="text" name="give_last" autocomplete="family-name" id="give-last"
+                          placeholder="Last Name" value="" />
+                      </p>
+
+
+                      <p id="give-email-wrap" class="form-row form-row-wide">
+                        <label class="give-label" for="give-email">
+                          Email Address <span class="give-required-indicator">*</span>
+                          <span class="give-tooltip hint--top hint--medium hint--bounce"
+                            aria-label="We will send the donation receipt to this address." rel="tooltip"><i
+                              class="give-icon give-icon-question"></i></span> </label>
+                        <input class="give-input required" type="email" name="give_email" autocomplete="email"
+                          placeholder="Email Address" id="give-email" value="" required aria-required="true" />
+
+                      </p>
+
+
+                    </fieldset>
+                    <div id="give-stripe-payment-errors-2056-1"></div>
+                    <fieldset id="give_purchase_submit" class="give-donation-submit">
+                      <p id="give-final-total-wrap" class="form-wrap ">
+                        <span class="give-donation-total-label">
+                          Donation Total: </span>
+                        <span class="give-final-total-amount" data-total="5">
+                          &#36;5 </span>
+                      </p>
+                      <input type="hidden" name="give_action" value="purchase" />
+                      <input type="hidden" name="give-gateway" value="manual" />
+                      <div class="give-submit-button-wrap give-clearfix">
+                        <input type="submit" class="give-submit give-btn" id="give-purchase-button" name="give-purchase"
+                          value="Donate Now" data-before-validation-label="Donate Now" />
+                        <span class="give-loading-animation"></span>
+                      </div>
+                    </fieldset>
+
+                  </div>
+
+                </form>
+
+
+              </div>
+              <!--end #give-form-2056-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

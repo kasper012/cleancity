@@ -2,7 +2,13 @@ title = "Tenderlər"
 url = "/tenderler"
 layout = "default"
 is_hidden = 0
+
 [Company]
+
+[tenders]
+
+[viewBag]
+localeUrl[en] = "/tenders"
 ==
 {% partial 'inner_header' %}
 <div class="gramotech-content">
@@ -31,9 +37,9 @@ is_hidden = 0
                                 <h1>Tenderlər</h1>
                               </div>
                               <!--Team Box Start-->
-                              {% for tender in company.tender %}
+                              {% for tender in tenders %}
                               <ul>
-                                <li><a href="{{ tender.url | media }}">{{ tender.name }}</a></li>
+                                <li><a href="{{ 'tender-detallari' | page({id: tender.id}) }}">{{ tender.title }}</a></li>
                               </ul>
                               {% endfor %}
                             </div>

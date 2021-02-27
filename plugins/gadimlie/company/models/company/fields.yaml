@@ -19,17 +19,27 @@ fields:
     address:
         label: Ünvan
 
+        span: auto
+    favicon:
+        label: Favicon
+        type: mediafinder
+        mode: image
+        imageHeight: 100
+        imageWidth: 100
+        span: auto
+        cssClass: col-md-6  
+
 tabs:
     fields:
-        favicon:
-            label: Favicon
-            type: mediafinder
-            mode: image
-            imageHeight: 100
-            imageWidth: 100
-            tab: Məlumatlar
-            span: storm
-            cssClass: col-md-2
+        about:
+            type: richeditor
+            tab: Bizim haqqımızda
+            label: Bizim haqqımızda mətn
+
+        receive:
+            tab: Bizim haqqımızda
+            label: Vətəndaşların qəbulu qrafiki
+            type: mediafinder 
 
         structure_person:
             type: repeater
@@ -97,7 +107,6 @@ tabs:
                         type: mediafinder
                         label: Sənəd əlavə et
 
-
-
+        
         
                 

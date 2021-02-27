@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tender
+
+# Model Form Field configuration
+form: $/gadimlie/tenders/models/tender/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Tenders\Models\Tender
+
+# Default redirect location
+defaultRedirect: gadimlie/tenders/tenders
+
+# Create page
+create:
+    title: Create Tender
+    redirect: gadimlie/tenders/tenders/update/:id
+    redirectClose: gadimlie/tenders/tenders
+
+# Update page
+update:
+    title: Edit Tender
+    redirect: gadimlie/tenders/tenders
+    redirectClose: gadimlie/tenders/tenders
+
+# Preview page
+preview:
+    title: Preview tenders
