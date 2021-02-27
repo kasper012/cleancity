@@ -1,0 +1,14 @@
+<section class="wf100 p100 inner-header">
+    <div class="container">
+       <h1>{{ this.page.title }}</h1>
+       <ul>
+          <li><a href="{{ 'home' | page }}">{{ 'Əsas səhifə' | _ }}</a></li>
+          {% if parents %}
+                {% for child in parents %}
+                    <li><a href="{{ child.link | page }}">{{ child.title }}</a></li>
+                {% endfor %}
+          {% endif %}
+          <li><a href="javascript:void(0);">{{ this.page.title }}</a></li>
+       </ul>
+    </div>
+ </section>

@@ -4,33 +4,44 @@
 
 
 fields:
-    name:
-        label: Şirkətin adı
-        span: auto
-    email:
-        label: Email ünvanı
-        span: auto
-    phone:
-        label: Əlaqə nömrəsi
-        span: auto
-    google_map:
-        label: Xəritə (link)
-        span: auto
-    address:
-        label: Ünvan
-
-        span: auto
-    favicon:
-        label: Favicon
-        type: mediafinder
-        mode: image
-        imageHeight: 100
-        imageWidth: 100
-        span: auto
-        cssClass: col-md-6  
+    
 
 tabs:
     fields:
+        name:
+            label: Şirkətin adı
+            span: storm
+            cssClass: col-md-4
+            tab: Ümumi məlumat
+        email:
+            label: Email ünvanı
+            span: storm
+            cssClass: col-md-4
+            tab: Ümumi məlumat
+        phone:
+            label: Əlaqə nömrəsi
+            span: storm
+            cssClass: col-md-4
+            tab: Ümumi məlumat
+        google_map:
+            label: Xəritə (link)
+            span: storm
+            cssClass: col-md-6
+            tab: Ümumi məlumat
+        address:
+            label: Ünvan
+            tab: Ümumi məlumat
+            span: storm
+            cssClass: col-md-6
+        favicon:
+            label: Favicon
+            type: mediafinder
+            mode: image
+            imageHeight: 100
+            imageWidth: 100
+            span: auto
+            cssClass: col-md-6  
+            tab: Ümumi məlumat
         about:
             type: richeditor
             tab: Bizim haqqımızda

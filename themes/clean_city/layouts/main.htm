@@ -1,0 +1,219 @@
+[extendedLocalePicker]
+
+[Company]
+==
+<!doctype html>
+<html lang="{{ activeLocale }}">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="{{ this.page.description }}">
+      <meta name="author" content="Gadimlie Studio">
+      <link rel="icon" href="{{ 'assets/images/favicon.png' | theme }}">
+      <title>{{ this.page.title }} - {{ company.name }}</title>
+      <!-- CSS FILES START -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link href="{{ 'assets/css/custom.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/color.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/responsive.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/owl.carousel.min.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/bootstrap.min.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/prettyPhoto.css' | theme }}" rel="stylesheet">
+      <link href="{{ 'assets/css/all.min.css' | theme }}" rel="stylesheet">
+      <!-- CSS FILES End -->
+   </head>
+   <body>
+      <div class="wrapper home2">
+         <!--Header Start-->
+         <header class="header-style-2">
+            <nav class="navbar navbar-expand-xl">
+               <a class="navbar-brand" href="{{ 'home' | page }}">
+                   <img src="{{ 'assets/images/branding/logo.png' | theme }}" alt="">
+                </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"> <a class="nav-link" href="{{ 'home' | page }}">{{ 'Əsas səhifə' | _ }}</a></li>
+
+                    <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Haqqımızda' | _ }}</a>
+                     <ul class="dropdown-menu" >
+                         <li><a href="{{ 'about/about' | page }}">{{ 'Bizim haqqımızda' | _ }}</a></li>
+                         <li><a href="{{ 'about/structure' | page }}">{{ 'Təşkilatı struktur' | _ }}</a></li>
+                         <li><a href="{{ 'about/appeals' | page }}">{{ 'Appelyasiya şürası' | _ }}</a></li>
+                         <li><a href="{{ 'about/documents' | page }}">{{ 'Sənədlər' | _ }}</a></li>
+                         <li><a href="{{ 'about/certificates' | page }}">{{ 'Siyasət və sertifikatlar' | _ }}</a></li>
+                         <li><a href="{{ 'about/tenders' | page }}">{{ 'Tenderlər' | _ }}</a></li>
+                         <li><a href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
+                     </ul>
+                 </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
+                        <ul class="dropdown-menu" >
+                            <li><a href="{{ 'projects/bmtzp' | page }}">{{ 'BMTZP' | _ }}</a></li>
+                            <li><a href="{{ 'projects/bmtyz' | page }}">{{ 'BMTYZ' | _ }}</a></li>
+                            <li><a href="{{ 'projects/bmtcz' | page }}">{{ 'BMTÇZ' | _ }}</a></li>
+                            <li><a href="{{ 'projects/bsp' | page }}">{{ 'BSP' | _ }}</a></li>
+                            <li><a href="{{ 'projects/absheron' | page }}">{{ 'Abşeron göllərinin bərpası' | _ }}</a></li>
+                            <li><a href="{{ 'projects/bmtvil' | page }}">{{ 'Bərk Məişət Tullantılarının Vahid İdarəçiliyi Layihəsi' | _ }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'İctimayyətlə əlaqələr' | _ }}</a>
+                        <ul class="dropdown-menu" >
+                            <li><a href="{{ 'pr/news' | page }}">{{ 'Xəbərlər' | _ }}</a></li>
+                            <li><a href="{{ 'pr/media' | page }}">{{ 'Mediateka' | _ }}</a></li>
+                            <li><a href="{{ 'pr/press' | page }}">{{ 'Press-Relizlər' | _ }}</a></li>
+                            <li><a href="{{ 'pr/tours' | page }}">{{ 'Məlumat turları' | _ }}</a></li>
+                            <li><a href="{{ 'pr/lessons' | page }}">{{ 'Ustad dərsləri' | _ }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Balaxanı Senaye Parkı' | _ }}</a>
+                        <ul class="dropdown-menu" >
+                            <li><a href="{{ 'bsp/about' | page }}">{{ 'BSP Haqqında' | _ }}</a></li>
+                            <li><a href="{{ 'bsp/documents' | page }}">{{ 'Sənədlər' | _ }}</a></li>
+                            <li><a href="{{ 'bsp/news' | page }}">{{ 'Xəbərlər' | _ }}</a></li>
+                            <li><a href="{{ 'bsp/residents' | page }}">{{ 'Rezidentlərimiz' | _ }}</a></li>
+                            <li><a href="{{ 'bsp/media' | page }}">{{ 'Mediateka' | _ }}</a></li>
+                            <li><a href="{{ 'bsp/contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Tullantıdan sənətə' | _ }}</a>
+                        <ul class="dropdown-menu" >
+                            <li><a href="{{ 'tss/about' | page }}">{{ '"Tullantıdan sənətə sərgisi" haqqında' | _ }}</a></li>
+                            <li><a href="{{ 'tss/museum' | page }}">{{ '"Tullantıdan sənətə" muzeyi' | _ }}</a></li>
+                            <li><a href="{{ 'tss/partisipians' | page }}">{{ 'İştirakçılar' | _ }}</a></li>
+                            <li><a href="{{ 'tss/media' | page }}">{{ 'Foto və video' | _ }}</a></li>
+                            <li><a href="{{ 'tss/tour' | page }}">{{ 'Muzeyə virtual tur' | _ }}</a></li>
+                            <li><a href="{{ 'tss/contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ 'contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
+                  </ul>
+                  
+               </div>
+            </nav>
+         </header>
+         <div id="search">
+            <button type="button" class="close">×</button>
+            <form class="search-overlay-form">
+               <input type="search" value="" placeholder="type keyword(s) here" />
+               <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </form>
+         </div>
+         <!--Header End--> 
+         
+         {% page %}
+
+         <!--Footer Start-->
+         <footer class="footer">
+            <div class="footer-top wf100">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <h4>{{ 'Haqqımızda' | _ }}</h4>
+                           <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
+                           <a href="#" class="lm">About us</a> 
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <h4>Our Promises</h4>
+                           <ul class="quick-links">
+                              <li><a href="#">Solar Energy</a></li>
+                              <li><a href="#">Waste Management</a></li>
+                              <li><a href="#">Eco Ideas</a></li>
+                              <li><a href="#">Recycling Materials</a></li>
+                              <li><a href="#">Plant Ecology</a></li>
+                              <li><a href="#">Saving Wildlife </a></li>
+                           </ul>
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <h4>Latest Posts</h4>
+                           <ul class="lastest-products">
+                              <li> <img src="images/flp1.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
+                              <li> <img src="images/flp2.jpg" alt=""> <strong><a href="#">Eliminate your plastic bottle pollution & keep...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
+                              <li> <img src="images/flp3.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
+                           </ul>
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!--Footer Widget Start-->
+                        <div class="footer-widget">
+                           <div id="fpro-slider" class="owl-carousel owl-theme">
+                              <!--Footer Product Start-->
+                              <div class="item">
+                                 <div class="f-product">
+                                    <img src="images/fpro1.jpg" alt="">
+                                    <div class="fp-text">
+                                       <h6><a href="#">Buy T-Shirts</a></h6>
+                                       <strong>$19.00</strong> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Footer Product End--> 
+                              <!--Footer Product Start-->
+                              <div class="item">
+                                 <div class="f-product">
+                                    <img src="images/fpro1.jpg" alt="">
+                                    <div class="fp-text">
+                                       <h6><a href="#">Buy T-Shirts</a></h6>
+                                       <strong>$19.00</strong> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Footer Product End--> 
+                              <!--Footer Product Start-->
+                              <div class="item">
+                                 <div class="f-product">
+                                    <img src="images/fpro1.jpg" alt="">
+                                    <div class="fp-text">
+                                       <h6><a href="#">Buy T-Shirts</a></h6>
+                                       <strong>$19.00</strong> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Footer Product End--> 
+                           </div>
+                        </div>
+                        <!--Footer Widget End--> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-copyr wf100">
+               <div class="container">
+                  <div class="row d-flex align-items-center">
+                     <div class="col-md-4 col-sm-4"> <img src="{{ 'assets/images/branding/logo-light.png' | theme }}" alt=""> </div>
+                     <div class="col-md-8 col-sm-8">
+                        <p> {{ 'Bütün hüquqlar qorunur.' }} {{ company.name }} © {{ 'now' | date('Y') }}.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!--Footer End--> 
+      </div>
+      <!--   JS Files Start  --> 
+      <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/jquery-migrate-1.4.1.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/popper.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/bootstrap.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/owl.carousel.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/jquery.prettyPhoto.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/isotope.min.js' | theme }}"></script> 
+      <script src="{{ 'assets/js/custom.js' | theme }}"></script>
+   </body>
+</html>

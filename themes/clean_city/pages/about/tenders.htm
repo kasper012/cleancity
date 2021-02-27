@@ -1,0 +1,18 @@
+title = "Əsas səhifə"
+url = "/haqqimizda/tenderler"
+layout = "main"
+description = "test"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Home page"
+localeUrl[en] = "/about/tenders"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Haqqımızda' | _),
+                'link': 'about/about'
+            }
+        ] 
+%}
