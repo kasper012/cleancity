@@ -2,6 +2,7 @@
 
 [Company]
 ==
+{% spaceless %}
 <!doctype html>
 <html lang="{{ activeLocale }}">
    <head>
@@ -13,6 +14,8 @@
       <title>{{ this.page.title }} - {{ company.name }}</title>
       <!-- CSS FILES START -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
       <link href="{{ 'assets/css/custom.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/color.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/responsive.css' | theme }}" rel="stylesheet">
@@ -20,6 +23,7 @@
       <link href="{{ 'assets/css/bootstrap.min.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/prettyPhoto.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/all.min.css' | theme }}" rel="stylesheet">
+      
       <!-- CSS FILES End -->
    </head>
    <body>
@@ -209,6 +213,7 @@
       <!--   JS Files Start  --> 
       <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script> 
       <script src="{{ 'assets/js/jquery-migrate-1.4.1.min.js' | theme }}"></script> 
+      <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
       <script src="{{ 'assets/js/popper.min.js' | theme }}"></script> 
       <script src="{{ 'assets/js/bootstrap.min.js' | theme }}"></script> 
       <script src="{{ 'assets/js/owl.carousel.min.js' | theme }}"></script> 
@@ -217,3 +222,4 @@
       <script src="{{ 'assets/js/custom.js' | theme }}"></script>
    </body>
 </html>
+{% endspaceless %}

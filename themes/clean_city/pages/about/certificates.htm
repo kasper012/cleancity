@@ -8,6 +8,7 @@ is_hidden = 0
 localeTitle[en] = "Policies and Certificates"
 localeUrl[en] = "/about/policies-and-certificates"
 ==
+
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -16,3 +17,47 @@ localeUrl[en] = "/about/policies-and-certificates"
             }
         ] 
 %}
+
+<!--Blog Start-->
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-9 col-md-8">
+               <div class="certificates-gallery">
+                  <div class="row">
+                     <div class="col-md-4 mb-4"> 
+                        <a class="certificate-item" 
+                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
+                           data-fancybox="gallery"
+                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
+                        </a>
+                     </div>
+                     <div class="col-md-4 mb-4"> 
+                        <a class="certificate-item" 
+                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
+                           data-fancybox="gallery"
+                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
+                        </a>
+                     </div>
+                     <div class="col-md-4 mb-4"> 
+                        <a class="certificate-item" 
+                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
+                           data-fancybox="gallery"
+                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
+                        </a>
+                     </div>
+                  </div>
+                  
+               </div>
+             </div>
+             
+             <div class="col-lg-3 col-md-4">
+               {% partial 'sidebars/about' %}
+            </div>
+
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--Blog End--> 

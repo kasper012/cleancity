@@ -314,7 +314,7 @@ Inner Header Start
 *********************************/
 
 .inner-header {
-	background: url(../images/innerheader.jpg) no-repeat;
+	background: url(../images/backgrounds/innerheader.jpg) no-repeat;
 }
 .inner-header h1 {
 	color: #fff;
@@ -1332,6 +1332,15 @@ Footer Start
 }
 .footer-widget a.lm {
 	line-height: 40px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #fff;
+	display: inline-block;
+	border-radius: 3px;
+	text-transform: uppercase;
+	padding: 0 20px;
+}
+.sidebar-widget a.lm {
 	font-size: 16px;
 	font-weight: 400;
 	color: #fff;
@@ -3258,6 +3267,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	float: left;
 	overflow: hidden;
 	position: relative;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 120%;
+
+	cursor: pointer;
+
 }
 .team-box:after {
 	position: absolute;
@@ -3277,7 +3294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	height: auto;
 }
 .team-grid .team-box:hover .team-info {
-	height: 170px;
+	height: 120px;
 }
 .team-grid .team-box:hover .team-info ul {
 	opacity: 1;
@@ -4983,6 +5000,33 @@ Blog Details Start
 .small-gallery img {
 	max-width: 100%;
 	height: auto;
+	border-radius: 5px;
+}
+.certificates-gallery {
+	margin: 0 0 50px;
+	padding: 0px;
+	list-style: none;
+	width: 100%;
+	float: left;
+}
+.certificates-gallery li {
+	width: 33.3333%;
+	float: left;
+}
+.certificates-gallery img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+.certificate-item {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	display: inline-block;
+	width: 100%;
+	padding-top: 141%;
 	border-radius: 5px;
 }
 .single-post-tags {

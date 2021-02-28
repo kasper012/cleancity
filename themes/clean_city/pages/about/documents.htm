@@ -8,6 +8,7 @@ is_hidden = 0
 localeTitle[en] = "Documents"
 localeUrl[en] = "/about/documents"
 ==
+
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -16,3 +17,69 @@ localeUrl[en] = "/about/documents"
             }
         ] 
 %}
+
+<!--Blog Start-->
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-9 col-md-8">
+                <!--Blog Single Content Start-->
+                <div class="blog-single-content">
+
+                  <div class="single-counter-box">
+                     <div class="container w-100">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-md-9"><strong>APELLYASİYA ŞURASI HAQQINDA ƏSASNAMƏ</strong></div>
+                           <div class="col-md-3 text-center"> 
+                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-counter-box">
+                     <div class="container w-100">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-md-9"><strong>“Təmiz Şəhər” ASC-də Apellyasiya Şurasının yaradılması haqqında Əmr</strong></div>
+                           <div class="col-md-3 text-center"> 
+                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-counter-box">
+                     <div class="container w-100">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-md-9"><strong>APELLYASİYA ŞURASI HAQQINDA ƏSASNAMƏ</strong></div>
+                           <div class="col-md-3 text-center"> 
+                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                </div>
+                <!--Blog Single Content End--> 
+             </div>
+
+             <div class="col-lg-3 col-md-4">
+
+               <div class="sidebar">
+                  <div class="side-widget project-list-widget">
+                     <h5>{{ 'Sənədlər' | _ }}</h5>
+                     <ul>
+                        <li><a href="{{ 'about/about' | page }}" title="{{ 'Normativ hüquqi baza' | _ }}">{{ 'Normativ hüquqi baza' | _ }}</a></li>
+                        <li><a href="{{ 'about/structure' | page }}" title="{{ 'Maliyyə hesabatları' | _ }}">{{ 'Maliyyə hesabatları' | _ }}</a></li>
+                     </ul>
+                  </div>
+               </div>
+               {% partial 'sidebars/about' %}
+            </div>
+             
+             
+
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--Blog End--> 
