@@ -1,10 +1,10 @@
-title = "Mediateka"
+title = "BSP Mediateka"
 url = "/bsp/mediateka"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "Medialibrary"
+localeTitle[en] = "BIP Medialibrary"
 localeUrl[en] = "/bip/medialibrary"
 ==
 {% partial 'sections/breadcrumbs'
@@ -15,3 +15,40 @@ localeUrl[en] = "/bip/medialibrary"
             }
         ] 
 %}
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 mb-3">
+                            <div class="gallery-img">
+                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
+                                    sit ametLorem Ipsum dolor sit ametLorem Ipsum dolor sit amet</a>
+                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 mb-3">
+                            <div class="gallery-img">
+                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
+                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor sit ametLorem Ipsum dolor sit ametLorem Ipsum dolor sit amet</a>
+                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 mb-3">
+                            <div class="gallery-img">
+                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
+                                    sit ametLorem Ipsum dolor sit ametLorem Ipsum dolor sit amet</a>
+                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    {% partial 'sidebars/bsp' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

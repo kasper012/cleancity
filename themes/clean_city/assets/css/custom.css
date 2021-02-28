@@ -826,6 +826,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', e
 .campaign-thumb img {
 	width: 100%;
 	height: auto;
+	
 }
 .post-thumb a, .f-cat span a, .campaign-thumb a, .event-thumb a, .blog-thumb a {
 	position: absolute;
@@ -1073,6 +1074,10 @@ ul.participants, .campaign-txt h5 {
 .campaign-thumb {
 	position: relative;
 	overflow: hidden;
+}
+.blog-details .campaign-thumb {
+	  width: 42.7%;
+    float: left;
 }
 .campaign-thumb:after {
 	position: absolute;
@@ -4504,20 +4509,17 @@ GAllery Pages Start
 }
 .gallery-img a {
 	position: absolute;
-	width: 50px;
-	height: 50px;
+	width: 100%;
 	margin: auto;
-	left: -150px;
-	top: 0;
+	padding-bottom: 10px;
 	bottom: 0;
 	right: 0;
 	z-index: 999;
-	border: 2px solid #fff;
 	color: #fff;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
-	border-radius: 100%;
-	line-height: 46px;
+
+	line-height: 20px;
 	opacity: 0;
 }
 .gallery-img:hover a {

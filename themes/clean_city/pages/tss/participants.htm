@@ -1,10 +1,10 @@
-title = "İştirakçılar"
+title = "TSS İştirakçılar"
 url = "/tss/ishtirakchilar"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "Participant "
+localeTitle[en] = "fWtA Participant "
 localeUrl[en] = "/fwta/participants"
 ==
 {% partial 'sections/breadcrumbs'
@@ -15,3 +15,62 @@ localeUrl[en] = "/fwta/participants"
             }
         ] 
 %}
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+
+                    <div class="team-grid team-small-grid">
+                        <div class="">
+                            <div class="row">
+
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="team-box"
+                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                                        <div class="team-info">
+                                            <h5>Mr. Elven Micky</h5>
+                                            <p>Team Head</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="team-box"
+                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                                        <div class="team-info">
+                                            <h5>Mr. Elven Micky</h5>
+                                            <p>Team Head</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="team-box"
+                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                                        <div class="team-info">
+                                            <h5>Mr. Elven Micky</h5>
+                                            <p>Team Head</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="team-box"
+                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                                        <div class="team-info">
+                                            <h5>Mr. Elven Micky</h5>
+                                            <p>Team Head</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    {% partial 'sidebars/tss' %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

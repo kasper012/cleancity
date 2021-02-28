@@ -97,7 +97,28 @@
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ 'contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
                   </ul>
-                  
+
+                  <ul class="topnav-right">
+                     <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>
+                     <li class="dropdown">
+                        <a class="cart-icon" href="#" role="button" id="cartdropdown" data-toggle="dropdown" style=""
+                           aria-expanded="false"> <i class="fas fa-shopping-cart"></i></a>
+                        <div class="dropdown-menu cart-box" aria-labelledby="cartdropdown">
+                           <ul class="list">
+                              <li class="item">
+                                 <a href="#" class="preview-image"><img class="preview" src="images/pro.jpg" alt=""></a>
+                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
+                              </li>
+                              <li class="item">
+                                 <a href="#" class="preview-image"><img class="preview" src="images/pro.jpg" alt=""></a>
+                                 <div class="description"> <a href="#">Sample Course</a> <strong class="price">1 x $44.95</strong> </div>
+                              </li>
+                           </ul>
+                           <div class="total">Total: <strong>$44.95</strong></div>
+                           <div class="view-link"><a href="#">Proceed to Checkout</a> <a href="#">View cart </a></div>
+                        </div>
+                     </li>
+                  </ul>
                </div>
             </nav>
          </header>

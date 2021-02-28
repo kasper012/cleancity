@@ -1,10 +1,10 @@
-title = "Əlaqə"
+title = "BSP Əlaqə"
 url = "/bsp/elaqe"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "Contacts"
+localeTitle[en] = "BIP Contacts"
 localeUrl[en] = "/bip/contacts"
 ==
 {% partial 'sections/breadcrumbs'
@@ -15,3 +15,57 @@ localeUrl[en] = "/bip/contacts"
             }
         ] 
 %}
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8">
+                    <div class="comment-form">
+                        <h4>{{ 'Bizimlə Əlaqə Saxlayın' | _ }}</h4>
+                        <ul>
+                            <li class="w3">
+                                <input type="text" name="fullname" class="form-control" placeholder="{{ 'Adınız və soyadınız'  | _ }}">
+                            </li>
+                            <li class="w3">
+                                <input type="text" name="email" class="form-control" placeholder="{{ 'Elektron ünvanənız'  | _ }}">
+                            </li>
+                            <li class="w3 np">
+                                <input type="text" name="subject" class="form-control" placeholder="{{ 'Mesajin mövzusu'  | _ }}">
+                            </li>
+                            <li class="full">
+                                <textarea class="form-control" name="message" placeholder="{{ 'Mesaj'  | _ }}"></textarea>
+                            </li>
+                            <li class="full">
+                                <button class="post-btn">{{ 'Göndər' | _ }}</button>
+                            </li>
+                        </ul>
+                    </div>
+<div class="google-map">
+    <div class="contact-map-info">
+        <address>
+            <ul>
+                <li>
+                    <strong class="add-title">Address:</strong>
+                    4700 Millenia Blvd # 175, Orlando, FL 32839, USA
+                </li>
+                <li>
+                    <strong class="add-title">Contact:</strong>
+                    <p><strong>Phone:</strong> +1 321 2345 678-9</p>
+                </li>
+                <li>
+                    <strong class="add-title">For More Information:</strong>
+                    <p><strong>Email:</strong> info@ecova.com</p>
+                </li>
+            </ul>
+        </address>
+    </div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11418.310112375979!2d-74.00986187433132!3d40.710981182716246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY!5e0!3m2!1sen!2s!4v1540972202179"></iframe>
+</div>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    {% partial 'sidebars/bsp' %}
+                </div>
+            </div>
+        </div>
+</section>
