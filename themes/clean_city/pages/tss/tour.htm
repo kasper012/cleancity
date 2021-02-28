@@ -1,0 +1,17 @@
+title = "TSS Muzeyə Virtual Tur"
+url = "/tss/tur"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "fWtA Virtual Tour to Museum"
+localeUrl[en] = "/fwta/tour"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('TSS' | _),
+                'link': ''
+            }
+        ] 
+%}

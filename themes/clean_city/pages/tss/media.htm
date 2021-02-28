@@ -1,0 +1,17 @@
+title = "TSS Mediateka"
+url = "/tss/mediateka"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "fWtA Medialibrary "
+localeUrl[en] = "/fwta/medialibrary"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('TSS' | _),
+                'link': ''
+            }
+        ] 
+%}

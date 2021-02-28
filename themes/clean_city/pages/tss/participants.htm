@@ -1,0 +1,17 @@
+title = "TSS İştirakçılar"
+url = "/tss/ishtirakchilar"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "fWtA Participant "
+localeUrl[en] = "/fwta/participants"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('TSS' | _),
+                'link': ''
+            }
+        ] 
+%}
