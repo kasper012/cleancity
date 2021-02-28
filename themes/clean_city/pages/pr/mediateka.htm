@@ -1,0 +1,17 @@
+title = "Mediateka"
+url = "/pr/mediateka"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Media Library"
+localeUrl[en] = "/pr/mediateka"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+        {
+            'title': ('İctimaiyyətlə əlaqələr' | _),
+            'link': ''
+        }
+    ]
+%}

@@ -1,5 +1,17 @@
-title = "bmtvil"
-url = "/bmtvil"
+title = "BMTVİL"
+url = "/layiheler/bmtvil"
 layout = "main"
 is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "BMTZP"
+localeUrl[en] = "/projects/bmtvil"
 ==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Layihələr' | _),
+                'link': ''
+            }
+        ] 
+%}
