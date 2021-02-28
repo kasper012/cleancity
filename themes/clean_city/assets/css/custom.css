@@ -5156,6 +5156,16 @@ ul.children {
 .comment-form li.w3.np, .small-gallery li:last-child, .related-posts>ul>li:last-child {
 	padding-right: 0px;
 }
+.gallery-item {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 5px;
+}
+
 .rp-box {
 	background: #f7f7f7;
 	border: 1px solid #eeeeee;
