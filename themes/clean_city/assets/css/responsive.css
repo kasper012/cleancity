@@ -22,7 +22,7 @@ a.con {
 	right: 10px;
 }
 ul.topnav-right {
-	display: none;
+	/* display: none; */
 }
 .slider-caption.h2slider {
 	top: 10%;

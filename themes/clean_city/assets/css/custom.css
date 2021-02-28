@@ -1513,6 +1513,13 @@ ul.topnav-right li {
 	float: left;
 	margin-right: 15px;
 }
+.language-switcher .dropdown-menu {
+	min-width: auto !important;
+	width: auto !important;
+}
+.language-switcher .nav-link {
+	padding: .5rem 1rem !important;
+}
 .mdonate {
 	background: #66bb6a;
 	color: #fff;
@@ -1556,7 +1563,7 @@ a.cart-icon, a.search-icon {
 	line-height: 32px;
 	color: #c8e6c9;
 	font-size: 14px;
-	margin: 5px 0 0;
+	/* margin: 5px 0 0; */
 }
 .login-reg {
 	color: #fff;
@@ -1590,9 +1597,10 @@ a.cart-icon:hover, a.search-icon:hover {
 	bottom: 0;
 	margin: auto;
 }
-.header-style-2 .navbar-nav .nav-link {
+.header-style-2 .navbar-nav .nav-link,
+.language-switcher .nav-link {
 	/* padding: 22px; */
-	padding: 22px 12px !important;
+	padding: 22px 12px;
 	color: #c8e6c9;
 	font-family: 'Poppins', sans-serif;
 	/* font-size: 15px; */
