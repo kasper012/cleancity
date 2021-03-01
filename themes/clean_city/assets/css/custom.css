@@ -1484,6 +1484,8 @@ Home Page 2 Start
 }
 .home2 p, .home2 li {
 	font-family: 'Roboto', sans-serif;
+
+	 /* padding: 6px 0; */
 }
 header.header-style-2 {
 	background: #1b5e20;
@@ -6269,7 +6271,7 @@ SideWidgets
 	list-style: none;
 }
 .side-widget.archives ul li a, .project-list-widget ul li a {
-	line-height: 32px;
+	line-height: 1rem;
 	color: #666666;
 	font-size: 16px;
 	font-family: 'Poppins', sans-serif;
