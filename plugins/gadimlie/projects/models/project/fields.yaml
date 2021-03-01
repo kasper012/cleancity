@@ -12,8 +12,12 @@ fields:
         label: Layihənin adı
         span: auto
 
+    client:
+        label: Müştəri
+        span: auto
+
     youtube:
-        label: Video
+        label: Video (Youtube link)
         span: auto
         # default: https://www.youtube.com/embed/
 
@@ -21,11 +25,14 @@ fields:
         label: Göstərilən xidmətlər
         span: auto
 
-    address:
-        label: Ünvan
+
+    date_start:
+        label: Başlama tarixi
         span: auto
-    date:
-        label: Tarix
+        type: datepicker
+
+    date_finish:
+        label: Bitirmə tarixi
         span: auto
         type: datepicker
 

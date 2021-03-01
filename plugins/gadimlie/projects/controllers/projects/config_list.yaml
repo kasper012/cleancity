@@ -9,13 +9,13 @@ list: $/gadimlie/projects/models/project/columns.yaml
 modelClass: Gadimlie\Projects\Models\Project
 
 # List Title
-title: Manage Projects
+title: Layihələrin idarə etməsi
 
 # Link URL for each record
 recordUrl: gadimlie/projects/projects/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: Layihə yoxdur
 
 # Records to display per page
 recordsPerPage: 20
@@ -44,4 +44,6 @@ toolbar:
 
     # Search widget configuration
     search:
-        prompt: backend::lang.list.search_prompt
+        prompt: Axtar
+
+

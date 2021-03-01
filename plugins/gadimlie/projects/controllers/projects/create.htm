@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('gadimlie/projects/projects') ?>">Projects</a></li>
+        <li><a href="<?= Backend::url('gadimlie/projects/projects') ?>">Layihələr</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -21,7 +21,7 @@
                     data-hotkey="ctrl+s, cmd+s"
                     data-load-indicator="Creating Project..."
                     class="btn btn-primary">
-                    Create
+                    Yarat
                 </button>
                 <button
                     type="button"
@@ -30,10 +30,10 @@
                     data-hotkey="ctrl+enter, cmd+enter"
                     data-load-indicator="Creating Project..."
                     class="btn btn-default">
-                    Create and Close
+                    Yarat və bağla
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('gadimlie/projects/projects') ?>">Cancel</a>
+                    <a href="<?= Backend::url('gadimlie/projects/projects') ?>">Ləğv et</a>
                 </span>
             </div>
         </div>
@@ -43,6 +43,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('gadimlie/projects/projects') ?>" class="btn btn-default">Return to projects list</a></p>
+    <p><a href="<?= Backend::url('gadimlie/projects/projects') ?>" class="btn btn-default">Layihə siyahisinə qayıtmaq</a></p>
 
 <?php endif ?>

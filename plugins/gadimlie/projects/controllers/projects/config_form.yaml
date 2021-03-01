@@ -16,16 +16,16 @@ defaultRedirect: gadimlie/projects/projects
 
 # Create page
 create:
-    title: Create Project
+    title: Yeni Layihə
     redirect: gadimlie/projects/projects/update/:id
     redirectClose: gadimlie/projects/projects
 
 # Update page
 update:
-    title: Edit Project
+    title: Layihəni dəyişmək
     redirect: gadimlie/projects/projects
     redirectClose: gadimlie/projects/projects
 
 # Preview page
 preview:
-    title: Preview Project
+    title: Layihəni göstərmək

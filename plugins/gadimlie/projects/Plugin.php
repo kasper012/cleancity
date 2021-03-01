@@ -86,13 +86,6 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-rocket',
                 'permissions' => ['gadimlie.projects.*'],
                 'order'       => 500,
-                'sideMenu' => [
-                    'projects' => [
-                        'label'       => 'Layihələr',
-                        'icon'        => 'icon-files-o',
-                        'url'         => Backend::url('gadimlie/projects/projects'),
-                    ],
-                ]
             ],
         ];
     }

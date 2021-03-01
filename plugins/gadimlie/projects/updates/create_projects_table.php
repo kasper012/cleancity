@@ -19,8 +19,8 @@ class CreateProjectsTable extends Migration
 
             $table->text('services')->nullable();
             $table->text('client')->nullable();
-            $table->text('address')->nullable();
-            $table->text('date')->nullable();
+            $table->text('date_start')->nullable();
+            $table->text('date_finish')->nullable();
 
             $table->text('youtube')->nullable();
 
