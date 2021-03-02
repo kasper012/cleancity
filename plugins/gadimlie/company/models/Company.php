@@ -13,6 +13,8 @@ class Company extends Model
 
 
     public $translatable = [
+      'name',
+      
       'structure_person',
       'appeal_board'
     ];    

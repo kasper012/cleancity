@@ -8,11 +8,11 @@ fields:
 
 tabs:
     fields:
-        # name:
-        #     label: Şirkətin adı
-        #     span: storm
-        #     cssClass: col-md-4
-        #     tab: Ümumi məlumat
+        name:
+            label: Şirkətin adı
+            span: storm
+            cssClass: col-md-4
+            tab: Ümumi məlumat
         # email:
         #     label: Email ünvanı
         #     span: storm

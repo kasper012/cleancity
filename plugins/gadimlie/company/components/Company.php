@@ -23,11 +23,14 @@ class Company extends ComponentBase
     {
         $settings = Settings::instance();
         $company = new Model();
-        // $company->about = $settings->about;
-        // $company->receive = $settings->receive;
+        $company->name = $settings->name;
+        
         $company->structure_person = $settings->structure_person;
         $company->structure_image = $settings->structure_image;
         $company->appeal_board = $settings->appeal_board;
+
+        // $company->about = $settings->about;
+        // $company->receive = $settings->receive;
         // $company->certificates = $settings->certificates;
         // $company->normativ = $settings->normativ;
         // $company->finance = $settings->finance;
