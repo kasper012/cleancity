@@ -14,7 +14,8 @@ class bsp extends Model
 
     public $translatable = [
       
-      'participants',
+      'participant',
+      'document'
 
     ];    
 
