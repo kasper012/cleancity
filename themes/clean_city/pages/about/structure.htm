@@ -32,8 +32,8 @@ localeUrl[en] = "/about/structure"
                            <h1>{{ 'Təşkilati struktur' | _ }}</h1>
                         </div>
                         {% for member in company.structure_person %}
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                           <div class="team-box" style="background-image: url({{ member.image | media }})">
+                        <div class="col-lg-4 col-md-6 col-sm-6 py-2">
+                           <div class="team-box" style="background-image: url({{ member.photo | media }})">
                               <div class="team-info">
                                  <h5>{{ member.name }}</h5>
                                  <p>{{ member.post }}</p>
@@ -46,7 +46,7 @@ localeUrl[en] = "/about/structure"
                </div>
 
                <hr>
-               <a class="structure-image-item" href="{{ company.structure_image | media }}" style="background-image: url(http://tamizshahar.gadimlie.com/themes/clean_city/assets/images/blog/bsmall1.jpg);" data-fancybox="gallery"></a>
+               <a class="structure-image-item" href="{{ company.structure_image | media }}" style="background-image: url({{ company.structure_image | media }});" data-fancybox="gallery"></a>
              </div>
              
              <div class="col-lg-3 col-md-4">
