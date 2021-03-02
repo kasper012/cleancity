@@ -89,6 +89,29 @@ tabs:
                     url: 
                         label: Appelyasiya şürası haqqında sənəd
                         type: mediafinder
+        documents:
+            tab: Sənədlər
+            type: repeater 
+            prompt: Sənəd əlavə et
+            form:
+                fields:
+                    name:
+                        label: Sənədin adı
+                        span: storm
+                        cssClass: col-md-12
+                    url: 
+                        label: Sənəd
+                        type: mediafinder
+                        span: storm
+                        cssClass: col-md-6
+                    type:
+                        label: Sənədin növü
+                        type: dropdown
+                        span: storm
+                        cssClass: col-md-6
+                        options:
+                            normativ-huquqi-baza: Normativ hüquqi baza
+                            maliyye-hesabatlari: Maliyyə hesabatları
         # certificates:
         #     tab: Siyasətimiz və sertifikatlarımız
         #     type: repeater
