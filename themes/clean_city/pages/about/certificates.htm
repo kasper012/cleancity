@@ -26,27 +26,15 @@ localeUrl[en] = "/about/policies-and-certificates"
              <div class="col-lg-9 col-md-8">
                <div class="certificates-gallery">
                   <div class="row">
-                     <div class="col-md-4 mb-4"> 
-                        <a class="certificate-item" 
-                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
-                           data-fancybox="gallery"
-                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
-                        </a>
-                     </div>
-                     <div class="col-md-4 mb-4"> 
-                        <a class="certificate-item" 
-                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
-                           data-fancybox="gallery"
-                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
-                        </a>
-                     </div>
-                     <div class="col-md-4 mb-4"> 
-                        <a class="certificate-item" 
-                           style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})" 
-                           data-fancybox="gallery"
-                           href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}">
-                        </a>
-                     </div>
+                     {% for certificate in company.certificates %}
+                        <div class="col-md-4 mb-4"> 
+                           <a class="certificate-item" 
+                              style="background-image: url({{ certificate.url | media }})" 
+                              data-fancybox="gallery"
+                              href="{{ certificate.url | media }}">
+                           </a>
+                        </div>
+                     {% endfor %}
                   </div>
                   
                </div>

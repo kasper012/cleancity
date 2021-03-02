@@ -18,7 +18,9 @@ class Company extends Model
       'structure_person',
       'appeal_board',
       
-      'documents'
+      'documents',
+
+      'certificates'
     ];    
 
     public $settingsCode = 'gadimlie_company_settings';

@@ -112,15 +112,15 @@ tabs:
                         options:
                             normativ-huquqi-baza: Normativ hüquqi baza
                             maliyye-hesabatlari: Maliyyə hesabatları
-        # certificates:
-        #     tab: Siyasətimiz və sertifikatlarımız
-        #     type: repeater
-        #     prompt: Sənəd əlavə et
-        #     form:
-        #         fields:
-        #             url:
-        #                 type: mediafinder
-        #                 label: Sənəd əlavə et
+        certificates:
+            tab: Siyasətimiz və sertifikatlarımız
+            type: repeater
+            prompt: Sənəd əlavə et
+            form:
+                fields:
+                    url:
+                        type: mediafinder
+                        label: Sənəd əlavə et
         # finance:
         #     tab: Maliyyə hesabatları
         #     type: repeater

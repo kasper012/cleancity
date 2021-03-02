@@ -30,10 +30,11 @@ class Company extends ComponentBase
         $company->appeal_board = $settings->appeal_board;
 
         $company->documents = $settings->documents;
-
+        $company->certificates = $settings->certificates;
+        
         // $company->about = $settings->about;
         // $company->receive = $settings->receive;
-        // $company->certificates = $settings->certificates;
+        
         // $company->normativ = $settings->normativ;
         // $company->finance = $settings->finance;
         // $company->tender = $settings->tender;
