@@ -8,49 +8,49 @@ fields:
 
 tabs:
     fields:
-        name:
-            label: Şirkətin adı
-            span: storm
-            cssClass: col-md-4
-            tab: Ümumi məlumat
-        email:
-            label: Email ünvanı
-            span: storm
-            cssClass: col-md-4
-            tab: Ümumi məlumat
-        phone:
-            label: Əlaqə nömrəsi
-            span: storm
-            cssClass: col-md-4
-            tab: Ümumi məlumat
-        google_map:
-            label: Xəritə (link)
-            span: storm
-            cssClass: col-md-6
-            tab: Ümumi məlumat
-        address:
-            label: Ünvan
-            tab: Ümumi məlumat
-            span: storm
-            cssClass: col-md-6
-        favicon:
-            label: Favicon
-            type: mediafinder
-            mode: image
-            imageHeight: 100
-            imageWidth: 100
-            span: auto
-            cssClass: col-md-6  
-            tab: Ümumi məlumat
-        about:
-            type: richeditor
-            tab: Bizim haqqımızda
-            label: Bizim haqqımızda mətn
+        # name:
+        #     label: Şirkətin adı
+        #     span: storm
+        #     cssClass: col-md-4
+        #     tab: Ümumi məlumat
+        # email:
+        #     label: Email ünvanı
+        #     span: storm
+        #     cssClass: col-md-4
+        #     tab: Ümumi məlumat
+        # phone:
+        #     label: Əlaqə nömrəsi
+        #     span: storm
+        #     cssClass: col-md-4
+        #     tab: Ümumi məlumat
+        # google_map:
+        #     label: Xəritə (link)
+        #     span: storm
+        #     cssClass: col-md-6
+        #     tab: Ümumi məlumat
+        # address:
+        #     label: Ünvan
+        #     tab: Ümumi məlumat
+        #     span: storm
+        #     cssClass: col-md-6
+        # favicon:
+        #     label: Favicon
+        #     type: mediafinder
+        #     mode: image
+        #     imageHeight: 100
+        #     imageWidth: 100
+        #     span: auto
+        #     cssClass: col-md-6  
+        #     tab: Ümumi məlumat
+        # about:
+        #     type: richeditor
+        #     tab: Bizim haqqımızda
+        #     label: Bizim haqqımızda mətn
 
-        receive:
-            tab: Bizim haqqımızda
-            label: Vətəndaşların qəbulu qrafiki
-            type: mediafinder 
+        # receive:
+        #     tab: Bizim haqqımızda
+        #     label: Vətəndaşların qəbulu qrafiki
+        #     type: mediafinder 
 
         structure_person:
             type: repeater
@@ -69,54 +69,58 @@ tabs:
                     photo:
                         type: mediafinder
                         label: Təşkilati struktur üzvün şəkili
+                        span: storm
+                        cssClass: col-md-12
         structure_image:
             tab: Təşkilatı struktur 
             type: mediafinder
             label: Təşkilati strukturun sxema-şəkili
+            span: storm
+            cssClass: col-md-12
         
-        appeal_board:
-            tab: Appelyasiya şürası
-            type: repeater 
-            prompt: Appelyasiya şürası haqqında məlumat əlavə et
-            form:
-                fields:
-                    name:
-                        label: Appelyasiya şürası haqqında sənədin adı
-                    url: 
-                        label: Appelyasiya şürası haqqında sənəd
-                        type: mediafinder
-        certificates:
-            tab: Siyasətimiz və sertifikatlarımız
-            type: repeater
-            prompt: Sənəd əlavə et
-            form:
-                fields:
-                    url:
-                        type: mediafinder
-                        label: Sənəd əlavə et
-        finance:
-            tab: Maliyyə hesabatları
-            type: repeater
-            prompt: Maliyyə hesabat əlavə et  
-            form:
-                fields:
-                    name:
-                        label: Sənədin adı
-                    url:
-                        type: mediafinder
-                        label: Sənəd əlavə et
+        # appeal_board:
+        #     tab: Appelyasiya şürası
+        #     type: repeater 
+        #     prompt: Appelyasiya şürası haqqında məlumat əlavə et
+        #     form:
+        #         fields:
+        #             name:
+        #                 label: Appelyasiya şürası haqqında sənədin adı
+        #             url: 
+        #                 label: Appelyasiya şürası haqqında sənəd
+        #                 type: mediafinder
+        # certificates:
+        #     tab: Siyasətimiz və sertifikatlarımız
+        #     type: repeater
+        #     prompt: Sənəd əlavə et
+        #     form:
+        #         fields:
+        #             url:
+        #                 type: mediafinder
+        #                 label: Sənəd əlavə et
+        # finance:
+        #     tab: Maliyyə hesabatları
+        #     type: repeater
+        #     prompt: Maliyyə hesabat əlavə et  
+        #     form:
+        #         fields:
+        #             name:
+        #                 label: Sənədin adı
+        #             url:
+        #                 type: mediafinder
+        #                 label: Sənəd əlavə et
         
-        normativ:
-            tab: Normativ hüquqi baza
-            type: repeater
-            prompt: Maliyyə hesabat əlavə et  
-            form:
-                fields:
-                    name:
-                        label: Sənədin adı
-                    url:
-                        type: mediafinder
-                        label: Sənəd əlavə et
+        # normativ:
+        #     tab: Normativ hüquqi baza
+        #     type: repeater
+        #     prompt: Maliyyə hesabat əlavə et  
+        #     form:
+        #         fields:
+        #             name:
+        #                 label: Sənədin adı
+        #             url:
+        #                 type: mediafinder
+        #                 label: Sənəd əlavə et
 
         
         

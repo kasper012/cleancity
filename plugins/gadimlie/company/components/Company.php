@@ -23,21 +23,21 @@ class Company extends ComponentBase
     {
         $settings = Settings::instance();
         $company = new Model();
-        $company->about = $settings->about;
-        $company->receive = $settings->receive;
+        // $company->about = $settings->about;
+        // $company->receive = $settings->receive;
         $company->structure_person = $settings->structure_person;
         $company->structure_image = $settings->structure_image;
-        $company->appeal_board = $settings->appeal_board;
-        $company->certificates = $settings->certificates;
-        $company->normativ = $settings->normativ;
-        $company->finance = $settings->finance;
-        $company->tender = $settings->tender;
+        // $company->appeal_board = $settings->appeal_board;
+        // $company->certificates = $settings->certificates;
+        // $company->normativ = $settings->normativ;
+        // $company->finance = $settings->finance;
+        // $company->tender = $settings->tender;
 
-        $company->name = $settings->name;
-        $company->email = $settings->email;
-        $company->phone = $settings->phone;
-        $company->google_map = $settings->google_map;
-        $company->address = $settings->address;
+        // $company->name = $settings->name;
+        // $company->email = $settings->email;
+        // $company->phone = $settings->phone;
+        // $company->google_map = $settings->google_map;
+        // $company->address = $settings->address;
 
 
         $this->page['company'] = $company;

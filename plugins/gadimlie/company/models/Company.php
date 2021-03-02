@@ -13,7 +13,7 @@ class Company extends Model
 
 
     public $translatable = [
-
+      'structure_person'
     ];    
 
     public $settingsCode = 'gadimlie_company_settings';

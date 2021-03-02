@@ -31,25 +31,22 @@ localeUrl[en] = "/about/structure"
                         <div class="col-md-12">
                            <h1>{{ 'Təşkilati struktur' | _ }}</h1>
                         </div>
+                        {% for member in company.structure_person %}
                         <div class="col-lg-4 col-md-6 col-sm-6">
-                           <div class="team-box" style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                           <div class="team-box" style="background-image: url({{ member.image | media }})">
                               <div class="team-info">
-                                 <h5>Mr. Elven Micky</h5>
-                                 <p>Team Head</p>
+                                 <h5>{{ member.name }}</h5>
+                                 <p>{{ member.post }}</p>
                               </div>
                            </div>
                         </div>
-                        
+                        {% endfor %}
                      </div>
                   </div>
                </div>
 
                <hr>
-
-               <div class="blog-single-thumb">
-                  <img src="{{ 'assets/images/blog/bf2.jpg' | theme }}" alt="">
-               </div>
-
+               <a class="structure-image-item" href="{{ company.structure_image | media }}" style="background-image: url(http://tamizshahar.gadimlie.com/themes/clean_city/assets/images/blog/bsmall1.jpg);" data-fancybox="gallery"></a>
              </div>
              
              <div class="col-lg-3 col-md-4">
