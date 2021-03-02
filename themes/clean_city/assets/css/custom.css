@@ -3322,7 +3322,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	padding: 20px;
 	z-index: 999;
 	text-align: center;
-	height: 110px;
+	height: 130px;
 }
 .team-box .team-info p, .team-box .team-info h3 {
 	color: #fff;
@@ -5183,7 +5183,7 @@ ul.children {
 	background-position: center;
 	display: inline-block;
 	width: 100%;
-	padding-top: 40%;
+	padding-top: 60%;
 	border-radius: 5px;
 }
 
