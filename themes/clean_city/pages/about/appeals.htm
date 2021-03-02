@@ -24,36 +24,18 @@ localeUrl[en] = "/about/board-of-appeals"
           <div class="row">
              <div class="col-lg-9 col-md-8">
                <div class="blog-single-content">
+                  {% for document in company.appeal_board %}
                   <div class="single-counter-box">
                      <div class="container w-100">
                         <div class="row d-flex align-items-center">
-                           <div class="col-md-9"><strong>APELLYASİYA ŞURASI HAQQINDA ƏSASNAMƏ</strong></div>
+                           <div class="col-md-9"><strong>{{ document.name }}</strong></div>
                            <div class="col-md-3 text-center"> 
-                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
+                              <a href="{{ document.url | media }}" download>{{ 'Yüklə' | _ }}</a>   
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="single-counter-box">
-                     <div class="container w-100">
-                        <div class="row d-flex align-items-center">
-                           <div class="col-md-9"><strong>“Təmiz Şəhər” ASC-də Apellyasiya Şurasının yaradılması haqqında Əmr</strong></div>
-                           <div class="col-md-3 text-center"> 
-                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="single-counter-box">
-                     <div class="container w-100">
-                        <div class="row d-flex align-items-center">
-                           <div class="col-md-9"><strong>APELLYASİYA ŞURASI HAQQINDA ƏSASNAMƏ</strong></div>
-                           <div class="col-md-3 text-center"> 
-                              <a href="#" download>{{ 'Yüklə' | _ }}</a>   
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  {% endfor %}
                </div>
              </div>
              

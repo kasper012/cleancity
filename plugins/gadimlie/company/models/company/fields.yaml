@@ -78,17 +78,17 @@ tabs:
             span: storm
             cssClass: col-md-12
         
-        # appeal_board:
-        #     tab: Appelyasiya şürası
-        #     type: repeater 
-        #     prompt: Appelyasiya şürası haqqında məlumat əlavə et
-        #     form:
-        #         fields:
-        #             name:
-        #                 label: Appelyasiya şürası haqqında sənədin adı
-        #             url: 
-        #                 label: Appelyasiya şürası haqqında sənəd
-        #                 type: mediafinder
+        appeal_board:
+            tab: Appelyasiya şürası
+            type: repeater 
+            prompt: Appelyasiya şürası haqqında məlumat əlavə et
+            form:
+                fields:
+                    name:
+                        label: Appelyasiya şürası haqqında sənədin adı
+                    url: 
+                        label: Appelyasiya şürası haqqında sənəd
+                        type: mediafinder
         # certificates:
         #     tab: Siyasətimiz və sertifikatlarımız
         #     type: repeater

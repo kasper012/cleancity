@@ -27,7 +27,7 @@ class Company extends ComponentBase
         // $company->receive = $settings->receive;
         $company->structure_person = $settings->structure_person;
         $company->structure_image = $settings->structure_image;
-        // $company->appeal_board = $settings->appeal_board;
+        $company->appeal_board = $settings->appeal_board;
         // $company->certificates = $settings->certificates;
         // $company->normativ = $settings->normativ;
         // $company->finance = $settings->finance;
