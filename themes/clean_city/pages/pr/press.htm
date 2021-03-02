@@ -6,6 +6,12 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Press releases"
 localeUrl[en] = "/pr/press-releases"
+
+[proBlogList]
+postsPerPage = 10
+filter_type = "none"
+parent = "pr/press"
+render = "none"
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -22,99 +28,23 @@ localeUrl[en] = "/pr/press-releases"
                 <!--Blog Post Start-->
                 <div class="col-md-9 col-xs-9">
                     <div class="row">
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
+                        {% for post in blogPosts.toArray().data %}
+                            <div class="col-md-6 col-sm-9">
+                                <div class="blog-post">
+                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
+                                            src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt="">
+                                    </div>
+                                    <div class="post-txt">
+                                        <h5><a href="#">{{ post.title }}</a></h5>
+                                        <ul class="post-meta">
+                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at }}</li>
+                                        </ul>
+                                        <p>{{ post.excerpt }}</p>
+                                        <a href="#" class="read-post">{{ 'Ətraflı oxu' }}</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-sm-9">
-                            <div class="event-post">
-                                <div class="event-thumb">
-                                    <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/ep1.jpg' | theme }}" alt="">
-                                    <ul class="post-meta">
-                                        <li>29 August, 2018 </li>
-                                        <li> 08:00 am - 01:00 pm</li>
-                                    </ul>
-                                </div>
-                                <div class="event-txt">
-                                    <h5><a href="#">Forest Planting &amp; Save Plant Campaign</a></h5>
-                                    <p><i class="fas fa-map-marker-alt"></i> Green Gardendening Center, New York, USA </p>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <!--Blog Post End-->
