@@ -1,0 +1,35 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+
+tabs:
+    fields:
+
+
+        participant:
+            type: repeater
+            prompt: Sərgi iştirakçını əlavə et
+            tab: İştirakcılar
+            form: 
+                fields: 
+                    name:
+                        label: Sərgi iştirakçının adı
+                        span: storm
+                    post: 
+                        label: Sərgi iştirakçının vəzifəsi
+                        span: storm
+                    image: 
+                        label: Sərgi iştirakçının şəkili
+                        span: storn
+                        type: mediafinder
+
+
+
+
+        
+        
+                

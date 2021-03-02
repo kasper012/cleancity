@@ -4,14 +4,16 @@ layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "fWtA Participant "
+localeTitle[en] = "fWtA Participant"
 localeUrl[en] = "/fwta/participants"
+
+[Tss]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
             {
                 'title': ('TSS' | _),
-                'link': ''
+                'link': 'tss/about'
             }
         ] 
 %}
@@ -24,43 +26,19 @@ localeUrl[en] = "/fwta/participants"
                     <div class="team-grid team-small-grid">
                         <div class="">
                             <div class="row">
+                                
+                                {% for member in tss.participant %}
+                                <div class="col-lg-4 col-md-6 col-sm-6">
+                                    <div class="team-box"
+                                        style="background-image: url({{ member.image | media }})">
+                                        <div class="team-info">
+                                            <h5>{{ member.name }}</h5>
+                                            <p>{{ member.post }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
 
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box"
-                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box"
-                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box"
-                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box"
-                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

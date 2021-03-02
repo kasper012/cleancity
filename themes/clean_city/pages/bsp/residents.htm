@@ -6,12 +6,13 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "BIP Residents"
 localeUrl[en] = "/bip/residents"
+[Bsp]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
             {
                 'title': ('BSP' | _),
-                'link': ''
+                'link': 'bsp/about'
             }
         ] 
 %}
@@ -24,41 +25,18 @@ localeUrl[en] = "/bip/residents"
                     <div class="team-grid team-small-grid">
                         <div class="">
                             <div class="row">
-
+                                {% for resident in bsp.participant %}
                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                     <div class="team-box"
-                                        style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
+                                        style="background-image: url({{ resident.image | media }})">
                                         <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
+                                            <h5>{{ resident.name }}</h5>
+                                            <p>{{ resident.name }}</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box" style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box" style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box" style="background-image: url({{ 'assets/images/h3team1.jpg' | theme }})">
-                                        <div class="team-info">
-                                            <h5>Mr. Elven Micky</h5>
-                                            <p>Team Head</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                {% endfor %}
+                            </div> 
                         </div>
                     </div>
                 </div>
