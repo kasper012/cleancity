@@ -10,23 +10,12 @@ localeUrl[en] = "/"
 
 [Sliders]
 
-[proBlogList]
-postsPerPage = 3
-filter_type = "none"
-parent = "pr/news"
-render = "none"
-
-[proBlogList proBlogList2]
-postsPerPage = 3
-filter_type = "none"
-parent = "pr/press"
-render = "none"
 ==
 use Radiantweb\Problog\Models\Post;
 
    public function onStart() {
-      $this['news'] = Post::where('parent', 'pr/news')->get();
-      $this['presses'] = Post::where('parent', 'pr/press')->get();
+      $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'DESC')->take(3)->get();
+      $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->take(3)->get();
    }
 ==
 <!--Slider Start-->
