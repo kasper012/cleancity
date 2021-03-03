@@ -25,7 +25,8 @@ ul.topnav-right {
 	/* display: none; */
 }
 .slider-caption.h2slider {
-	top: 10%;
+	top: 50%;
+    transform: translateY(-50%);
 }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
