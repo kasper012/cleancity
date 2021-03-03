@@ -1303,6 +1303,12 @@ ul.flinks li a:hover, ul.flinks li.active a {
 	-webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
+.partner-logos .item {
+	padding-top: 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 /*********************************
 Home Page Content End
 *********************************/
