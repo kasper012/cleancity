@@ -1,31 +1,18 @@
-<?php namespace Gadimlie\Photos\Models;
+<?php namespace Gadimlie\Company\Models;
 
 use Model;
 
 /**
- * Photo Model
+ * Mediateka Model
  */
-class Photo extends Model
+class Mediateka extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-
-    public $implement = [
-        'RainLab.Translate.Behaviors.TranslatableModel'
-      ];
-    
-    public $translatable = [
-        'title',
-        'services',
-        'client',
-        'address',
-        'description',
-        'text',
-    ];
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'gadimlie_photos_photos';
+    public $table = 'gadimlie_company_mediatekas';
 
     /**
      * @var array Guarded fields
@@ -35,8 +22,7 @@ class Photo extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [
-    ];
+    protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes
@@ -51,9 +37,7 @@ class Photo extends Model
     /**
      * @var array Attributes to be cast to JSON
      */
-    protected $jsonable = [
-        'photo'
-    ];
+    protected $jsonable = [];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())

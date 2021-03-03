@@ -6,11 +6,3 @@ columns:
     id:
         label: ID
         searchable: true
-    title:
-        label: Fotoqalereyanın adı
-        searchable: true
-    date:
-        label: Tarix
-        searchable: true
-
-

@@ -1,0 +1,43 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+    title:
+        label: Başlıq
+        span: storm
+        cssClass: col-md-12
+    gallery:
+        type: repeater
+        prompt: Şəkil əlavə et
+        form:
+            fields:
+                photo:
+                    type: mediafinder
+                    label: Təşkilati struktur üzvün şəkili
+                    span: storm
+                    cssClass: col-md-12
+    video:
+        label: video link
+        span: storm
+        cssClass: col-md-12
+    type:
+        label: Media növü
+        type: dropdown
+        span: storm
+        cssClass: col-md-6
+        options:
+            normativ-huquqi-baza: Normativ hüquqi baza
+            maliyye-hesabatlari: Maliyyə hesabatları
+    section: 
+        label: İstifadə olunacaq bölmə
+        type: dropdown
+        span: storm
+        cssClass: col-md-6
+        options:
+            normativ-huquqi-baza: Normativ hüquqi baza
+            maliyye-hesabatlari: Maliyyə hesabatları

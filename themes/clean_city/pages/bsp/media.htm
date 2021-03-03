@@ -1,11 +1,11 @@
 title = "BSP Mediateka"
-url = "/bsp/mediateka"
+url = "/bsp/mediateka/:type?"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "BIP Medialibrary"
-localeUrl[en] = "/bip/medialibrary"
+localeUrl[en] = "/bip/medialibrary/:type?"
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -21,60 +21,36 @@ localeUrl[en] = "/bip/medialibrary"
             <div class="row">
                 <div class="col-lg-9 col-md-6">
                     <div class="row">
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
+                        <div class="col-md-4 col-sm-4 pb-4">
+                            <a  class="gallery-item" 
+                                href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}"
+                                style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})"
+                                data-fancybox="gallery"></a>
                         </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
+                        <div class="col-md-4 col-sm-4 pb-4">
+                            <a  class="gallery-item" 
+                                href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}"
+                                style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})"
+                                data-fancybox="gallery"></a>
                         </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
+                        <div class="col-md-4 col-sm-4 pb-4">
+                            <a  class="gallery-item" 
+                                href="{{ 'assets/images/blog/bsmall1.jpg' | theme }}"
+                                style="background-image: url({{ 'assets/images/blog/bsmall1.jpg' | theme }})"
+                                data-fancybox="gallery"></a>
                         </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
+                    <div class="sidebar">
+                        <div class="side-widget project-list-widget">
+                           <ul>
+                                <li><a href="{{ 'bsp/media' | page({type: ('foto' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{ 'Foto' | _ | capitalize}}</a></li>
+                                <li><a href="{{ 'bsp/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{ 'Video' | _ | capitalize }}</a></li>
+                           </ul>
+                        </div>
+                     </div>
                     {% partial 'sidebars/bsp' %}
                 </div>
             </div>

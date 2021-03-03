@@ -1,12 +1,12 @@
-<?php namespace Gadimlie\Photos\Controllers;
+<?php namespace Gadimlie\Company\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Photos Back-end Controller
+ * Mediateka Back-end Controller
  */
-class Photos extends Controller
+class Mediateka extends Controller
 {
     /**
      * @var array Behaviors that are implemented by this controller.
@@ -30,6 +30,6 @@ class Photos extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Gadimlie.Photos', 'photos', 'photos');
+        BackendMenu::setContext('Gadimlie.Company', 'company', 'mediateka');
     }
 }
