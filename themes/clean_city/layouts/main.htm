@@ -54,7 +54,7 @@
                  </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
+                        <a class="nav-link dropdown-toggle" href="{{ 'projects/index' | page }}"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
                         <ul class="dropdown-menu" >
                            {% for project in projects %}
                               <li><a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ project.title }}</a></li>
