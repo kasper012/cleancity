@@ -3,15 +3,9 @@
   <div class="side-widget project-list-widget">
     <h5 class="text-center">{{ 'Layihələr' | _ }}</h5>
     <ul>
-      <li  class="py-2"><a href="{{ 'projects/bmtzp' | page }}" title="{{ 'BMTZP' | _ }}">{{ 'BMTZP' | _ }}</a>
-      </li>
-      <li  class="py-2"><a href="{{ 'projects/bmtyz' | page }}" title="{{ 'BMTYZ' | _ }}">{{ 'BMTYZ' | _ }}</a></li>
-      <li  class="py-2"><a href="{{ 'projects/bmtcz' | page }}" title="{{ 'BMTÇZ' | _ }}">{{ 'BMTÇZ' | _ }}</a></li>
-      <li  class="py-2"><a href="{{ 'projects/bsp' | page }}" title="{{ 'BSP' | _ }}">{{ 'BSP' | _ }}</a></li>
-      <li  class="py-2"><a href="{{ 'projects/absheron' | page }}" title="{{ 'A bsheron' | _ }}">{{ 'Absheron' | _ }}</a>
-      </li>
-      
-      <li class="py-2"><a href="{{ 'projects/bmtvil' | page }}" title="{{ 'BMTVIL' | _ }}">{{ 'BMTVIL' | _ }}</a></li>
+      {% for project in projects %}
+          <li   class="py-2"><a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ project.title }}</a></li>
+      {% endfor %}
     </ul>
   </div>
   <!--Widget End-->

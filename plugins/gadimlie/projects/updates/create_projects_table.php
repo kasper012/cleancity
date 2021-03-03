@@ -17,15 +17,13 @@ class CreateProjectsTable extends Migration
             $table->text('image')->nullable();
             $table->text('images')->nullable();
 
-            $table->text('services')->nullable();
-            $table->text('client')->nullable();
             $table->text('date_start')->nullable();
             $table->text('date_finish')->nullable();
 
             $table->text('youtube')->nullable();
 
             $table->text('description')->nullable();
-            $table->text('text')->nullable();
+            $table->text('excerpt')->nullable();
 
             $table->timestamps();
         });

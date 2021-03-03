@@ -15,11 +15,9 @@ class Project extends Model
     
     public $translatable = [
         'title',
-        'services',
-        'client',
-        'address',
+        'excerpt',
         'description',
-        'text',
+        'youtube'
     ];
 
     /**
