@@ -11,42 +11,33 @@ fields:
     title:
         label: Layihənin adı
         span: auto
-
-    client:
-        label: Müştəri
-        span: auto
-
     youtube:
         label: Video (Youtube link)
         span: auto
-        # default: https://www.youtube.com/embed/
-
-    services:
-        label: Göstərilən xidmətlər
-        span: auto
-
+        default: https://www.youtube.com/embed/
 
     date_start:
         label: Başlama tarixi
         span: auto
         type: datepicker
 
-    date_finish:
-        label: Bitirmə tarixi
-        span: auto
-        type: datepicker
+    # date_finish:
+    #     label: Bitirmə tarixi
+    #     span: auto
+    #     type: datepicker
 
-    description:
+    excerpt:
         label: Layihənin təsviri
-        type: richeditor
+        type: textarea
 
     image:
         label: Şəkil başlıq
         type: mediafinder
         
-    text:
+    description:
         label: Layihə haqqında məlumat
         type: richeditor
+
     images: 
             label: Galereya
             type: repeater

@@ -1,0 +1,62 @@
+title = "Layihələr"
+url = "/layiheler/:id"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Projects"
+localeUrl[en] = "/projects/:id"
+==
+use Gadimlie\Projects\Models\Project;
+public function onStart() {
+    $project = Project::find($this->param('id'));
+    $this->page->title = $project->title;
+    $this['project'] = $project;
+}
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Layihələr' | _),
+                'link': 'projects/index'
+            }
+        ] 
+%}
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <!--Blog Single Content Start-->
+                    <div class="blog-single-content">
+                        <div class="blog-single-thumb">
+                            <img src="{{ project.image | media }}" alt="">
+                        </div>
+                        <h3>{{ project.title }}</h3>
+                        {{ project.description | raw }}
+                        <div class="small-gallery">
+                            <div class="row">
+                                {% for image in project.images %}
+                                    <div class="col-md-4 pb-4">
+                                        <a class="gallery-item" href="{{ image.image | media }}"
+                                            style="background-image: url({{ image.image | media }})"
+                                            data-fancybox="gallery">
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% if project.youtube %}
+                            <h5>{{ 'Video' | _ }}</h5>
+                            <iframe src="https://player.vimeo.com/video/89009039"></iframe>
+                        {% endif %}
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    {% partial 'sidebars/projects' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
