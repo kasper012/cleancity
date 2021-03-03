@@ -1981,6 +1981,11 @@ li.form-submit button:hover {
 	float: left;
 	border-radius: 5px;
 	overflow: hidden;
+
+	padding-top: 141%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .pro-box:after {
 	position: absolute;

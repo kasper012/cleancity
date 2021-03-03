@@ -255,8 +255,7 @@ localeUrl[en] = "/"
             <!--Pro Box-->
             {% for project in projects %}
                <div class="item">
-                  <div class="pro-box">
-                     <img src="{{ project.image | media }}" alt="">
+                  <div class="pro-box" style="background-image: url({{ project.image | media }});">
                      <h5>{{ project.title }}</h5>
                      <div class="pro-hover">
                         <h6>{{ project.title }}</h6>
@@ -266,61 +265,7 @@ localeUrl[en] = "/"
                </div>
             {% endfor %}
             
-            <!--Pro Box End--> 
-            <!--Pro Box-->
-            <div class="item">
-               <div class="pro-box">
-                  <img src="{{ 'assets/images/current-pro1.jpg' | theme }}" alt="">
-                  <h5>Recycling & Waste Management</h5>
-                  <div class="pro-hover">
-                     <h6>Recycling & Waste Management</h6>
-                     <a href="#">Read More</a> 
-                  </div>
-               </div>
-            </div>
-            <!--Pro Box End--> 
-            <!--Pro Box-->
-            <div class="item">
-               <div class="pro-box">
-                  <img src="{{ 'assets/images/current-pro1.jpg' | theme }}" alt="">
-                  <h5>Solar & Wind Energy</h5>
-                  <div class="pro-hover">
-                     <h6>Solar & Wind Energy</h6>
-                     <a href="#">Read More</a> 
-                  </div>
-               </div>
-            </div>
-            <!--Pro Box End--> 
-            <!--Pro Box-->
-            <div class="item">
-               <div class="pro-box">
-                  <img src="{{ 'assets/images/current-pro1.jpg' | theme }}" alt="">
-                  <h5>Saving Wildlife
-                     & their Cubs 
-                  </h5>
-                  <div class="pro-hover">
-                     <h6>Saving Wildlife
-                        & their Cubs 
-                     </h6>
-                     <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
-                     <a href="#">Read More</a> 
-                  </div>
-               </div>
-            </div>
-            <!--Pro Box End--> 
-            <!--Pro Box-->
-            <div class="item">
-               <div class="pro-box">
-                  <img src="{{ 'assets/images/current-pro1.jpg' | theme }}" alt="">
-                  <h5>Forest & Tree Planting</h5>
-                  <div class="pro-hover">
-                     <h6>Forest & Tree Planting</h6>
-                     <p>We are working over 20 years on Waste Management & Material Recycling Projects.</p>
-                     <a href="#">Read More</a> 
-                  </div>
-               </div>
-            </div>
-            <!--Pro Box End--> 
+           
          </div>
         </div>
      </div>
