@@ -253,16 +253,19 @@ localeUrl[en] = "/"
         <div class="col-md-12">
          <div class="cpro-slider owl-carousel owl-theme">
             <!--Pro Box-->
-            <div class="item">
-               <div class="pro-box">
-                  <img src="{{ 'assets/images/current-pro1.jpg' | theme }}" alt="">
-                  <h5>Forest & Tree Planting</h5>
-                  <div class="pro-hover">
-                     <h6>Forest & Tree Planting</h6>
-                     <a href="#">Read More</a> 
+            {% for project in projects %}
+               <div class="item">
+                  <div class="pro-box">
+                     <img src="{{ project.image | media }}" alt="">
+                     <h5>{{ project.title }}</h5>
+                     <div class="pro-hover">
+                        <h6>{{ project.title }}</h6>
+                        <a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ 'Ətraflı bax' | _ }}</a> 
+                     </div>
                   </div>
                </div>
-            </div>
+            {% endfor %}
+            
             <!--Pro Box End--> 
             <!--Pro Box-->
             <div class="item">
