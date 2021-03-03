@@ -304,7 +304,7 @@ render = "none"
             <div class="col-md-6">
                   <div class="blog-post-large">
                      <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
-                        <img src="{{ 'assets/images/h2news1.jpg' | theme }}" alt="">
+                        <img src="{{ post.featured_images[0].path }}" alt="">
                      </div>
                      <div class="post-txt">
                         <ul class="post-meta">
@@ -379,7 +379,7 @@ render = "none"
                      <a href="#">
                         <i class="fas fa-link"></i>
                      </a> 
-                     <img src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt=""> 
+                     <img src="{{ post.featured_images[0].path }}" alt=""> 
                   </div>
                   <div class="post-txt">
                      <h5><a href="#">{{ post.title }}</a></h5>
