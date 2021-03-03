@@ -812,6 +812,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 .pro-thumb, .blog-thumb {
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 1rem;
 }
 .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
 	position: absolute;

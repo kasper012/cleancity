@@ -300,7 +300,6 @@ render = "none"
      </div>
       <div class="row">
          {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
-            
             {% if loop.index == 1 %}
             <div class="col-md-6">
                   <div class="blog-post-large">
@@ -309,7 +308,7 @@ render = "none"
                      </div>
                      <div class="post-txt">
                         <ul class="post-meta">
-                           <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
+                           <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</li>
                         </ul>
                         <h5><a href="#">{{ post.title }}</a></h5>
                      </div>
@@ -322,7 +321,7 @@ render = "none"
                
                   <div class="blog-small-post">
                      <div class="post-txt">
-                        <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
+                        <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</span>
                         <h5><a href="#">{{ post.title }}</a></h5>
                         <a href="#" class="rm">{{ 'Ətraflı oxu' | _ }}</a> 
                      </div>
@@ -373,6 +372,7 @@ render = "none"
      </div>
      <div class="row">
          {% for post in this.page.components.proBlogList2.blogPosts.toArray().data %}
+         
             <div class="col-md-4 col-sm-6">
                <div class="blog-post">
                   <div class="blog-thumb"> 
@@ -384,9 +384,8 @@ render = "none"
                   <div class="post-txt">
                      <h5><a href="#">{{ post.title }}</a></h5>
                      <ul class="post-meta">
-                        <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
+                        <li> <a href="#"><i class="fas fa-calendar-alt"></i>{{ post.published_at | date('d.m.Y') }}</a> </li>
                      </ul>
-                     <p>According to a survey the perceived higher cost of environmentally-friendly products is the major holdup to consumers going green.</p>
                      <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
                   </div>
                </div>
