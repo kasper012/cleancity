@@ -7,7 +7,20 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Home page"
 localeUrl[en] = "/"
+
 [Sliders]
+
+[proBlogList]
+postsPerPage = 3
+filter_type = "none"
+parent = "pr/news"
+render = "none"
+
+[proBlogList proBlogList2]
+postsPerPage = 3
+filter_type = "none"
+parent = "pr/press"
+render = "none"
 ==
 <!--Slider Start-->
 <section id="home-slider" class="owl-carousel owl-theme wf100">
@@ -285,43 +298,53 @@ localeUrl[en] = "/"
         </div>
         <div class="col-md-6"> <a href="{{ 'about/news' | page }}" class="view-more">{{ 'Hamısına baxın' | _ }}</a> </div>
      </div>
-     <div class="row">
-        <div class="col-md-6">
-           <div class="blog-post-large">
-              <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/h2news1.jpg' | theme }}" alt=""></div>
-              <div class="post-txt">
-                 <ul class="post-meta">
-                    <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
-                    <li><i class="fas fa-comments"></i> 134 Comments</li>
-                 </ul>
-                 <h5><a href="#">Planting Trees for Better Future</a></h5>
-              </div>
-           </div>
-        </div>
-        <div class="col-md-6">
-           <!--Blog Small Post Start-->
-           <div class="blog-small-post">
-              <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/h2news2.jpg' | theme }}" alt=""> </div>
-              <div class="post-txt">
-                 <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
-                 <h5><a href="#">How you can keep alive wildlife long.</a></h5>
-                 <p>According to a survey the perceived higher cost of environmentally.</p>
-                 <a href="#" class="rm">Read More</a> 
-              </div>
-           </div>
-           <!--Blog Small Post End--> 
-           <!--Blog Small Post Start-->
-           <div class="blog-small-post">
-              <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/h2news3.jpg' | theme }}" alt=""> </div>
-              <div class="post-txt">
-                 <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
-                 <h5><a href="#">The effort GoGreen has been felt across</a></h5>
-                 <p>Majority have suffered alteration in some form by injected humour.</p>
-                 <a href="#" class="rm">Read More</a> 
-              </div>
-           </div>
-           <!--Blog Small Post End--> 
-        </div>
+      <div class="row">
+         {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
+            
+            {% if loop.index == 1 %}
+            <div class="col-md-6">
+                  <div class="blog-post-large">
+                     <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
+                        <img src="{{ 'assets/images/h2news1.jpg' | theme }}" alt="">
+                     </div>
+                     <div class="post-txt">
+                        <ul class="post-meta">
+                           <li><i class="fas fa-calendar-alt"></i> 29 September, 2018</li>
+                           <li><i class="fas fa-comments"></i> 134 Comments</li>
+                        </ul>
+                        <h5><a href="#">Planting Trees for Better Future</a></h5>
+                     </div>
+                  </div>
+            </div>
+            {% else %}
+               {% if loop.index == 2 %}
+                  <div class="col-md-6">
+               {% endif %}
+               
+                  <div class="blog-small-post">
+                     <div class="post-thumb"> 
+                        <a href="#">
+                           <i class="fas fa-link"></i>
+                        </a> 
+                        <img src="{{ 'assets/images/h2news2.jpg' | theme }}" alt=""> 
+                     </div>
+                     <div class="post-txt">
+                        <span class="pdate"> <i class="fas fa-calendar-alt"></i> 29 September, 2018</span>
+                        <h5><a href="#">How you can keep alive wildlife long.</a></h5>
+                        <p>According to a survey the perceived higher cost of environmentally.</p>
+                        <a href="#" class="rm">Read More</a> 
+                     </div>
+                  </div>
+
+               {% if loop.index == 3 %}
+                  </div>
+               {% endif %}
+
+            {% endif %}
+           
+         {% endfor %}
+      </div>
+        
      </div>
   </div>
 </section>
@@ -357,46 +380,21 @@ localeUrl[en] = "/"
         </div>
      </div>
      <div class="row">
-         <div class="col-md-4 col-sm-6">
-            <div class="blog-post">
-               <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt=""> </div>
-               <div class="post-txt">
-                  <h5><a href="#">How you can keep alive wild animals for long.</a></h5>
-                  <ul class="post-meta">
-                     <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                  </ul>
-                  <p>According to a survey the perceived higher cost of environmentally-friendly products is the major holdup to consumers going green.</p>
-                  <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
+         {% for post in this.page.components.proBlogList2.blogPosts.toArray().data %}
+            <div class="col-md-4 col-sm-6">
+               <div class="blog-post">
+                  <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt=""> </div>
+                  <div class="post-txt">
+                     <h5><a href="#">How you can keep alive wild animals for long.</a></h5>
+                     <ul class="post-meta">
+                        <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
+                     </ul>
+                     <p>According to a survey the perceived higher cost of environmentally-friendly products is the major holdup to consumers going green.</p>
+                     <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
+                  </div>
                </div>
             </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div class="blog-post">
-               <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt=""> </div>
-               <div class="post-txt">
-                  <h5><a href="#">How you can keep alive wild animals for long.</a></h5>
-                  <ul class="post-meta">
-                     <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                  </ul>
-                  <p>According to a survey the perceived higher cost of environmentally-friendly products is the major holdup to consumers going green.</p>
-                  <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
-               </div>
-            </div>
-         </div>
-         <div class="col-md-4 col-sm-6">
-            <div class="blog-post">
-               <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt=""> </div>
-               <div class="post-txt">
-                  <h5><a href="#">How you can keep alive wild animals for long.</a></h5>
-                  <ul class="post-meta">
-                     <li> <a href="#"><i class="fas fa-calendar-alt"></i> 29 September, 2018</a> </li>
-                  </ul>
-                  <p>According to a survey the perceived higher cost of environmentally-friendly products is the major holdup to consumers going green.</p>
-                  <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
-               </div>
-            </div>
-         </div>
-
+         {% endfor %}
      </div>
   </div>
 </section>
@@ -421,4 +419,4 @@ localeUrl[en] = "/"
       </div>
    </div>
 </div>
-<!--Partner Logos Section End--> 
+<!--Partner Logos Section End-->
