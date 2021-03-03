@@ -13,6 +13,12 @@ tabs:
             span: storm
             cssClass: col-md-4
             tab: Ümumi məlumat
+        receive:
+            tab: Ümumi məlumat
+            label: Vətəndaşların qəbulu qrafiki
+            type: mediafinder 
+            span: storm
+            cssClass: col-md-8
         # email:
         #     label: Email ünvanı
         #     span: storm
@@ -47,10 +53,6 @@ tabs:
         #     tab: Bizim haqqımızda
         #     label: Bizim haqqımızda mətn
 
-        # receive:
-        #     tab: Bizim haqqımızda
-        #     label: Vətəndaşların qəbulu qrafiki
-        #     type: mediafinder 
 
         structure_person:
             type: repeater

@@ -33,7 +33,7 @@ class Company extends ComponentBase
         $company->certificates = $settings->certificates;
         
         // $company->about = $settings->about;
-        // $company->receive = $settings->receive;
+        $company->receive = $settings->receive;
         
         // $company->normativ = $settings->normativ;
         // $company->finance = $settings->finance;
