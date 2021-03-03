@@ -1379,7 +1379,8 @@ ul.quick-links {
 	list-style: none;
 }
 ul.quick-links li {
-	line-height: 38px;
+	line-height: 20px;
+	padding-bottom: 12px;
 }
 ul.quick-links li a {
 	color: #ccc;
@@ -3468,7 +3469,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	margin: 0 0 22px;
 }
 .h3footer ul.quick-links li {
-	line-height: 26px;
+	line-height: 20px;
+	padding-bottom: 8px;
 }
 .h3footer ul.quick-links li a {
 	font-size: 14px;
