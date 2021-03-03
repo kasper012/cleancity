@@ -690,6 +690,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	width: 100%;
 	float: left;
 	position: relative;
+	padding-top: 50%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .ser-box .ser-thumb:after {
 	position: absolute;
@@ -3902,7 +3906,9 @@ Projects Pages Start
 }
 .projects-grid .ser-txt h5 a {
 	color: #222;
-	line-height: 32px;
+    line-height: 12px;
+    font-size: 1.2rem;
+}
 }
 .projects-grid .ser-txt {
 	padding: 25px 30px;
