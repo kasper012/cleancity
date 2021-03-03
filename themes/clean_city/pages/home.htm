@@ -12,7 +12,7 @@ localeUrl[en] = "/"
 <!--Slider Start-->
 <section id="home-slider" class="owl-carousel owl-theme wf100">
    {% for slider in sliders.slider %}
-  <div class="item">
+  <div class="item" style="background-image:url({{ slider.image | media }})">
      <div class="slider-caption h2slider">
         <div class="container">
            <h1>{{ slider.title }}</h1>
@@ -25,7 +25,7 @@ localeUrl[en] = "/"
            {% endif %} 
         </div>
      </div>
-     <img src="{{ slider.image | media }}" alt=""> 
+     <!-- <img src="{{ slider.image | media }}" alt="">  -->
   </div>
   {% endfor %}
 

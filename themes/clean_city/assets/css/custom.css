@@ -361,6 +361,15 @@ Home Page Content Start
 .item {
 	position: relative;
 }
+#home-slider .item{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		display: inline-block;
+		width: 100%;
+		padding-top: 41%;
+}
 .slider-caption {
 	position: absolute;
 	left: 0;
