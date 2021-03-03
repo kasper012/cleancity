@@ -18,26 +18,36 @@ fields:
             fields:
                 photo:
                     type: mediafinder
-                    label: Təşkilati struktur üzvün şəkili
+                    label: Şəkil
                     span: storm
                     cssClass: col-md-12
     video:
-        label: video link
+        label: Video link
         span: storm
         cssClass: col-md-12
+        type: repeater
+        prompt: Video əlavə et
+        form: 
+            fields:
+                name:
+                    label: Video başlıqı
+                url:
+                    label: Video link
+                    
     type:
         label: Media növü
         type: dropdown
         span: storm
         cssClass: col-md-6
         options:
-            normativ-huquqi-baza: Normativ hüquqi baza
-            maliyye-hesabatlari: Maliyyə hesabatları
+            photo: Foto
+            video: Video
     section: 
         label: İstifadə olunacaq bölmə
         type: dropdown
         span: storm
         cssClass: col-md-6
         options:
-            normativ-huquqi-baza: Normativ hüquqi baza
-            maliyye-hesabatlari: Maliyyə hesabatları
+            pr: İctimaiyyətlə əlaqələr
+            bsp: Balaxanı Sənayə Parkı
+            tss: Tullantıdan sənətə sərgisi

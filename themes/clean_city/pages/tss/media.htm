@@ -1,11 +1,11 @@
 title = "TSS Mediateka"
-url = "/tss/mediateka"
+url = "/tss/mediateka/:type?"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "fWtA Medialibrary "
-localeUrl[en] = "/fwta/medialibrary"
+localeUrl[en] = "/fwta/medialibrary/:type?"
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -83,6 +83,16 @@ localeUrl[en] = "/fwta/medialibrary"
                 </div>
 
                 <div class="col-lg-3 col-md-4">
+                    <div class="sidebar">
+                        <div class="side-widget project-list-widget">
+                            <ul>
+                                <li><a href="{{ 'tss/media' | page({type: ('foto' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{
+                                        'Foto' | _ | capitalize}}</a></li>
+                                <li><a href="{{ 'tss/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{
+                                        'Video' | _ | capitalize }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     {% partial 'sidebars/tss' %}
                 </div>
             </div>

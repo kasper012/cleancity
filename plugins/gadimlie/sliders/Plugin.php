@@ -1,9 +1,9 @@
-<?php namespace Gadimlie\Company;
+<?php namespace Gadimlie\Sliders;
 use Backend;
 use System\Classes\PluginBase;
 
 /**
- * company Plugin Information File
+ * sliders Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -15,8 +15,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Company',
-            'description' => 'About company',
+            'name' => 'Əsas səhifə üçün slayderlər',
+            'description' => 'Sliders',
             'author' => 'gadimlie',
             'icon' => 'icon-building',
         ];
@@ -50,22 +50,21 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Gadimlie\Company\Components\Company' => 'Company',
-            // 'Gadimlie\Company\Components\SubmitContactForm' => 'SubmitContactForm',
-            'Gadimlie\Company\Components\Mediateka' => 'Mediateka',
+            'Gadimlie\Sliders\Components\Sliders' => 'Sliders',
+            // 'Gadimlie\Sliders\Components\SubmitContactForm' => 'SubmitContactForm',
         ];
     }
 
     public function registerSettings()
     {
         return [
-            'company' => [
-                'label' => 'Данные о компании',
+            'sliders' => [
+                'label' => 'Əsas səhifə üçün slayderlər',
                 'description' => '',
                 'category' => 'Правки Gadimlie Studio',
-                'class' => 'Gadimlie\Company\Models\Company',
+                'class' => 'Gadimlie\Sliders\Models\Sliders',
                 'order' => 100,
-                'icon' => 'icon-building-o',
+                'icon' => 'icon-image',
             ],
         ];
     }
@@ -80,8 +79,8 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'gadimlie.company.some_permission' => [
-                'tab' => 'company',
+            'gadimlie.sliders.some_permission' => [
+                'tab' => 'sliders',
                 'label' => 'Some permission',
             ],
         ];
@@ -95,13 +94,7 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'media' => [
-                'label'       => 'Mediateka',
-                'url'         => Backend::url('gadimlie/company/mediateka'),
-                'icon'        => 'icon-building',
-                'permissions' => ['gadimlie.company.*'],
-                'order'       => 500,
-            ],
+
         ];
     }
 }

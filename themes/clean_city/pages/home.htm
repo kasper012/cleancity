@@ -7,20 +7,28 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Home page"
 localeUrl[en] = "/"
+[Sliders]
 ==
 <!--Slider Start-->
 <section id="home-slider" class="owl-carousel owl-theme wf100">
+   {% for slider in sliders.slider %}
   <div class="item">
      <div class="slider-caption h2slider">
         <div class="container">
-           <strong>Ecova<span> is the Best</span></strong>
-           <h1>Eco Friendly</h1>
-           <p>Nonprofit WordPress Theme</p>
-           <a href="#" class="active">Find Out More</a> <a href="#">Join us Now</a> 
+           <h1>{{ slider.title }}</h1>
+           <p>{{ slider.slogan }}</p>
+           {% if slider.btn_txt_1 and slider.btn_url_1 %}
+           <a href="{{ slider.btn_url_1 }}" class="active">{{ slider.btn_txt_1 }}</a>
+           {% endif %}
+           {% if slider.btn_txt_2 and slider.btn_url_2 %}
+           <a href="{{ slider.btn_url_2 }}">{{ slider.btn_txt_2 }}</a>
+           {% endif %} 
         </div>
      </div>
-     <img src="{{ 'assets/images/h2-slide1.jpg' | theme }}" alt=""> 
+     <img src="{{ slider.image | media }}" alt=""> 
   </div>
+  {% endfor %}
+
 </section>
 <!--Slider End--> 
 <!--Service Area Start-->

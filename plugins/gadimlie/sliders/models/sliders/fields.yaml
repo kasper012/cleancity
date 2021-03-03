@@ -1,0 +1,46 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+
+tabs:
+    fields:
+        slider:
+            type: repeater
+            prompt: Yeni şəkil
+            tab: Slayder
+            form: 
+                fields: 
+                    title:
+                        label: Başlıq
+                        span: storm
+                    slogan: 
+                        label: Sloqan
+                        span: storm
+                    image: 
+                        label: Şəkil
+                        span: storn
+                        type: mediafinder
+                    btn_txt_1:
+                        label: Birinci düymənin məzmunu
+                        span: auto
+                    btn_url_1: 
+                        label: Birinci düymənin linki
+                        span: auto
+                    btn_txt_2:
+                        label: Ikinci düymənin məzmunu
+                        span: auto
+                    btn_url_2: 
+                        label: Ikinci düymənin linki
+                        span: auto
+                    
+                    
+                    
+
+
+        
+        
+                
