@@ -22,6 +22,13 @@ filter_type = "none"
 parent = "pr/press"
 render = "none"
 ==
+use Radiantweb\Problog\Models\Post;
+
+   public function onStart() {
+      $this['news'] = Post::where('parent', 'pr/news')->get();
+      $this['presses'] = Post::where('parent', 'pr/press')->get();
+   }
+==
 <!--Slider Start-->
 <section id="home-slider" class="owl-carousel owl-theme wf100">
    {% for slider in sliders.slider %}
@@ -299,8 +306,11 @@ render = "none"
         <div class="col-md-6"> <a href="{{ 'pr/news' | page }}" class="view-more">{{ 'Hamısına baxın' | _ }}</a> </div>
      </div>
       <div class="row">
-         {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
+         
+         {% for post in news %}
+         
             {% if loop.index == 1 %}
+            
             <div class="col-md-6">
                   <div class="blog-post-large">
                      <div class="post-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
@@ -371,8 +381,8 @@ render = "none"
         </div>
      </div>
      <div class="row">
-         {% for post in this.page.components.proBlogList2.blogPosts.toArray().data %}
-         
+         {% for post in presses %}
+            
             <div class="col-md-4 col-sm-6">
                <div class="blog-post">
                   <div class="blog-thumb"> 
