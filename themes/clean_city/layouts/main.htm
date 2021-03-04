@@ -2,6 +2,12 @@
 
 [extendedLocalePicker]
 [projects]
+
+[proBlogList]
+postsPerPage = 3
+filter_type = "none"
+parent = "pr/news"
+render = "none"
 ==
 {% spaceless %}
 <!doctype html>
@@ -125,7 +131,7 @@
                         <div class="footer-widget">
                            <h4>{{ 'Haqqımızda' | _ }}</h4>
                            <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a href="#" class="lm">About us</a> 
+                           <a href="{{ 'about/about' }}" class="lm">{{ 'Haqqımızda' | _ }}</a> 
                         </div>
                         <!--Footer Widget End--> 
                      </div>
@@ -162,9 +168,9 @@
                         <div class="footer-widget">
                            <h4>{{ 'Son xəbərlər' | _ }}</h4>
                            <ul class="lastest-products">
-                              <li> <img src="images/flp1.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img src="images/flp2.jpg" alt=""> <strong><a href="#">Eliminate your plastic bottle pollution & keep...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
-                              <li> <img src="images/flp3.jpg" alt=""> <strong><a href="#">How you can keep alive wild animals for...</a></strong> <span class="pdate"><i>Posted:</i> 29 September, 2018</span> </li>
+                              {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
+                                 <li> <strong><a href="#">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> 29 September, 2018</span> </li>
+                              {% endfor %}
                            </ul>
                         </div>
                         <!--Footer Widget End--> 

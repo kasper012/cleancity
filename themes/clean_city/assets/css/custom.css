@@ -155,13 +155,13 @@ body h2 {
 	font-size: 40px;
 }
 body h3 {
-	font-size: 32px;
+	font-size: 26px;
 }
 body h4 {
-	font-size: 28px;
+	font-size: 24px;
 }
 body h5 {
-	font-size: 24px;
+	font-size: 20px;
 }
 body h6 {
 	font-size: 20px;
@@ -812,6 +812,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 .pro-thumb, .blog-thumb {
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 1rem;
 }
 .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
 	position: absolute;
@@ -1379,7 +1380,8 @@ ul.quick-links {
 	list-style: none;
 }
 ul.quick-links li {
-	line-height: 38px;
+	line-height: 20px;
+	padding-bottom: 12px;
 }
 ul.quick-links li a {
 	color: #ccc;
@@ -1804,7 +1806,7 @@ section.services-area ul li.active:after {
 	color: #222222;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
-	margin: 15px 0;
+	margin: 10px 0 15px;
 }
 .h2-about-txt p {
 	font-family: 'Roboto', sans-serif;
@@ -1981,6 +1983,11 @@ li.form-submit button:hover {
 	float: left;
 	border-radius: 5px;
 	overflow: hidden;
+
+	padding-top: 141%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .pro-box:after {
 	position: absolute;
@@ -2164,13 +2171,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	position: relative;
 }
 .blog-small-post .post-txt {
-	width: 53%;
+	width: 100%;
 	float: left;
 	padding-left: 15px;
 }
 .blog-small-post .post-txt h5 {
 	font-family: 'Poppins', sans-serif;
-	line-height: 34px;
+	line-height: 20px;
 	margin: 11px 0 8px;
 }
 .blog-small-post .post-txt h5 a {
@@ -3463,7 +3470,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	margin: 0 0 22px;
 }
 .h3footer ul.quick-links li {
-	line-height: 26px;
+	line-height: 20px;
+	padding-bottom: 8px;
 }
 .h3footer ul.quick-links li a {
 	font-size: 14px;
@@ -3749,7 +3757,7 @@ a.read-post:hover {
 .post-txt h5 a, .blog-grid-medium .post-txt h5 a {
 	font-weight: 700;
 	color: #222;
-	line-height: 34px;
+	line-height: 24px;
 }
 .blog-grid-medium ul.post-meta {
 	margin: 0px;
