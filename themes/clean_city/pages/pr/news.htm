@@ -13,6 +13,12 @@ filter_type = "none"
 parent = "pr/news"
 render = "none"
 ==
+use Radiantweb\Problog\Models\Post;
+
+   public function onStart() {
+      $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'DESC')->take(3)->get();
+   }
+==
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -27,11 +33,11 @@ render = "none"
             <div class="row">
                 <div class="col-md-9 col-xs-12">
                     <div class="row">
-                        {% for post in blogPosts.toArray().data %}
+                        {% for post in news %}
                             <div class="col-md-6 col-sm-9">
                                 <div class="blog-post">
                                     <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
-                                            src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt="">
+                                            src="{{ post.featured_images[0].path }}" alt="">
                                     </div>
                                     <div class="post-txt">
                                         <h5><a href="#">{{ post.title }}</a></h5>
