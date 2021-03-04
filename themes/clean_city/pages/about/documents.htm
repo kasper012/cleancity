@@ -1,14 +1,13 @@
 title = "Sənədlər"
 url = "/haqqimizda/senedler/:type?"
 layout = "main"
-description = "test"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "Documents"
 localeUrl[en] = "/about/documents/:type?"
 ==
-
+<?php
 public function onStart() {
    
    $locale = app()->getLocale();
@@ -54,9 +53,8 @@ public function onStart() {
    }
    
 }
-
+?>
 ==
-
 {% partial 'sections/breadcrumbs'
     parents=[
             {

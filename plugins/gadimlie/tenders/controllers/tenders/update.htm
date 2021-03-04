@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('gadimlie/tenders/tenders') ?>">Tenders</a></li>
+        <li><a href="<?= Backend::url('gadimlie/tenders/tenders') ?>">Tenderlər</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,28 +20,28 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Tender..."
+                    data-load-indicator="Tender yenilənir..."
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <u>Saxla</u>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Tender..."
+                    data-load-indicator="Tender yenilənir..."
                     class="btn btn-default">
-                    Save and Close
+                    Saxla və bağla
                 </button>
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Deleting Tender..."
-                    data-request-confirm="Delete this Tender?">
+                    data-load-indicator="Tender silinir..."
+                    data-request-confirm="Tenderi silmək?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('gadimlie/tenders/tenders') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('gadimlie/tenders/tenders') ?>">Ləğv et</a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('gadimlie/tenders/tenders') ?>" class="btn btn-default">Return to tenders list</a></p>
+    <p><a href="<?= Backend::url('gadimlie/tenders/tenders') ?>" class="btn btn-default">Tender siyahisinə qayıtmaq</a></p>
 
 <?php endif ?>

@@ -9,13 +9,13 @@ list: $/gadimlie/tenders/models/tender/columns.yaml
 modelClass: Gadimlie\Tenders\Models\Tender
 
 # List Title
-title: Manage tenders
+title: Tenderlərin idarə etməsi
 
 # Link URL for each record
 recordUrl: gadimlie/tenders/tenders/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
+noRecordsMessage: Tender yoxdur
 
 # Records to display per page
 recordsPerPage: 20
@@ -44,4 +44,4 @@ toolbar:
 
     # Search widget configuration
     search:
-        prompt: backend::lang.list.search_prompt
+        prompt: Axtar

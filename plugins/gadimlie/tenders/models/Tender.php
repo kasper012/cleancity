@@ -15,10 +15,6 @@ class Tender extends Model
     
     public $translatable = [
         'title',
-        'services',
-        'client',
-        'address',
-        'description',
         'text',
     ];
 

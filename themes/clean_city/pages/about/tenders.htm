@@ -1,14 +1,14 @@
 title = "Tenderlər"
 url = "/haqqimizda/tenderler"
 layout = "main"
-description = "test"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "Tenders"
 localeUrl[en] = "/about/tenders"
-==
 
+[tenders]
+==
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -28,23 +28,22 @@ localeUrl[en] = "/about/tenders"
                   <div class="container">
                      <div class="row">
                         <div class="col-lg-9 col-md-8">
-
+                           {% for tender in tenders %}
+                           
                            <div class="pro-list-box">
                               <div class="pro-txt row d-flex align-items-center w-100">
                                  <div class="col-md-8">
                                     <ul class="event-meta">
-                                       <li>17 September, 2018</li>
-                                       <li>09:30 am - 03:00 pm</li>
+                                       <li>{{ tender.date | date('d/m/Y') }}</li>
                                     </ul>
-                                    <h4> <a href="#">Bərk məişət tullantılarının yandırılması zavodu üçün ehtiyat hissənin satın alınmasına dair sorğu</a> </h4>
-                                    <p class="eloc"><i class="fas fa-map-marker-alt"></i> 150 / G iii, Newyork, USA</p>
+                                    <h4> <a href="{{ 'about/tender_detailed' | page({id: tender.id}) }}">{{ tender.title }}</a> </h4>
                                  </div>
                                  <div class="col-md-4 text-center">
-                                    <a href="#" class="partibtn">Participate</a> 
+                                    <a href="{{ 'about/tender_detailed' | page({id: tender.id}) }}" class="partibtn">{{ 'Daha ətraflı' }}</a> 
                                  </div>
                               </div>
                            </div>
-                           
+                           {% endfor %}
                         </div>
                      </div>
                      
@@ -60,4 +59,4 @@ localeUrl[en] = "/about/tenders"
        </div>
     </div>
  </section>
- <!--Blog End--> 
+ <!--Blog End-->

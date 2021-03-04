@@ -1,0 +1,51 @@
+title = "Tenderlər"
+url = "/haqqimizda/tenderler/:id"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Tenders"
+localeUrl[en] = "about/tenders/:id"
+==
+use Gadimlie\Tenders\Models\Tender;
+public function onStart() {
+    $tender = Tender::find($this->param('id'));
+    $this['tender'] = $tender;
+}
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Haqqımızda' | _),
+                'link': 'about/about'
+            }
+        ] 
+%}
+
+<!--Blog Start-->
+<section class="wf100 p80 blog">
+  <div class="blog-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-8">
+          <!--Blog Single Content Start-->
+          <div class="blog-single-content">
+              <h3>{{ tender.title }}</h3>
+              <p>
+                <strong>{{ 'Tarix' }}: </strong>{{ tender.date_start | date ('d/m/Y')}} - {{ tender.date_finish | date ('d/m/Y')}}
+              </p>
+              {{ tender.text | raw}}
+          </div>
+
+
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          {% partial 'sidebars/about' %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--Blog End-->

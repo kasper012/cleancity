@@ -16,16 +16,16 @@ defaultRedirect: gadimlie/tenders/tenders
 
 # Create page
 create:
-    title: Create Tender
+    title: Yeni Tender
     redirect: gadimlie/tenders/tenders/update/:id
     redirectClose: gadimlie/tenders/tenders
 
 # Update page
 update:
-    title: Edit Tender
+    title: Tenderi dəyişmək
     redirect: gadimlie/tenders/tenders
     redirectClose: gadimlie/tenders/tenders
 
 # Preview page
 preview:
-    title: Preview tenders
+    title: Tenderi göstərmək

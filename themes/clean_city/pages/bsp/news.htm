@@ -31,9 +31,11 @@ render = "none"
                         {% for post in blogPosts.toArray().data %}
                             <div class="col-md-6 col-sm-9">
                                 <div class="blog-post">
-                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
-                                            src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt="">
+                                    {% for image in post.featured_images | slice(0.1)%}
+                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> 
+                                        <img src="{{ image.path}}" alt="{{post.title}}">
                                     </div>
+                                    {% endfor %}
                                     <div class="post-txt">
                                         <h5><a href="#">{{ post.title }}</a></h5>
                                         <ul class="post-meta">

@@ -14,7 +14,8 @@ fields:
     youtube:
         label: Video (Youtube link)
         span: auto
-        default: https://www.youtube.com/embed/
+        placeholder: https://www.youtube.com/embed/
+        comment: Youtube linki 'https://www.youtube.com/embed/'-dan başlamalıdı
 
     # date_start:
     #     label: Başlama tarixi
