@@ -11,13 +11,16 @@ localeUrl[en] = "/pr/press-releases"
 postsPerPage = 10
 filter_type = "none"
 parent = "pr/press"
-render = "none"
+render = "specific"
+specific = "pr/press_detailed"
 ==
+<?php
 use Radiantweb\Problog\Models\Post;
 
    public function onStart() {
       $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->take(6)->get();
    }
+?>
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -37,16 +40,18 @@ use Radiantweb\Problog\Models\Post;
                         {% for post in presses %}
                             <div class="col-md-6 col-sm-9">
                                 <div class="blog-post">
-                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
-                                            src="{{ post.featured_images[0].path }}" alt="">
+                                    <div class="blog-thumb">
+                                        <a href="{{ 'pr/press_detailed' | page({id:post.id}) }}">
+                                            <div class="blog-img" style="background-image:url({{ post.featured_images[0].path }})"></div>
+                                        </a>
                                     </div>
                                     <div class="post-txt">
-                                        <h5><a href="#">{{ post.title }}</a></h5>
+                                        <h5><a href="{{ 'pr/press_detailed' | page({id: post.id}) }}">{{ post.title }}</a></h5>
                                         <ul class="post-meta">
-                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at }}</li>
+                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date ('d/m/Y')}}</li>
                                         </ul>
                                         <p>{{ post.excerpt }}</p>
-                                        <a href="#" class="read-post">{{ 'Ətraflı oxu' }}</a>
+                                        <a href="{{ 'pr/press_detailed' | page({id: post.id}) }}" class="read-post">{{ 'Ətraflı oxu' }}</a>
                                     </div>
                                 </div>
                             </div>

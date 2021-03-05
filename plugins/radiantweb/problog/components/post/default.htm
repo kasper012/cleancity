@@ -1,7 +1,7 @@
 {% if render_category %}
     {% component 'proBlogList' %}
 {% else %}
-    <h1>{{ post_item.title }}</h1>
+    <h1>Title:{{ post_item.title }}</h1>
     <h4>{{ 'Posted By'|_ }}: {{ author.login }} {% if author.image %} <img src="{{ author.image }}" alt="avatar"
                                                                           width="20"/> {% endif %}</h4>
     <p class="info">
