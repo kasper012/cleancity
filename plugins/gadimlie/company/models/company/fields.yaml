@@ -26,6 +26,21 @@ tabs:
             type: textarea 
             span: storm
             cssClass: col-md-12
+
+        video:
+            tab: Ümumi məlumat
+            label: Video link
+            span: storm
+            cssClass: col-md-6
+
+        image:
+            tab: Ümumi məlumat
+            label: Haqqimizda shekil
+            type: mediafinder 
+            span: storm
+            cssClass: col-md-6
+
+        
         
         structure_person:
             type: repeater

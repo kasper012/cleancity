@@ -100,18 +100,18 @@ use Radiantweb\Problog\Models\Post;
 <section class="home2-about wf100 p100 gallery">
   <div class="container">
      <div class="row">
-        <div class="col-md-5">
-           <div class="video-img"> 
-              <a href="http://vimeo.com/43338103&width=700" data-rel="prettyPhoto" title="Vimeo video">
-               <i class="fas fa-play"></i>
-            </a> 
-            <img src="{{ 'assets/images/h2about.jpg' | theme }}" alt=""> </div>
+        <div class="col-md-5 align-items-center">
+            <div class="video-img">
+                  <a href="{{ company.video }}" data-fancybox="gallery" data-caption="{{ company.name }}">
+                     <i class="fas fa-play"></i>
+                  </a> 
+            </div>
         </div>
         <div class="col-md-7">
            <div class="h2-about-txt">
               <h3>{{ 'Haqqımızda' | _ }}</h3>
               <h2>{{ company.name }}</h2>
-              <p>12 mart 2009-cu ildə “Təmiz Şəhər” ASC dövlət qeydiyyatına alınmış və öz fəaliyyətinə başlamışdır. “Təmiz Şəhər” ASC dövlət müəssisəsi olmaqla, öz təsərrüfat fəaliyyətini müstəqil qurmuşdur, onun ümumi idarəetmə və fəaliyyətinə nəzarət səlahiyyətləri təsisçi qismində Əmlak Məsələləri üzrə Dövlət Komitəsi və İqtisadi İnkişaf Nazirliyi, həmçinin İqtisadi İnkişaf Nazirliyinin formalaşdırdığı Müşahidə Şurası tərəfindən həyata keçirilir.</p>
+              <p>{{ company.slogan }}</p>
               <a class="aboutus" href="{{ 'about/about' | page }}">{{ 'Ətraflı oxu' | _ }}</a> 
            </div>
         </div>
