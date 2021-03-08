@@ -1,0 +1,56 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+    title:
+        label: Ad
+        span: storm
+        cssClass: col-md-12
+    section:
+        label: İstifadə olunacaq bölmə
+        type: dropdown
+        span: storm
+        cssClass: col-md-6
+        options:
+            pr: İctimaiyyətlə əlaqələr
+            bsp: Balaxanı Sənayə Parkı
+            tss: Tullantıdan sənətə sərgisi
+    type:
+        label: Media tipi
+        type: dropdown
+        span: storm
+        cssClass: col-md-6
+        options:
+            photo: Foto
+            video: Video
+
+    photos:
+        label: Şəkil
+        type: repeater
+        span: storm
+        cssClass: col-md-12
+        prompt: Şəkil əlavə et
+        form:
+            fields:
+                photo:
+                    type: mediafinder
+                    span: storm
+                    cssClass: col-md-12
+
+                
+    videos:
+        label: Video
+        type: repeater
+        span: storm
+        cssClass: col-md-12
+        prompt: Video əlavə et
+        form:
+            fields:
+                video:
+                    span: storm
+                    cssClass: col-md-12

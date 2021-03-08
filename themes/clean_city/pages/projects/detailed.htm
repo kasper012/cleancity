@@ -48,7 +48,7 @@ public function onStart() {
                         </div>
                         {% if project.youtube %}
                             <h5>{{ 'Video' | _ }}</h5>
-                            <iframe src="https://player.vimeo.com/video/89009039"></iframe>
+                            <iframe src="{{ project.youtube }}"></iframe>
                         {% endif %}
 
                     </div>
