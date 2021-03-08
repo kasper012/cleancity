@@ -16,7 +16,7 @@ render = "none"
 <?php
     use Radiantweb\Problog\Models\Post;
     public function onStart() {
-      $this['news'] = Post::where('parent', 'bsp/news')->orderBy('published_at', 'DESC')->take(6)->get();
+      $this['news'] = Post::where('parent', 'bsp/news')->orderBy('published_at', 'DESC')->paginate(10);
     }
 ?>
 ==
@@ -58,6 +58,27 @@ render = "none"
                         </div>
                         {% endfor %}
                     </div>
+
+                    {% if news.lastPage > 1 %}
+                        <div class="gt-pagination">
+                            <nav>
+                            <ul class="pagination">
+                                {% if news.currentPage > 1 %}
+                                    <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{news.currentPage-1}}" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>
+                                {% endif %}
+                                {% for page in 1..news.lastPage %}
+                                    <li class="page-item {{ news.currentPage == page ? 'active' : null }}">
+                                        <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{page}}">{{ page }}</a>
+                                    </li>
+                                {% endfor %}
+                                {% if news.lastPage > news.currentPage %}
+                                    <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{news.currentPage+1}}" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>
+                                {% endif %}   
+                            </ul>
+                            </nav>
+                        </div>
+                    {% endif %}
+                    
                 </div>
                 <div class="col-md-3 col-xs-12">
                     {% partial 'sidebars/bsp' %}
