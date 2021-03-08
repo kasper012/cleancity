@@ -18,7 +18,7 @@ specific = "pr/press_detailed"
 use Radiantweb\Problog\Models\Post;
 
    public function onStart() {
-      $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->take(6)->get();
+      $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->paginate(10);
    }
 ?>
 ==
@@ -57,28 +57,32 @@ use Radiantweb\Problog\Models\Post;
                             </div>
                         {% endfor %}
                     </div>
+
+                    {% if presses.lastPage > 1 %}
+                        <div class="gt-pagination">
+                            <nav>
+                            <ul class="pagination">
+                                {% if presses.currentPage > 1 %}
+                                    <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{presses.currentPage-1}}" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>
+                                {% endif %}
+                                {% for page in 1..presses.lastPage %}
+                                    <li class="page-item {{ presses.currentPage == page ? 'active' : null }}">
+                                        <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{page}}">{{ page }}</a>
+                                    </li>
+                                {% endfor %}
+                                {% if presses.lastPage > presses.currentPage %}
+                                    <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{presses.currentPage+1}}" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>
+                                {% endif %}   
+                            </ul>
+                            </nav>
+                        </div>
+                    {% endif %}
+
                 </div>
                 <!--Blog Post End-->
 
                 <div class="col-md-3 col-xs-9">
                     {% partial 'sidebars/pr' %}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="gt-pagination mt20">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <i
-                                            class="fas fa-angle-left"></i> </a> </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <i
-                                            class="fas fa-angle-right"></i> </a> </li>
-                            </ul>
-                        </nav>
-                    </div>
                 </div>
             </div>
 
