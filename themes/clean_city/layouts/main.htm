@@ -169,7 +169,9 @@ render = "none"
                            <h4>{{ 'Son xəbərlər' | _ }}</h4>
                            <ul class="lastest-products">
                               {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
-                                 <li> <strong><a href="#">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> 29 September, 2018</span> </li>
+                                 {% if loop.index < 4 %}
+                                    <li> <strong><a href="#">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
+                                 {% endif %}
                               {% endfor %}
                            </ul>
                         </div>
