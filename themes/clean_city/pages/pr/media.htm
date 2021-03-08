@@ -41,7 +41,7 @@ public function onStart () {
                             <div class="col-md-4 col-sm-4">
                                 {% for image in media.gallery %}
                                     <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}" style="background-image: url({{ image.photo | media }});">
-                                        <a href="{{ image.photo | media }}" data-fancybox="gallery "><i class="fas fa-images"></i></a>
+                                        <a href="{{ image.photo | media }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-images"></i></a>
                                     </div>
                                 {% endfor %}
                              </div>
@@ -50,7 +50,7 @@ public function onStart () {
 
                             <div class="col-md-4 col-sm-4">
                                 <div class="gallery-img" style="background-image: url({{ media.gallery.0.photo | media }});">
-                                    <a href="{{ image.video | media }}" data-fancybox="gallery "><i class="fas fa-video"></i></a>
+                                    <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-video"></i></a>
                                 </div>
                              </div>
 

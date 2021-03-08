@@ -47,7 +47,6 @@ class Mediateka extends Model
      */
     protected $jsonable = [
         'gallery',
-        'video',
     ];
 
     /**
