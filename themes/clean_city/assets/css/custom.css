@@ -1785,6 +1785,10 @@ section.services-area ul li.active:after {
 	float: left;
 	overflow: hidden;
 	position: relative;
+	padding-top: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .video-img img {
 	border-radius: 5px;
