@@ -172,7 +172,7 @@ render = "none"
                            <ul class="lastest-products">
                               {% for post in this.layout.components.proBlogList.blogPosts.toArray().data %}
                                  {% if loop.index < 4 %}
-                                    <li> <strong><a href="#">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
+                                    <li> <strong><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
                                  {% endif %}
                               {% endfor %}
                            </ul>
