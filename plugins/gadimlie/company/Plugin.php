@@ -95,12 +95,13 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'media' => [
+            'mediateka' => [
                 'label'       => 'Mediateka',
                 'url'         => Backend::url('gadimlie/company/mediateka'),
                 'icon'        => 'icon-building',
                 'permissions' => ['gadimlie.company.*'],
                 'order'       => 500,
+                
             ],
         ];
     }

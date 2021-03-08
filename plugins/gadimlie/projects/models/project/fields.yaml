@@ -27,9 +27,9 @@ fields:
     #     span: auto
     #     type: datepicker
 
-    excerpt:
-        label: Layihənin təsviri
-        type: textarea
+    # excerpt:
+    #     label: Layihənin təsviri
+    #     type: textarea
 
     image:
         label: Şəkil başlıq

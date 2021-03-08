@@ -25,14 +25,6 @@ fields:
         label: Video link
         span: storm
         cssClass: col-md-12
-        type: repeater
-        prompt: Video əlavə et
-        form: 
-            fields:
-                name:
-                    label: Video başlıqı
-                url:
-                    label: Video link
                     
     type:
         label: Media növü
