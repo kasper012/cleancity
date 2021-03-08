@@ -20,7 +20,8 @@ class Company extends Model
       
       'documents',
 
-      'certificates'
+      'certificates',
+      'slogan'
     ];    
 
     public $settingsCode = 'gadimlie_company_settings';

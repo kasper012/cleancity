@@ -19,41 +19,14 @@ tabs:
             type: mediafinder 
             span: storm
             cssClass: col-md-8
-        # email:
-        #     label: Email ünvanı
-        #     span: storm
-        #     cssClass: col-md-4
-        #     tab: Ümumi məlumat
-        # phone:
-        #     label: Əlaqə nömrəsi
-        #     span: storm
-        #     cssClass: col-md-4
-        #     tab: Ümumi məlumat
-        # google_map:
-        #     label: Xəritə (link)
-        #     span: storm
-        #     cssClass: col-md-6
-        #     tab: Ümumi məlumat
-        # address:
-        #     label: Ünvan
-        #     tab: Ümumi məlumat
-        #     span: storm
-        #     cssClass: col-md-6
-        # favicon:
-        #     label: Favicon
-        #     type: mediafinder
-        #     mode: image
-        #     imageHeight: 100
-        #     imageWidth: 100
-        #     span: auto
-        #     cssClass: col-md-6  
-        #     tab: Ümumi məlumat
-        # about:
-        #     type: richeditor
-        #     tab: Bizim haqqımızda
-        #     label: Bizim haqqımızda mətn
 
-
+        slogan:
+            tab: Ümumi məlumat
+            label: Qısa məlumat
+            type: textarea 
+            span: storm
+            cssClass: col-md-12
+        
         structure_person:
             type: repeater
             prompt: Təşkilati struktur üzvü əlavə et
@@ -123,30 +96,4 @@ tabs:
                     url:
                         type: mediafinder
                         label: Sənəd əlavə et
-        # finance:
-        #     tab: Maliyyə hesabatları
-        #     type: repeater
-        #     prompt: Maliyyə hesabat əlavə et  
-        #     form:
-        #         fields:
-        #             name:
-        #                 label: Sənədin adı
-        #             url:
-        #                 type: mediafinder
-        #                 label: Sənəd əlavə et
-        
-        # normativ:
-        #     tab: Normativ hüquqi baza
-        #     type: repeater
-        #     prompt: Maliyyə hesabat əlavə et  
-        #     form:
-        #         fields:
-        #             name:
-        #                 label: Sənədin adı
-        #             url:
-        #                 type: mediafinder
-        #                 label: Sənəd əlavə et
-
-        
-        
-                
+       

@@ -32,19 +32,8 @@ class Company extends ComponentBase
         $company->documents = $settings->documents;
         $company->certificates = $settings->certificates;
         
-        // $company->about = $settings->about;
         $company->receive = $settings->receive;
-        
-        // $company->normativ = $settings->normativ;
-        // $company->finance = $settings->finance;
-        // $company->tender = $settings->tender;
-
-        // $company->name = $settings->name;
-        // $company->email = $settings->email;
-        // $company->phone = $settings->phone;
-        // $company->google_map = $settings->google_map;
-        // $company->address = $settings->address;
-
+        $company->slogan = $settings->slogan;
 
         $this->page['company'] = $company;
     }
