@@ -131,7 +131,7 @@ render = "none"
                         <div class="footer-widget">
                            <h4>{{ 'Haqqımızda' | _ }}</h4>
                            <p> If anything’s hot in today’s economy, it’s saving money, including a broad range of green businesses helping people save energy, water, and other resources. Definitely, you can go with this business as it is a nothing but the future. </p>
-                           <a href="{{ 'about/about' }}" class="lm">{{ 'Haqqımızda' | _ }}</a> 
+                           <a href="{{ 'about/about' | page }}" class="lm">{{ 'Haqqımızda' | _ }}</a> 
                         </div>
                         <!--Footer Widget End--> 
                      </div>
@@ -168,7 +168,7 @@ render = "none"
                         <div class="footer-widget">
                            <h4>{{ 'Son xəbərlər' | _ }}</h4>
                            <ul class="lastest-products">
-                              {% for post in this.page.components.proBlogList.blogPosts.toArray().data %}
+                              {% for post in this.layout.components.proBlogList.blogPosts.toArray().data %}
                                  {% if loop.index < 4 %}
                                     <li> <strong><a href="#">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
                                  {% endif %}
