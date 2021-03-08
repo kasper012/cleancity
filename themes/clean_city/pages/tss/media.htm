@@ -7,6 +7,15 @@ is_hidden = 0
 localeTitle[en] = "fWtA Medialibrary "
 localeUrl[en] = "/fwta/medialibrary/:type?"
 ==
+<?php
+
+use Gadimlie\Company\Models\Mediateka;
+
+public function onStart () {
+    $this['medias'] = Mediateka::where('section', 'tss')->paginate(10);
+}
+?>
+==
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -22,77 +31,36 @@ localeUrl[en] = "/fwta/medialibrary/:type?"
             <div class="row">
                 <div class="col-lg-9 col-md-6">
                     <div class="row">
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLoremd</a>
-                                <img src="{{ 'assets/images/gallery/sgall1.jpg' | theme }}" alt="">
-                            </div>
-                        </div>
+                        {% for media in medias %}
+
+                            {% if media.type == 'photo' %}
+
+                            <div class="col-md-4 col-sm-4">
+                                {% for image in media.gallery %}
+                                    <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}" style="background-image: url({{ image.photo | media }});">
+                                        <a href="{{ image.photo | media }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-images"></i></a>
+                                    </div>
+                                {% endfor %}
+                                <p class="gallery-title">{{ media.title }}</p>
+                             </div>
+
+                            {% elseif media.type == 'video' %}
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="gallery-img" style="background-image: url({{ media.gallery.0.photo | media }});">
+                                    <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-video"></i></a>
+                                </div>
+                                <p class="gallery-title">{{ media.title }}</p>
+                             </div>
+
+                            {% endif %}
+
+                        {% endfor %}
 
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
-                    <div class="sidebar">
-                        <div class="side-widget project-list-widget">
-                            <ul>
-                                <li><a href="{{ 'tss/media' | page({type: ('foto' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{
-                                        'Foto' | _ | capitalize}}</a></li>
-                                <li><a href="{{ 'tss/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{
-                                        'Video' | _ | capitalize }}</a></li>
-                            </ul>
-                        </div>
-                    </div>
                     {% partial 'sidebars/tss' %}
                 </div>
             </div>

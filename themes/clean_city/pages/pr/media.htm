@@ -1,11 +1,11 @@
 title = "Mediateka"
-url = "/pr/mediateka/:type?"
+url = "/pr/mediateka"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "Media Library"
-localeUrl[en] = "/pr/medialibrary/:type?"
+localeUrl[en] = "/pr/medialibrary"
 
 [Mediateka]
 ==
@@ -14,7 +14,6 @@ localeUrl[en] = "/pr/medialibrary/:type?"
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $type = $this->param('type');
     $this['medias'] = Mediateka::where('section', 'pr')->paginate(10);
 }
 ?>
@@ -44,6 +43,7 @@ public function onStart () {
                                         <a href="{{ image.photo | media }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-images"></i></a>
                                     </div>
                                 {% endfor %}
+                                <p class="gallery-title">{{ media.title }}</p>
                              </div>
 
                             {% elseif media.type == 'video' %}
@@ -52,6 +52,7 @@ public function onStart () {
                                 <div class="gallery-img" style="background-image: url({{ media.gallery.0.photo | media }});">
                                     <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-video"></i></a>
                                 </div>
+                                <p class="gallery-title">{{ media.title }}</p>
                              </div>
 
                             {% endif %}
@@ -62,18 +63,6 @@ public function onStart () {
                 </div>
 
                 <div class="col-lg-3 col-md-4">
-                    <div class="sidebar">
-                        <div class="side-widget project-list-widget">
-                            <ul>
-                                <li>
-                                    <a href="{{ 'pr/media' | page({type: ('photo' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{ 'Foto' | _ | capitalize }}</a>
-                                </li>
-                                <li>
-                                    <a href="{{ 'pr/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{ 'Video' | _ | capitalize }}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                     {% partial 'sidebars/pr' %}
                 </div>
             </div>
