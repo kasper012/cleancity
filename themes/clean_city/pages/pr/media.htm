@@ -10,8 +10,12 @@ localeUrl[en] = "/pr/medialibrary/:type?"
 [Mediateka]
 ==
 <?php
+
+use Gadimlie\Company\Models\Mediateka;
+
 public function onStart () {
     $type = $this->param('type');
+    $this['medias'] = Mediateka::where('section', 'pr')->paginate(10);
 }
 ?>
 ==
@@ -29,15 +33,29 @@ public function onStart () {
             <div class="row">
                 <div class="col-lg-9 col-md-6">
                     <div class="row">
-                        {% for media in mediateka.gallery %}
-                        <div class="col-md-4 col-xs-12 mb-3">
-                            <div class="gallery-img">
-                                <a href="{{ 'assets/images/gallery/sgall1.jpg' | theme }}"
-                                    data-rel="prettyPhoto[gallery1]">Lorem Ipsum dolor
-                                    sit ametLorem</a>
-                                <img src="{{ 'media.photo' | media }}" alt="">
-                            </div>
-                        </div>
+                        
+                        {% for media in medias %}
+
+                            {% if media.type == 'photo' %}
+
+                            <div class="col-md-4 col-sm-4">
+                                {% for image in media.gallery %}
+                                    <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}" style="background-image: url({{ image.photo | media }});">
+                                        <a href="{{ image.photo | media }}" data-fancybox="gallery "><i class="fas fa-images"></i></a>
+                                    </div>
+                                {% endfor %}
+                             </div>
+
+                            {% elseif media.type == 'video' %}
+
+                            <div class="col-md-4 col-sm-4">
+                                <div class="gallery-img" style="background-image: url({{ media.gallery.0.photo | media }});">
+                                    <a href="{{ image.video | media }}" data-fancybox="gallery "><i class="fas fa-video"></i></a>
+                                </div>
+                             </div>
+
+                            {% endif %}
+
                         {% endfor %}
 
                     </div>
@@ -47,10 +65,12 @@ public function onStart () {
                     <div class="sidebar">
                         <div class="side-widget project-list-widget">
                             <ul>
-                                <li><a href="{{ 'pr/media' | page({type: ('photo' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{
-                                        'Foto' | _ | capitalize}}</a></li>
-                                <li><a href="{{ 'pr/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{
-                                        'Video' | _ | capitalize }}</a></li>
+                                <li>
+                                    <a href="{{ 'pr/media' | page({type: ('photo' | _)}) }}" title="{{ 'Foto' | _ | capitalize }}">{{ 'Foto' | _ | capitalize }}</a>
+                                </li>
+                                <li>
+                                    <a href="{{ 'pr/media' | page({type: ('video' | _)}) }}" title="{{ 'Video' | _ | capitalize }}">{{ 'Video' | _ | capitalize }}</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -60,3 +80,34 @@ public function onStart () {
         </div>
     </div>
 </section>
+
+
+<div class="gallery wf100 p80">
+    <div class="container">
+       <div class="row">
+           
+          <div class="col-md-4 col-sm-4">
+             <div class="gallery-img">
+                <a href="images/gallery/sgall1.jpg" data-rel="prettyPhoto[gallery1]"><i class="fas fa-search"></i></a>
+                <img src="images/gallery/sgall1.jpg" alt="">
+             </div>
+          </div>
+
+       </div>
+       <div class="row">
+          <div class="col-md-12">
+             <div class="gt-pagination">
+                <nav>
+                   <ul class="pagination">
+                      <li class="page-item"> <a class="page-link" href="#" aria-label="Previous"> <i class="fas fa-angle-left"></i> </a> </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"> <a class="page-link" href="#" aria-label="Next"> <i class="fas fa-angle-right"></i> </a> </li>
+                   </ul>
+                </nav>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
