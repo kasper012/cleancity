@@ -11,8 +11,22 @@ localeUrl[en] = "/pr/news"
 postsPerPage = 10
 filter_type = "none"
 parent = "pr/news"
+<<<<<<< HEAD
 searchpage = "blog"
 render = "none"
+=======
+searchpage = "pr/news"
+render = "specific"
+specific = "pr/news_detailed"
+==
+<?php
+use Radiantweb\Problog\Models\Post;
+
+   public function onStart() {
+      $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'DESC')->take(3)->get();
+   }
+?>
+>>>>>>> cdaca6d33d0f5e2f8448651cf5a7d4c8dd784be2
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -28,19 +42,26 @@ render = "none"
             <div class="row">
                 <div class="col-md-9 col-xs-12">
                     <div class="row">
-                        {% for post in blogPosts.toArray().data %}
+                        {% for post in news %}
                             <div class="col-md-6 col-sm-9">
                                 <div class="blog-post">
+<<<<<<< HEAD
                                     <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
                                             src="{{ post.featured_images[0].path }}" alt="">
+=======
+                                    <div class="blog-thumb"> 
+                                          <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">
+                                            <div class="blog-img" style="background-image:url({{ post.featured_images[0].path }})"></div>
+                                          </a>
+>>>>>>> cdaca6d33d0f5e2f8448651cf5a7d4c8dd784be2
                                     </div>
                                     <div class="post-txt">
-                                        <h5><a href="#">{{ post.title }}</a></h5>
+                                        <h5><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></h5>
                                         <ul class="post-meta">
-                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at }}</li>
+                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date ('d/m/Y')}}</li>
                                         </ul>
                                         <p>{{ post.excerpt }}</p>
-                                        <a href="#" class="read-post">{{ 'Ətraflı oxu' }}</a>
+                                        <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}" class="read-post">{{ 'Ətraflı oxu' }}</a>
                                     </div>
                                 </div>
                             </div>

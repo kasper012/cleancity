@@ -14,12 +14,9 @@ class CreateTendersTable extends Migration
 
             $table->text('title')->nullable();
             
+            $table->text('date_start')->nullable();
 
-
-
-            $table->text('date')->nullable();
-
-            $table->text('query')->nullable();
+            $table->text('date_finish')->nullable();
             $table->text('text')->nullable();
 
             $table->timestamps();

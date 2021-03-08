@@ -13,6 +13,15 @@ filter_type = "none"
 parent = "bsp/news"
 render = "none"
 ==
+<?php
+    use Radiantweb\Problog\Models\Post;
+    public function onStart() {
+      $this['news'] = Post::where('parent', 'bsp/news')->orderBy('published_at', 'DESC')->take(6)->get();
+    }
+?>
+==
+
+
 {% partial 'sections/breadcrumbs'
     parents=[
             {
@@ -21,29 +30,32 @@ render = "none"
             }
         ] 
 %}
-<!--Blog Start-->
 <section class="wf100 p80 blog">
     <div class="blog-details">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-xs-12">
                     <div class="row">
-                        {% for post in blogPosts.toArray().data %}
-                            <div class="col-md-6 col-sm-9">
-                                <div class="blog-post">
-                                    <div class="blog-thumb"> <a href="#"><i class="fas fa-link"></i></a> <img
-                                            src="{{ 'assets/images/blog/bg1-1.jpg' | theme }}" alt="">
-                                    </div>
-                                    <div class="post-txt">
-                                        <h5><a href="#">{{ post.title }}</a></h5>
-                                        <ul class="post-meta">
-                                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at }}</li>
-                                        </ul>
-                                        <p>{{ post.excerpt }}</p>
-                                        <a href="#" class="read-post">{{ 'Ətraflı oxu' }}</a>
-                                    </div>
+                        {% for post in news %}
+                        <div class="col-md-6 col-sm-9">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                        <a href="{{ 'bsp/news_detailed' | page({id:post.id}) }}">
+                                            <div class="blog-img" style="background-image:url({{ post.featured_images[0].path }})"></div>
+                                        </a>
+                                </div>
+                                <div class="post-txt">
+                                    <h5><a href="{{ 'bsp/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a>
+                                    </h5>
+                                    <ul class="post-meta">
+                                        <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date ('d/m/Y')}}</li>
+                                    </ul>
+                                    <p>{{ post.excerpt }}</p>
+                                    <a href="{{ 'bsp/news_detailed' | page({id:post.id}) }}" class="read-post">{{
+                                        'Ətraflı oxu' }}</a>
                                 </div>
                             </div>
+                        </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -54,4 +66,3 @@ render = "none"
         </div>
     </div>
 </section>
-<!--Blog End-->

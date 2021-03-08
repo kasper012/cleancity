@@ -358,6 +358,18 @@ Home Page Content Start
 }
 /***************  Home 1 Slider Start  *****************/
 
+/* Gadimlie Studio */
+.blog-img {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		display: inline-block;
+		width: 100%;
+		padding-top: 65%;
+		border-radius: 5px;
+}
+/* End Gadimlie Studio */
 .item {
 	position: relative;
 }
@@ -814,7 +826,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	overflow: hidden;
 	margin-bottom: 1rem;
 }
-.blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
+/* .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -823,13 +835,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	content: "";
 	opacity: 0;
 	background: -moz-linear-gradient(45deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.9) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.9) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.9) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#e6000000', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-.blog-small-post:hover .post-thumb:after, .blog-list .blog-post:hover .blog-thumb:after {
+	/*background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.9) 100%); *//* Chrome10-25,Safari5.1-6 */
+	/* background: linear-gradient(45deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.9) 100%);*/ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', endColorstr='#e6000000', GradientType=1 );  *//* IE6-9 fallback on horizontal gradient 
+} */
+/* .blog-small-post:hover .post-thumb:after, .blog-list .blog-post:hover .blog-thumb:after {
 	opacity: 1;
-}
+} */
 .blog-list .blog-post:hover .blog-txt h5 a {
 	color: #689f38;
 }
@@ -842,7 +854,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', e
 	height: auto;
 	
 }
-.post-thumb a, .f-cat span a, .campaign-thumb a, .event-thumb a, .blog-thumb a {
+/* .post-thumb a, .f-cat span a, .campaign-thumb a, .event-thumb a, .blog-thumb a {
 	position: absolute;
 	width: 50px;
 	height: 50px;
@@ -855,15 +867,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2000000', e
 	text-align: center;
 	line-height: 48px;
 	font-size: 16px;
-	border-radius: 100%;
-	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	/* border-radius: 100%; */
+	/* box-shadow: 0 2px 5px rgba(0,0,0,.2);
 	z-index: 99;
 	color: #fff;
 	opacity: 0;
 	border: 2px solid #fff;
-}
+} */ 
 .pro-thumb a:hover, .f-cat span a:hover, .campaign-thumb a:hover, .event-thumb a:hover, .blog-thumb a:hover {
-	background: #689f38;
+	/* background: #689f38; */
 	color: #fff;
 	border-color: #689f38;
 }
@@ -3557,11 +3569,13 @@ Blog Pages Start
 	float: left;
 }
 .blog .blog-post:hover .blog-thumb:after {
-	opacity: 1;
+	opacity: 0;
 }
 .blog .blog-post:hover .blog-thumb a {
-	opacity: 1;
+	/* opacity: 1; */
 	top: 0;
+	width: 100%;
+	height: 100%;
 }
 .blog .blog-post .blog-thumb {
 	margin: 0 0 25px;
@@ -6396,8 +6410,8 @@ SideWidgets
 .side-volunteer-form .fsubmit {
 	background: #66bb6a;
 	color: #fff;
-	height: 55px;
-	line-height: 55px;
+	/* height: 55px; */
+	line-height: 40px;
 	text-align: center;
 	border: 0px;
 	border-radius: 5px;
@@ -6888,10 +6902,10 @@ section.wf100.p80.fcampaigns {
 .post-comments.wf100 {
 	margin-bottom: 40px;
 }
-.volbox h5, .newsletter input[type=submit], #home-slider.owl-theme .owl-nav [class*=owl-], .add-2-cart input[type="submit"], a.view, .side-search button, #search .btn, .aboutus, .header-style-2 .dropdown-menu a, .header-style-1 .dropdown-menu a, .cus, .c-info, .post-thumb a, .blog-post-large .post-thumb:after, .h3footer .newsletter input[type=submit], .fsubmit, .side-widget.archives ul li a, .rp-box h6 a, .blog-single-content .rp-box .post-meta li a i, .blog-single-content .rp-box .post-meta li a, .project-list-widget ul li a, .side-widget .lastest-products strong a, .eco-box .econ-icon, .eco-box h5, .single-post-tags a, .about-text a, .about-video-img a, .slider-caption a, .donator-details input[type="submit"], p.stars a:before, a.contact-team, .single-counter-box a, .share-post a, .post-tags a, button.post-btn, .testimonials-section.bg-white .owl-theme .owl-dots .owl-dot span, .login-box button.login-btn, .login-box a.fp, .myaccount-form button.register, .myaccount-form a, .page-404-txt a, .gallery-img a, .gallery-img:before, .gallery-img:after, .cform .fsubmit, .bav, .vol-box, .vol-txt strong, .team-box .team-info, .team-box .team-info ul, .event-txt h4 a, .event-list-box .event-txt .attbtn, .event-list .pro-list-box .pro-txt h4 a, a.partibtn, .event-txt h5 a, .pro-txt h3 a, .ser-box .ser-thumb:after, .ser-thumb a, .projects-grid .ser-txt h5 a, .projects-grid .ser-box, .causes-grid .campaign-box, .causes-listing .campaign-box, .causes-listing .campaign-txt h4 a, .dn-btn, .blog-large .blog-post .blog-thumb:before, .post-txt h5 a, ul.post-meta li a, .blog-small-post, .gt-pagination .page-link, .blog-slider .owl-theme .owl-nav [class*=owl-], .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after, .blog-txt ul.post-meta li a, a.read-post, .blog-txt h3 a, .team-box .team-info ul li a, .news-txt h4 a, .news-thumb a, .news-thumb:after, .ocp-box h5 a, .volbox a, .donation-wrap .radio-boxes input[type=radio].css-radio+label.css-label, button.sbtn, a.con-btn, .navrow .dropdown-menu li a, .navrow .navbar-nav .nav-link, .social-links a, .acclink, .h3-events .owl-theme .owl-nav button.owl-prev:after, .h3-events .owl-theme .owl-nav button.owl-next:after, .h3-events .owl-theme .owl-nav [class*=owl-], #h3-events .event-box .event-txt h4 a, .footer-social a, ul.ftags a, .instagram img, .instagram li a, .product-box .pro-txt h6 a, .pro-thumb:after, .pro-thumb a, .rm, a.view-more, .blog-small-post .post-thumb:after, .blog-small-post .post-thumb a, .blog-small-post .post-txt h5 a, .blog-post-large .post-txt h5 a, .current-projects .nav-link, .current-projects .owl-theme .owl-nav [class*=owl-], .pro-box h5, li.form-submit button, .video-img a, .services-area img, .services-area h6, .services-area p, .services-area ul li:after, .services-area ul li, .navbar-nav .nav-link, .mdonate span, .login-reg a, .mdonate:after, a.cart-icon, a.search-icon, .mdonate, .footer-widget a, ul.quick-links li a, .partner-logos .owl-carousel .owl-item img, .f-cat span:before, .f-cat span a, .f-cat span:after, ul.flinks li a, .volunteer-form input.fsubmit, .campaign-txt h5 a, a.dbutton, .campaign-thumb a, .campaign-thumb:after, a.dbutton, .event-thumb a, .event-thumb:after, .blog-txt h5 a, .blog-thumb a, .blog-list .blog-post .blog-thumb:after, .pic1, .pic2, span.aicon, .ser-txt h4 a, a.lm, .header-style-1 .nav-link, .dropdown-menu .dropdown-menu, .header-style-1 .dropdown-menu a, .topside-menu a {
+/* .volbox h5, .newsletter input[type=submit], #home-slider.owl-theme .owl-nav [class*=owl-], .add-2-cart input[type="submit"], a.view, .side-search button, #search .btn, .aboutus, .header-style-2 .dropdown-menu a, .header-style-1 .dropdown-menu a, .cus, .c-info, .post-thumb a, .blog-post-large .post-thumb:after, .h3footer .newsletter input[type=submit], .fsubmit, .side-widget.archives ul li a, .rp-box h6 a, .blog-single-content .rp-box .post-meta li a i, .blog-single-content .rp-box .post-meta li a, .project-list-widget ul li a, .side-widget .lastest-products strong a, .eco-box .econ-icon, .eco-box h5, .single-post-tags a, .about-text a, .about-video-img a, .slider-caption a, .donator-details input[type="submit"], p.stars a:before, a.contact-team, .single-counter-box a, .share-post a, .post-tags a, button.post-btn, .testimonials-section.bg-white .owl-theme .owl-dots .owl-dot span, .login-box button.login-btn, .login-box a.fp, .myaccount-form button.register, .myaccount-form a, .page-404-txt a, .gallery-img a, .gallery-img:before, .gallery-img:after, .cform .fsubmit, .bav, .vol-box, .vol-txt strong, .team-box .team-info, .team-box .team-info ul, .event-txt h4 a, .event-list-box .event-txt .attbtn, .event-list .pro-list-box .pro-txt h4 a, a.partibtn, .event-txt h5 a, .pro-txt h3 a, .ser-box .ser-thumb:after, .ser-thumb a, .projects-grid .ser-txt h5 a, .projects-grid .ser-box, .causes-grid .campaign-box, .causes-listing .campaign-box, .causes-listing .campaign-txt h4 a, .dn-btn, .blog-large .blog-post .blog-thumb:before, .post-txt h5 a, ul.post-meta li a, .blog-small-post, .gt-pagination .page-link, .blog-slider .owl-theme .owl-nav [class*=owl-], .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after, .blog-txt ul.post-meta li a, a.read-post, .blog-txt h3 a, .team-box .team-info ul li a, .news-txt h4 a, .news-thumb a, .news-thumb:after, .ocp-box h5 a, .volbox a, .donation-wrap .radio-boxes input[type=radio].css-radio+label.css-label, button.sbtn, a.con-btn, .navrow .dropdown-menu li a, .navrow .navbar-nav .nav-link, .social-links a, .acclink, .h3-events .owl-theme .owl-nav button.owl-prev:after, .h3-events .owl-theme .owl-nav button.owl-next:after, .h3-events .owl-theme .owl-nav [class*=owl-], #h3-events .event-box .event-txt h4 a, .footer-social a, ul.ftags a, .instagram img, .instagram li a, .product-box .pro-txt h6 a, .pro-thumb:after, .pro-thumb a, .rm, a.view-more, .blog-small-post .post-thumb:after, .blog-small-post .post-thumb a, .blog-small-post .post-txt h5 a, .blog-post-large .post-txt h5 a, .current-projects .nav-link, .current-projects .owl-theme .owl-nav [class*=owl-], .pro-box h5, li.form-submit button, .video-img a, .services-area img, .services-area h6, .services-area p, .services-area ul li:after, .services-area ul li, .navbar-nav .nav-link, .mdonate span, .login-reg a, .mdonate:after, a.cart-icon, a.search-icon, .mdonate, .footer-widget a, ul.quick-links li a, .partner-logos .owl-carousel .owl-item img, .f-cat span:before, .f-cat span a, .f-cat span:after, ul.flinks li a, .volunteer-form input.fsubmit, .campaign-txt h5 a, a.dbutton, .campaign-thumb a, .campaign-thumb:after, a.dbutton, .event-thumb a, .event-thumb:after, .blog-txt h5 a, .blog-thumb a, .blog-list .blog-post .blog-thumb:after, .pic1, .pic2, span.aicon, .ser-txt h4 a, a.lm, .header-style-1 .nav-link, .dropdown-menu .dropdown-menu, .header-style-1 .dropdown-menu a, .topside-menu a {
 	transition: all ease-in-out 0.3s;
 	-webkit-transition: all ease-in-out 0.3s;
-}
+} */
 
 /* Gadimlie Studio */
 

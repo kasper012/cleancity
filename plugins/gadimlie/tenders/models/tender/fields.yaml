@@ -10,17 +10,25 @@ fields:
 
     title:
         label: Tenderin adı
-        span: auto
+        span: storm
+        cssClass: col-xs-11
 
-
-
-    date:
-        label: Tarix
-        span: auto
+    date_start:
+        label: Başlama tarixi
+        span: storm
         type: datepicker
+        cssClass: col-md-6
+    
+    date_finish:
+        label: Bitmə tarixi
+        span: storm
+        type: datepicker
+        cssClass: col-md-6
+
       
     text:
         label: Layihə haqqında məlumat
         type: richeditor
+
     
 

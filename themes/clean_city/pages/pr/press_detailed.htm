@@ -1,0 +1,62 @@
+title = "Press-reliz"
+url = "/press-relizler/:id"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Press-release"
+localeUrl[en] = "/press-releases/:id"
+
+[proBlogPost]
+slug = ":slug"
+searchpage = "pr/press"
+==
+<?php
+use Radiantweb\Problog\Models\Post;
+public function onStart() {
+    $this['post'] = $post = Post::find($this->param('id'));
+}
+?>
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+        {
+            'title': ('İctimaiyyətlə əlaqələr' | _),
+            'link': ''
+        }
+    ]
+%}
+
+<section class="wf100 p80 blog">
+  <div class="blog-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-8">
+          <!--Blog Single Content Start-->
+          <div class="blog-single-content">
+            <h3> {{ post.title }} </h3>
+            <p><i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}  </p>
+            <p>{{ post.content | raw }} </p>
+          </div>
+          <div class="small-gallery">
+            <div class="row">
+              {% for image in post.featured_images %}
+              <div class="col-md-4 mb-4">
+                <a class="gallery-item" href="{{ image.path }}"
+                  style="background-image: url({{ image.path }})"
+                  data-fancybox="gallery"></a>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4">
+          {% partial 'sidebars/pr' %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

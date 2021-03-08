@@ -58,11 +58,11 @@ render = "none"
                          <li><a href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
                      </ul>
                  </li>
-
+                
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{ 'projects/index' | page }}"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
                         <ul class="dropdown-menu" >
-                           {% for project in projects %}
+                           {% for project in projects | sort ( created_at )%}
                               <li><a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ project.title }}</a></li>
                            {% endfor %}
                         </ul>
