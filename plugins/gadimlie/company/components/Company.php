@@ -34,6 +34,8 @@ class Company extends ComponentBase
         
         $company->receive = $settings->receive;
         $company->slogan = $settings->slogan;
+        $company->image = $settings->image;
+        $company->video = $settings->video;
 
         $this->page['company'] = $company;
     }
