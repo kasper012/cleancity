@@ -7,6 +7,8 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Contacts"
 localeUrl[en] = "/contacts"
+
+[mainContactForm]
 ==
 
 {% partial 'sections/breadcrumbs' %}
@@ -18,29 +20,8 @@ localeUrl[en] = "/contacts"
           <div class="col-md-1"></div>
           <div class="col-md-10">
              <div class="contact-form mb60">
-                <h3>{{ 'Bizimlə əlaqə' | _ }}</h3>
-                <form action="">
-                    <ul class="cform">
-                        <li class="half pr-15">
-                           <input name="fullname" type="text" class="form-control" placeholder="{{ 'Adınız və soyadınız' | _ }}">
-                        </li>
-                        <li class="half pl-15">
-                           <input name="subject" type="text" class="form-control" placeholder="{{ 'Mövzu' | _ }}">
-                        </li>
-                        <li class="half pr-15">
-                            <input name="email" type="text" class="form-control" placeholder="{{ 'Email ünvanınız' | _ }}">
-                         </li>
-                         <li class="half pl-15">
-                            <input name="phone" type="text" class="form-control" placeholder="{{ 'Əlaqə nömrəniz' | _ }}">
-                         </li>
-                        <li class="full">
-                           <textarea class="textarea-control" placeholder="{{ 'Məktubunuz' | _ }}"></textarea>
-                        </li>
-                        <li class="full">
-                           <input type="submit" value="{{ 'Göndər' | _ }}" class="fsubmit">
-                        </li>
-                     </ul>
-                </form>
+                  <h3>{{ 'Bizimlə əlaqə' | _ }}</h3>
+                  {% component 'mainContactForm' %}
              </div>
           </div>
           <div class="col-md-12">

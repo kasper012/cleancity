@@ -6,6 +6,8 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "BIP Contacts"
 localeUrl[en] = "/bip/contacts"
+
+[bspContactForm]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -22,23 +24,7 @@ localeUrl[en] = "/bip/contacts"
                 <div class="col-lg-9 col-md-8">
                     <div class="comment-form">
                         <h4>{{ 'Bizimlə Əlaqə Saxlayın' | _ }}</h4>
-                        <ul>
-                            <li class="w3">
-                                <input type="text" name="fullname" class="form-control" placeholder="{{ 'Adınız və soyadınız'  | _ }}">
-                            </li>
-                            <li class="w3">
-                                <input type="text" name="email" class="form-control" placeholder="{{ 'Elektron ünvanənız'  | _ }}">
-                            </li>
-                            <li class="w3 np">
-                                <input type="text" name="subject" class="form-control" placeholder="{{ 'Mesajin mövzusu'  | _ }}">
-                            </li>
-                            <li class="full">
-                                <textarea class="form-control" name="message" placeholder="{{ 'Mesaj'  | _ }}"></textarea>
-                            </li>
-                            <li class="full">
-                                <button class="post-btn">{{ 'Göndər' | _ }}</button>
-                            </li>
-                        </ul>
+                        {% component "bspContactForm" %}
                     </div>
 <div class="google-map">
     <div class="contact-map-info">

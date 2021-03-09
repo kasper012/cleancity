@@ -1,0 +1,38 @@
+<form method="post" data-request="{{ __SELF__ }}::onSend"  data-request-success="formSuccess(this, context, data, textStatus, jqXHR)" data-request-validate data-request-flash>
+    <ul class="cform">
+        <li class="half pr-15">
+           <input name="fullname" type="text" class="form-control" placeholder="{{ 'Adınız və soyadınız' | _ }}">
+        </li>
+        <li class="half pl-15">
+           <input name="subject" type="text" class="form-control" placeholder="{{ 'Mövzu' | _ }}">
+        </li>
+        <li class="half pr-15">
+            <input name="email" type="text" class="form-control" placeholder="{{ 'Email ünvanınız' | _ }}">
+         </li>
+         <li class="half pl-15">
+            <input name="phone" type="text" class="form-control" placeholder="{{ 'Əlaqə nömrəniz' | _ }}">
+         </li>
+        <li class="full">
+           <textarea name="msg" class="textarea-control" placeholder="{{ 'Məktubunuz' | _ }}"></textarea>
+        </li>
+        <li class="full">
+           <input type="submit" value="{{ 'Göndər' | _ }}" class="fsubmit" data-attach-loading>
+        </li>
+     </ul>
+</form>
+
+<script>
+    function formSuccess(form, context, data, textStatus, jqXHR) {
+       if(data['status'] != 200) 
+           status = 'error'; 
+           else {
+               form.reset();
+               status = 'success'; 
+           }
+       $.oc.flashMsg({
+           'text': data['msg'],
+           'class': status,
+           'interval': 3
+       });
+    }
+</script>

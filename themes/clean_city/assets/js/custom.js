@@ -375,10 +375,6 @@ jQuery(document).ready(function($) {
 				$(this).removeClass('open');
 			}
 		});
-		$('form').submit(function(event) {
-			event.preventDefault();
-			return false;
-		})
 		});
 	}
 	

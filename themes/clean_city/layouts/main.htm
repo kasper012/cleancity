@@ -32,8 +32,9 @@ render = "none"
       <link href="{{ 'assets/css/all.min.css' | theme }}" rel="stylesheet">
 
       
+      <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script> 
+      {% framework extras %}
       
-      <!-- CSS FILES End -->
    </head>
    <body>
       <div class="wrapper home2">
@@ -196,7 +197,8 @@ render = "none"
          <!--Footer End--> 
       </div>
       <!--   JS Files Start  --> 
-      <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script> 
+      
+      
       <script src="{{ 'assets/js/jquery-migrate-1.4.1.min.js' | theme }}"></script> 
       <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
       <script src="{{ 'assets/js/popper.min.js' | theme }}"></script> 
@@ -205,6 +207,7 @@ render = "none"
       <script src="{{ 'assets/js/jquery.prettyPhoto.js' | theme }}"></script> 
       <script src="{{ 'assets/js/isotope.min.js' | theme }}"></script> 
       <script src="{{ 'assets/js/custom.js' | theme }}"></script>
+
    </body>
 </html>
 {% endspaceless %}
