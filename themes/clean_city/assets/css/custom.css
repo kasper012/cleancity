@@ -7009,5 +7009,6 @@ section.wf100.p80.fcampaigns {
 	display: block;
  }
 
-
-
+.blog-single-content video {
+	width: 100%;
+}
