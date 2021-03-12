@@ -14,8 +14,7 @@ class sliders extends Model
 
     public $translatable = [
       
-      'participant',
-      'document'
+      'slider'
 
     ];    
 

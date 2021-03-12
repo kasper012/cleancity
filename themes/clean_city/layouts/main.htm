@@ -173,7 +173,7 @@ render = "none"
                            <ul class="lastest-products">
                               {% for post in this.layout.components.proBlogList.blogPosts.toArray().data %}
                                  {% if loop.index < 4 %}
-                                    <li> <strong><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' }}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
+                                    <li> <strong><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></strong> <span class="pdate"><i>{{ 'Paylaşılıb' |_}}:</i> {{ post.published_at | date('d.m.Y') }}</span> </li>
                                  {% endif %}
                               {% endfor %}
                            </ul>
@@ -188,7 +188,7 @@ render = "none"
                   <div class="row d-flex align-items-center">
                      <div class="col-md-4 col-sm-4"> <img src="{{ 'assets/images/branding/logo-light.png' | theme }}" alt=""> </div>
                      <div class="col-md-8 col-sm-8">
-                        <p> {{ 'Bütün hüquqlar qorunur.' }} {{ company.name }} © {{ 'now' | date('Y') }}.</p>
+                        <p> {{ 'Bütün hüquqlar qorunur.' |_ }} {{ company.name }} © {{ 'now' | date('Y') }}.</p>
                      </div>
                   </div>
                </div>

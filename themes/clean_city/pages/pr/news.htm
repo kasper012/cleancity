@@ -51,7 +51,7 @@ use Radiantweb\Problog\Models\Post;
                                             <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date ('d/m/Y')}}</li>
                                         </ul>
                                         <p>{{ post.excerpt }}</p>
-                                        <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}" class="read-post">{{ 'Ətraflı oxu' }}</a>
+                                        <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}" class="read-post">{{ 'Ətraflı oxu' |_ }}</a>
                                     </div>
                                 </div>
                             </div>
