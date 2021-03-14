@@ -156,18 +156,14 @@ use Radiantweb\Problog\Models\Post;
      <div class="row">
         <div class="col-md-6">
            <div class="section-title-2">
-              
               <h2>{{ 'Xəbərlər' | _ }}</h2>
            </div>
         </div>
         <div class="col-md-6"> <a href="{{ 'pr/news' | page }}" class="view-more">{{ 'Hamısına baxın' | _ }}</a> </div>
      </div>
       <div class="row">
-         
          {% for post in news %}
-         
             {% if loop.index == 1 %}
-            
             <div class="col-md-6">
                   <div class="blog-post-large">
                      <div class="post-thumb" style="background-image: url({{ post.featured_images[0].path }});"></div>
@@ -175,7 +171,7 @@ use Radiantweb\Problog\Models\Post;
                         <ul class="post-meta">
                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</li>
                         </ul>
-                        <h5><a href="#">{{ post.title }}</a></h5>
+                        <h5><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></h5>
                      </div>
                   </div>
             </div>
@@ -186,8 +182,8 @@ use Radiantweb\Problog\Models\Post;
                   <div class="blog-small-post">
                      <div class="post-txt">
                         <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</span>
-                        <h5><a href="#">{{ post.title }}</a></h5>
-                        <a href="#" class="rm">{{ 'Ətraflı oxu' | _ }}</a> 
+                        <h5><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></h5>
+                        <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}" class="rm">{{ 'Ətraflı oxu' | _ }}</a> 
                      </div>
                   </div>
                {% if loop.index == 3 %}
@@ -196,7 +192,6 @@ use Radiantweb\Problog\Models\Post;
             {% endif %}
          {% endfor %}
       </div>
-        
      </div>
   </div>
 </section>
@@ -216,11 +211,11 @@ use Radiantweb\Problog\Models\Post;
                <div class="blog-post">
                   <div class="blog-thumb" style="background-image: url({{ post.featured_images[0].path }});"></div>
                   <div class="post-txt">
-                     <h5><a href="#">{{ post.title }}</a></h5>
+                     <h5><a href="{{ 'pr/press_detailed' | page({id: post.id}) }}">{{ post.title }}</a></h5>
                      <ul class="post-meta">
-                        <li> <a href="#"><i class="fas fa-calendar-alt"></i>{{ post.published_at | date('d.m.Y') }}</a> </li>
+                        <li> <a href="{{ 'pr/press_detailed' | page({id: post.id}) }}"><i class="fas fa-calendar-alt"></i>{{ post.published_at | date('d.m.Y') }}</a> </li>
                      </ul>
-                     <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
+                     <a href="{{ 'pr/press_detailed' | page({id: post.id}) }}" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
                   </div>
                </div>
             </div>
