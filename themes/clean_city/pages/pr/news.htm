@@ -11,7 +11,7 @@ localeUrl[en] = "/pr/news"
 use Radiantweb\Problog\Models\Post;
 
    public function onStart() {
-      $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'DESC')->paginate(10);
+      $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'ASC')->paginate(10);
    }
 ?>
 ==
