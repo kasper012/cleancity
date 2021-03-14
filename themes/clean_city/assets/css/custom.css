@@ -166,6 +166,12 @@ body h5 {
 body h6 {
 	font-size: 20px;
 }
+.post-thumb {
+	background-position: center;
+    background-size: cover;
+    padding-top: 60%;
+    background-repeat: no-repeat;
+}
 .post-thumb img {
 	width: 100%;
 	height: auto;
@@ -837,6 +843,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 1rem;
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 65%;
 }
 /* .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
 	position: absolute;
