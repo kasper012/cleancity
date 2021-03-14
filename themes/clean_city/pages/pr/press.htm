@@ -40,11 +40,7 @@ use Radiantweb\Problog\Models\Post;
                         {% for post in presses %}
                             <div class="col-md-6 col-sm-9">
                                 <div class="blog-post">
-                                    <div class="blog-thumb">
-                                        <a href="{{ 'pr/press_detailed' | page({id:post.id}) }}">
-                                            <div class="blog-img" style="background-image:url({{ post.featured_images[0].path }})"></div>
-                                        </a>
-                                    </div>
+                                    <div class="blog-thumb" style="background-image:url({{ post.featured_images[0].path }})"></div>
                                     <div class="post-txt">
                                         <h5><a href="{{ 'pr/press_detailed' | page({id: post.id}) }}">{{ post.title }}</a></h5>
                                         <ul class="post-meta">

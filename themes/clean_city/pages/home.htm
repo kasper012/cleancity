@@ -18,85 +18,27 @@ use Radiantweb\Problog\Models\Post;
       $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->take(3)->get();
    }
 ==
-<!--Slider Start-->
+
 <section id="home-slider" class="owl-carousel owl-theme wf100">
    {% for slider in sliders.slider %}
-  <div class="item" style="background-image:url({{ slider.image | media }})">
-     <div class="slider-caption h2slider">
-        <div class="container">
-           <h1>{{ slider.title }}</h1>
-           <p>{{ slider.slogan }}</p>
-           {% if slider.btn_txt_1 and slider.btn_url_1 %}
-           <a href="{{ slider.btn_url_1 }}" class="active">{{ slider.btn_txt_1 }}</a>
-           {% endif %}
-           {% if slider.btn_txt_2 and slider.btn_url_2 %}
-           <a href="{{ slider.btn_url_2 }}">{{ slider.btn_txt_2 }}</a>
-           {% endif %} 
+   <div class="item" style="background-image:url({{ slider.image | media }})">
+      <div class="slider-caption h2slider">
+         <div class="container">
+            <h1>{{ slider.title }}</h1>
+            <p>{{ slider.slogan }}</p>
+            {% if slider.btn_txt_1 and slider.btn_url_1 %}
+               <a href="{{ slider.btn_url_1 }}" class="active">{{ slider.btn_txt_1 }}</a>
+            {% endif %}
+            {% if slider.btn_txt_2 and slider.btn_url_2 %}
+            <a href="{{ slider.btn_url_2 }}">{{ slider.btn_txt_2 }}</a>
+            {% endif %} 
         </div>
-     </div>
-     <!-- <img src="{{ slider.image | media }}" alt="">  -->
-  </div>
+      </div>
+   </div>
   {% endfor %}
-
 </section>
-<!--Slider End--> 
-{% if false %}
-<!--Service Area Start-->
-<section class="services-area wf100">
-  <div class="container">
-     <ul>
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon1.png" alt="">
-              <h6>Recycling</h6>
-              <p>Waste Management</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon2.png" alt="">
-              <h6>Wind Energy</h6>
-              <p>Polar, Prevailing, Tropical</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon3.png" alt="">
-              <h6>Pure Water</h6>
-              <p>Save Water Resources</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li class="active">
-           <div class="sinfo">
-              <img src="images/sericon4.png" alt="">
-              <h6>Solar Panels</h6>
-              <p>Save Natural Engery</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon5.png" alt="">
-              <h6>Forest Planting</h6>
-              <p>Make Plants Alive for Life</p>
-           </div>
-        </li>
-        <!--box  end-->
-     </ul>
-  </div>
-</section>
-<!--Service Area End--> 
-{% endif %}
 
-<!--About Section Start-->
+
 <section class="home2-about wf100 p100 gallery">
   <div class="container">
      <div class="row">
@@ -118,9 +60,8 @@ use Radiantweb\Problog\Models\Post;
      </div>
   </div>
 </section>
-<!--About Section End--> 
 
-<!--Current Projects Start-->
+
 <section class="wf100 p80 current-projects">
   <div class="container">
      <div class="row">
