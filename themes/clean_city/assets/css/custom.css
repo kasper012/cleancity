@@ -4191,6 +4191,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .event-list .pro-list-box .pro-txt h4 a {
 	color: #222;
+	transition: .3s ease-in-out;
 }
 .event-list .pro-list-box .pro-txt p {
 	color: #555555;
@@ -4219,6 +4220,7 @@ a.partibtn {
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
+	transition: .3s ease-in-out;
 }
 .event-list .pro-list-box:hover .pro-txt h4 a {
 	color: #66bb6a;
