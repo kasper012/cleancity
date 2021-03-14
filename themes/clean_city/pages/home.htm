@@ -155,11 +155,13 @@ use Radiantweb\Problog\Models\Post;
   <div class="container">
      <div class="row">
         <div class="col-md-6">
-           <div class="section-title-2">
+           <div class="section-title-2 m-0">
               <h2>{{ 'Xəbərlər' | _ }}</h2>
            </div>
         </div>
-        <div class="col-md-6"> <a href="{{ 'pr/news' | page }}" class="view-more">{{ 'Hamısına baxın' | _ }}</a> </div>
+        <div class="col-md-6"> 
+           <a href="{{ 'pr/news' | page }}" class="view-more m-0">{{ 'Hamısına baxın' | _ }}</a> 
+         </div>
      </div>
       <div class="row">
          {% for post in news %}
@@ -223,9 +225,7 @@ use Radiantweb\Problog\Models\Post;
      </div>
   </div>
 </section>
-<!--Online Products End--> 
 
-<!--Partner Logos Section Start-->
 <div class="partner-logos wf100">
    <div class="container">
       <div id="partner-logos" class="owl-carousel owl-theme">
@@ -244,4 +244,3 @@ use Radiantweb\Problog\Models\Post;
       </div>
    </div>
 </div>
-<!--Partner Logos Section End-->
