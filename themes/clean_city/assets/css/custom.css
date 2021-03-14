@@ -1396,7 +1396,8 @@ Footer Start
 	display: inline-block;
 	border-radius: 3px;
 	text-transform: uppercase;
-	padding: 0 20px;
+	padding: 10px 20px;
+	line-height: 20px;
 }
 ul.quick-links {
 	margin: 0px;
@@ -3377,6 +3378,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	z-index: 999;
 	text-align: center;
 	height: 130px;
+	transition: .3s ease-in-out;
 }
 .team-box .team-info p, .team-box .team-info h3 {
 	color: #fff;
