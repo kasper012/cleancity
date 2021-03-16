@@ -61,10 +61,10 @@ class Plugin extends PluginBase
             'tss' => [
                 'label' => 'Tullantıdan sənətə sərgisi',
                 'description' => '',
-                'category' => 'Правки Gadimlie Studio',
+                'category' => 'Gadimlie Studio',
                 'class' => 'Gadimlie\Tss\Models\Tss',
                 'order' => 100,
-                'icon' => 'icon-building-o',
+                'icon' => 'icon-envira',
             ],
         ];
     }

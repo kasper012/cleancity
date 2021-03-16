@@ -61,7 +61,7 @@ class Plugin extends PluginBase
             'sliders' => [
                 'label' => 'Əsas səhifə üçün slayderlər',
                 'description' => '',
-                'category' => 'Правки Gadimlie Studio',
+                'category' => 'Gadimlie Studio',
                 'class' => 'Gadimlie\Sliders\Models\Sliders',
                 'order' => 100,
                 'icon' => 'icon-image',

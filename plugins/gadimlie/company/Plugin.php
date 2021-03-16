@@ -60,9 +60,9 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'Данные о компании',
+                'label' => 'Şirkət haqqında məlumat',
                 'description' => '',
-                'category' => 'Правки Gadimlie Studio',
+                'category' => 'Gadimlie Studio',
                 'class' => 'Gadimlie\Company\Models\Company',
                 'order' => 100,
                 'icon' => 'icon-building-o',
@@ -98,7 +98,7 @@ class Plugin extends PluginBase
             'mediateka' => [
                 'label'       => 'Mediateka',
                 'url'         => Backend::url('gadimlie/company/mediateka'),
-                'icon'        => 'icon-building',
+                'icon'        => 'icon-camera',
                 'permissions' => ['gadimlie.company.*'],
                 'order'       => 500,
                 

@@ -172,7 +172,7 @@ body h6 {
 }
 body h1, body h2, body h3, body h4, body h5, body h6 {
 	font-family: 'Poppins', sans-serif;
-	color: #222;
+	/* color: #222; */
 }
 .wrapper a:focus, .wrapper button:focus {
 	outline: none;
@@ -1396,7 +1396,8 @@ Footer Start
 	display: inline-block;
 	border-radius: 3px;
 	text-transform: uppercase;
-	padding: 0 20px;
+	line-height: 20px;
+	padding: 10px 20px;
 }
 ul.quick-links {
 	margin: 0px;
@@ -3377,6 +3378,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	z-index: 999;
 	text-align: center;
 	height: 130px;
+	transition: .3s ease-in-out;
 }
 .team-box .team-info p, .team-box .team-info h3 {
 	color: #fff;
@@ -4548,7 +4550,7 @@ GAllery Pages Start
 	position: relative;
 	overflow: hidden;
 	border-radius: 5px;
-	margin: 0 0 30px;
+	margin: 0 0 15px;
 }
 
 .gallery-img {
@@ -4676,6 +4678,7 @@ div#filters {
 	margin-bottom: 30px;
 	text-align: center;
 }
+
 .filter-gallery .gallery-thumb {
 	margin-bottom: 30px;
 }

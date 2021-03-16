@@ -18,7 +18,7 @@ class Plugin extends PluginBase
             'name' => 'Balaxanı Sənayə Parkı',
             'description' => 'Bsp',
             'author' => 'gadimlie',
-            'icon' => 'icon-building',
+            'icon' => 'icon-tree',
         ];
     }
 
@@ -61,10 +61,10 @@ class Plugin extends PluginBase
             'bsp' => [
                 'label' => 'Balaxanı sənayə parkı',
                 'description' => '',
-                'category' => 'Правки Gadimlie Studio',
+                'category' => 'Gadimlie Studio',
                 'class' => 'Gadimlie\Bsp\Models\Bsp',
                 'order' => 100,
-                'icon' => 'icon-building-o',
+                'icon' => 'icon-tree',
             ],
         ];
     }

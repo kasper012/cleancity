@@ -19,7 +19,7 @@ class Plugin extends PluginBase
             'name'        => 'tenders',
             'description' => 'No description provided yet...',
             'author'      => 'gadimlie',
-            'icon'        => 'icon-building-o'
+            'icon'        => 'icon-files-o'
         ];
     }
 
@@ -83,7 +83,7 @@ class Plugin extends PluginBase
             'tenders' => [
                 'label'       => 'Tenderlər',
                 'url'         => Backend::url('gadimlie/tenders/tenders'),
-                'icon'        => 'icon-building-o',
+                'icon'        => 'icon-files-o',
                 'permissions' => ['gadimlie.tenders.*'],
                 'order'       => 500,
                 'sideMenu' => [
