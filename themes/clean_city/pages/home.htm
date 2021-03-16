@@ -9,94 +9,36 @@ localeTitle[en] = "Home page"
 localeUrl[en] = "/"
 
 [Sliders]
-
 ==
+<?php
 use Radiantweb\Problog\Models\Post;
 
    public function onStart() {
       $this['news'] = Post::where('parent', 'pr/news')->orderBy('published_at', 'DESC')->take(3)->get();
       $this['presses'] = Post::where('parent', 'pr/press')->orderBy('published_at', 'DESC')->take(3)->get();
    }
+?>
 ==
-<!--Slider Start-->
 <section id="home-slider" class="owl-carousel owl-theme wf100">
    {% for slider in sliders.slider %}
-  <div class="item" style="background-image:url({{ slider.image | media }})">
-     <div class="slider-caption h2slider">
-        <div class="container">
-           <h1>{{ slider.title }}</h1>
-           <p>{{ slider.slogan }}</p>
-           {% if slider.btn_txt_1 and slider.btn_url_1 %}
-           <a href="{{ slider.btn_url_1 }}" class="active">{{ slider.btn_txt_1 }}</a>
-           {% endif %}
-           {% if slider.btn_txt_2 and slider.btn_url_2 %}
-           <a href="{{ slider.btn_url_2 }}">{{ slider.btn_txt_2 }}</a>
-           {% endif %} 
+   <div class="item" style="background-image:url({{ slider.image | media }})">
+      <div class="slider-caption h2slider">
+         <div class="container">
+            <h1>{{ slider.title }}</h1>
+            <p>{{ slider.slogan }}</p>
+            {% if slider.btn_txt_1 and slider.btn_url_1 %}
+               <a href="{{ slider.btn_url_1 }}" class="active">{{ slider.btn_txt_1 }}</a>
+            {% endif %}
+            {% if slider.btn_txt_2 and slider.btn_url_2 %}
+            <a href="{{ slider.btn_url_2 }}">{{ slider.btn_txt_2 }}</a>
+            {% endif %} 
         </div>
-     </div>
-     <!-- <img src="{{ slider.image | media }}" alt="">  -->
-  </div>
+      </div>
+   </div>
   {% endfor %}
-
 </section>
-<!--Slider End--> 
-{% if false %}
-<!--Service Area Start-->
-<section class="services-area wf100">
-  <div class="container">
-     <ul>
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon1.png" alt="">
-              <h6>Recycling</h6>
-              <p>Waste Management</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon2.png" alt="">
-              <h6>Wind Energy</h6>
-              <p>Polar, Prevailing, Tropical</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon3.png" alt="">
-              <h6>Pure Water</h6>
-              <p>Save Water Resources</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li class="active">
-           <div class="sinfo">
-              <img src="images/sericon4.png" alt="">
-              <h6>Solar Panels</h6>
-              <p>Save Natural Engery</p>
-           </div>
-        </li>
-        <!--box  end--> 
-        <!--box  start-->
-        <li>
-           <div class="sinfo">
-              <img src="images/sericon5.png" alt="">
-              <h6>Forest Planting</h6>
-              <p>Make Plants Alive for Life</p>
-           </div>
-        </li>
-        <!--box  end-->
-     </ul>
-  </div>
-</section>
-<!--Service Area End--> 
-{% endif %}
 
-<!--About Section Start-->
+
 <section class="home2-about wf100 p100 gallery">
   <div class="container">
      <div class="row">
@@ -117,127 +59,9 @@ use Radiantweb\Problog\Models\Post;
         </div>
      </div>
   </div>
-  {% if false %}
-  <div class="home-facts counter pt80">
-     <div class="container">
-        <div class="row">
-           <div class="col-lg-3 col-sm-6 col-md-3">
-              <div class="counter-box">
-                 <p class="counter-count">89000</p>
-                 <p class="ctxt">Trees Planted</p>
-              </div>
-           </div>
-           <div class="col-lg-3 col-sm-6 col-md-3">
-              <div class="counter-box">
-                 <p class="counter-count">79000</p>
-                 <p class="ctxt">Solar Panels in 2017</p>
-              </div>
-           </div>
-           <div class="col-lg-3 col-sm-6 col-md-3">
-              <div class="counter-box">
-                 <p class="counter-count">69000</p>
-                 <p class="ctxt">Wildlife Saved</p>
-              </div>
-           </div>
-           <div class="col-lg-3 col-sm-6 col-md-3">
-              <div class="counter-box">
-                 <p class="counter-count">59000</p>
-                 <p class="ctxt">Served Water Gallons</p>
-              </div>
-           </div>
-        </div>
-     </div>
-  </div>
-  {% endif %}
 </section>
-<!--About Section End--> 
 
-{% if false %}
-<!--Urgent Causes Start-->
-<section class="urgent-causes wf100 p80">
-  <div class="container">
-     <div class="row">
-        <div class="col-md-6">
-           <div class="section-title-2 white">
-              <h5>Urgent Cause</h5>
-              <h2>Stop Global Warming</h2>
-           </div>
-           <p> We need your support and help to Stop Globar Warning. Few generations ago it to seemed like the world’s resources were infinite, and the people needed only. </p>
-           <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-           </div>
-           <ul class="funds">
-              <li class="text-left"><strong>73%</strong> Funded</li>
-              <li class="text-center"><strong>$948.00</strong> Raised</li>
-              <li class="text-right"><strong>$1750.00</strong> Required</li>
-           </ul>
-        </div>
-        <div class="col-md-6">
-           <div class="donation-amount">
-              <h5>Donation Amount</h5>
-              <form>
-                 <ul class="radio-boxes">
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d1" type="radio" class="css-radio">
-                          <label for="d1" class="css-label">$5</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d2" type="radio" class="css-radio">
-                          <label for="d2" class="css-label">$20</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d3" type="radio" class="css-radio">
-                          <label for="d3" class="css-label">$50</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d4" type="radio" class="css-radio">
-                          <label for="d4" class="css-label">$100</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d5" type="radio" class="css-radio">
-                          <label for="d5" class="css-label">$250</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d6" type="radio" class="css-radio">
-                          <label for="d6" class="css-label">$500</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="radio custom">
-                          <input name="donation" id="d7" type="radio" class="css-radio">
-                          <label for="d7" class="css-label">$1000</label>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="inputs">
-                          <input class="enter" type="text" placeholder="$ Other">
-                       </div>
-                    </li>
-                    <li class="form-submit">
-                       <button type="submit">Continue to Donate</button>
-                    </li>
-                 </ul>
-              </form>
-           </div>
-        </div>
-     </div>
-  </div>
-</section>
-<!--Urgent Causes End--> 
-{% endif %}
 
-<!--Current Projects Start-->
 <section class="wf100 p80 current-projects">
   <div class="container">
      <div class="row">
@@ -246,69 +70,51 @@ use Radiantweb\Problog\Models\Post;
               <h2>{{ 'Layihələrimiz' | _ }}</h2>
            </div>
         </div>
-        {% if false %}
-        <div class="col-lg-6">
-           <ul class="nav" id="myTab" role="tablist">
-              <li class="nav-item"> <a class="nav-link active" id="wildlife-tab" data-toggle="tab" href="#wildlife" role="tab" aria-controls="wildlife-tab" aria-selected="true">Wildlife</a> </li>
-              <li class="nav-item"> <a class="nav-link" id="water-tab" data-toggle="tab" href="#water" role="tab" aria-controls="water-tab" aria-selected="false">Water Resources</a> </li>
-              <li class="nav-item"> <a class="nav-link" id="solar-tab" data-toggle="tab" href="#solar" role="tab" aria-controls="solar-tab" aria-selected="false">Solar Energy</a> </li>
-              <li class="nav-item"> <a class="nav-link" id="recycling-tab" data-toggle="tab" href="#recycling" role="tab" aria-controls="recycling-tab" aria-selected="false">Recycling</a> </li>
-           </ul>
-        </div>
-        {% endif %}
      </div>
      <div class="row">
-        <div class="col-md-12">
-         <div class="cpro-slider owl-carousel owl-theme">
-            <!--Pro Box-->
-            {% for project in projects %}
-               <div class="item">
-                  <div class="pro-box" style="background-image: url({{ project.image | media }});">
-                     <h5>{{ project.title }}</h5>
-                     <div class="pro-hover">
-                        <h6>{{ project.title }}</h6>
-                        <a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ 'Ətraflı bax' | _ }}</a> 
+         <div class="col-md-12">
+            <div class="cpro-slider owl-carousel owl-theme">
+               {% for project in projects %}
+                  <div class="item">
+                     <div class="pro-box" style="background-image: url({{ project.image | media }});">
+                        <h5>{{ project.title }}</h5>
+                        <div class="pro-hover">
+                           <h6>{{ project.title }}</h6>
+                           <a href="{{ 'projects/detailed' | page({id: project.id}) }}">{{ 'Ətraflı bax' | _ }}</a> 
+                        </div>
                      </div>
                   </div>
-               </div>
-            {% endfor %}
-            
-           
+               {% endfor %}
+            </div>
          </div>
-        </div>
      </div>
   </div>
 </section>
-<!--Current Projects End--> 
 
 <!--News & Articles Start-->
 <section class="h2-news wf100 p80">
   <div class="container">
      <div class="row">
         <div class="col-md-6">
-           <div class="section-title-2">
-              
+           <div class="section-title-2 m-0">
               <h2>{{ 'Xəbərlər' | _ }}</h2>
            </div>
         </div>
-        <div class="col-md-6"> <a href="{{ 'pr/news' | page }}" class="view-more">{{ 'Hamısına baxın' | _ }}</a> </div>
+        <div class="col-md-6"> 
+           <a href="{{ 'pr/news' | page }}" class="view-more m-0">{{ 'Hamısına baxın' | _ }}</a> 
+         </div>
      </div>
       <div class="row">
-         
          {% for post in news %}
-         
             {% if loop.index == 1 %}
-            
             <div class="col-md-6">
                   <div class="blog-post-large">
-                     <div class="post-thumb"> <a href="#"></i></a> 
-                        <img src="{{ post.featured_images[0].path }}" alt="">
-                     </div>
+                     <div class="post-thumb" style="background-image: url({{ post.featured_images[0].path }});"></div>
                      <div class="post-txt">
                         <ul class="post-meta">
                            <li><i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</li>
                         </ul>
-                        <h5><a href="#">{{ post.title }}</a></h5>
+                        <h5><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></h5>
                      </div>
                   </div>
             </div>
@@ -316,48 +122,23 @@ use Radiantweb\Problog\Models\Post;
                {% if loop.index == 2 %}
                   <div class="col-md-6">
                {% endif %}
-               
                   <div class="blog-small-post">
                      <div class="post-txt">
                         <span class="pdate"> <i class="fas fa-calendar-alt"></i> {{ post.published_at | date('d.m.Y') }}</span>
-                        <h5><a href="#">{{ post.title }}</a></h5>
-                        <a href="#" class="rm">{{ 'Ətraflı oxu' | _ }}</a> 
+                        <h5><a href="{{ 'pr/news_detailed' | page({id:post.id}) }}">{{ post.title }}</a></h5>
+                        <a href="{{ 'pr/news_detailed' | page({id:post.id}) }}" class="rm">{{ 'Ətraflı oxu' | _ }}</a> 
                      </div>
                   </div>
-
                {% if loop.index == 3 %}
                   </div>
                {% endif %}
-
             {% endif %}
-           
          {% endfor %}
       </div>
-        
      </div>
   </div>
 </section>
-<!--News & Articles End--> 
 
-{% if false %}
-<!--Why Ecova + Facts Start-->
-<section class="why-ecova wf100">
-  <div class="container">
-     <div class="row">
-        <div class="col-md-12">
-           <h1> Why Ecova!</h1>
-           <p>Let’s Join us to do something awesome to Save Water, Energey, Control Pollution &
-              Environment, Wildlife, Forest Planting Implant for Solar System.
-           </p>
-           <a href="#" class="cus">Signup to Join us</a> 
-        </div>
-     </div>
-  </div>
-</section>
-<!--Why Ecova + Facts End--> 
-{% endif %}
-
-<!--Online Products Start-->
 <section class="online-shop wf100 pt80">
   <div class="container">
      <div class="row">
@@ -369,21 +150,15 @@ use Radiantweb\Problog\Models\Post;
      </div>
      <div class="row">
          {% for post in presses %}
-            
             <div class="col-md-4 col-sm-6">
                <div class="blog-post">
-                  <div class="blog-thumb"> 
-                     <a href="#">
-                        
-                     </a> 
-                     <img src="{{ post.featured_images[0].path }}" alt=""> 
-                  </div>
+                  <div class="blog-thumb" style="background-image: url({{ post.featured_images[0].path }});"></div>
                   <div class="post-txt">
-                     <h5><a href="#">{{ post.title }}</a></h5>
+                     <h5><a href="{{ 'pr/press_detailed' | page({id: post.id}) }}">{{ post.title }}</a></h5>
                      <ul class="post-meta">
-                        <li> <a href="#"><i class="fas fa-calendar-alt"></i>{{ post.published_at | date('d.m.Y') }}</a> </li>
+                        <li> <a href="{{ 'pr/press_detailed' | page({id: post.id}) }}"><i class="fas fa-calendar-alt"></i>{{ post.published_at | date('d.m.Y') }}</a> </li>
                      </ul>
-                     <a href="#" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
+                     <a href="{{ 'pr/press_detailed' | page({id: post.id}) }}" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
                   </div>
                </div>
             </div>
@@ -391,9 +166,7 @@ use Radiantweb\Problog\Models\Post;
      </div>
   </div>
 </section>
-<!--Online Products End--> 
 
-<!--Partner Logos Section Start-->
 <div class="partner-logos wf100">
    <div class="container">
       <div id="partner-logos" class="owl-carousel owl-theme">
@@ -412,4 +185,3 @@ use Radiantweb\Problog\Models\Post;
       </div>
    </div>
 </div>
-<!--Partner Logos Section End-->

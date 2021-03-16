@@ -166,6 +166,12 @@ body h5 {
 body h6 {
 	font-size: 20px;
 }
+.post-thumb {
+	background-position: center;
+    background-size: cover;
+    padding-top: 60%;
+    background-repeat: no-repeat;
+}
 .post-thumb img {
 	width: 100%;
 	height: auto;
@@ -837,6 +843,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8bc34a', end
 	position: relative;
 	overflow: hidden;
 	margin-bottom: 1rem;
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 65%;
 }
 /* .blog-small-post .post-thumb:after, .event-thumb:after, .blog-thumb:after {
 	position: absolute;
@@ -1396,8 +1406,8 @@ Footer Start
 	display: inline-block;
 	border-radius: 3px;
 	text-transform: uppercase;
-	line-height: 20px;
 	padding: 10px 20px;
+	line-height: 20px;
 }
 ul.quick-links {
 	margin: 0px;
@@ -4191,6 +4201,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 }
 .event-list .pro-list-box .pro-txt h4 a {
 	color: #222;
+	transition: .3s ease-in-out;
 }
 .event-list .pro-list-box .pro-txt p {
 	color: #555555;
@@ -4219,6 +4230,7 @@ a.partibtn {
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-family: 'Poppins', sans-serif;
+	transition: .3s ease-in-out;
 }
 .event-list .pro-list-box:hover .pro-txt h4 a {
 	color: #66bb6a;
