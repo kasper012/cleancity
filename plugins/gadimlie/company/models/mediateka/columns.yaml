@@ -6,3 +6,13 @@ columns:
     id:
         label: ID
         searchable: true
+    title:
+        label: Başlıq
+        searchable: true
+    type: 
+        label: Media növü
+        searchable: true
+    section:
+        label: İstifadə olunacaq bölmə
+        searchable: true
+

@@ -9,7 +9,7 @@ columns:
     title:
         label: Tenderin adı
         searchable: true
-    date:
+    date_start:
         label: Tarix
         searchable: true
 

@@ -5,14 +5,14 @@ is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "WA Medialibrary "
-localeUrl[en] = "/fwta/medialibrary/:type?"
+localeUrl[en] = "/fwta/medialibrary/"
 ==
 <?php
 
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'tss')->paginate(10);
+    $this['medias'] = Mediateka::where('section', 'tss')->paginate(1);
 }
 ?>
 ==
@@ -58,6 +58,46 @@ public function onStart () {
                         {% endfor %}
 
                     </div>
+                {% if medias.lastPage > 1 %}
+                {% set startPage = medias.currentPage - 1 %}
+                {% set endPage = medias.currentPage + 1 %}
+                
+                {% if startPage <= 0 %} {% set endPage=endPage - (startPage - 1) %} {% set startPage=1 %} {% endif %} {% if endPage>
+                    medias.lastPage %}
+                    {% set endPage = medias.lastPage %}
+                    {% endif %}
+                    <div class="gt-pagination">
+                        <nav>
+                            <ul class="pagination">
+                                {% if medias.currentPage - 3 >= 1 %}
+                                <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page=1"
+                                        aria-label="Previous">1</a> </li>
+                                <li class="page-item disabled"> <a class="page-link" href="#" aria-label="Previous">...</a></li>
+                                {% elseif medias.currentPage == 3 %}
+                                <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page=1"
+                                        aria-label="Previous">1</a> </li>
+                                {% endif %}
+                
+                                {% for page in range(startPage, endPage) %}
+                                <li class="page-item {{ medias.currentPage == page ? 'active' : null }}">
+                                    <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{page}}">{{ page }}</a>
+                                </li>
+                                {% endfor %}
+                
+                                {% if medias.currentPage <= medias.lastPage - 3 %} <li class="page-item disabled"> <a class="page-link"
+                                        href="#" aria-label="Next">...</a></li>
+                                    <li class="page-item"> <a class="page-link"
+                                            href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}" aria-label="Next">{{
+                                            medias.lastPage }}</a></li>
+                                    {% elseif medias.lastPage - medias.currentPage == 3 %}
+                                    <li class="page-item"> <a class="page-link"
+                                            href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}"
+                                            aria-label="Next">{{medias.lastPage}}</a></li>
+                                    {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                    {% endif %}
                 </div>
 
                 <div class="col-lg-3 col-md-4">
