@@ -11,7 +11,7 @@ localeUrl[en] = "/bip/medialibrary/:type?"
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'bsp')->paginate(1);
+    $this['medias'] = Mediateka::where('section', 'bsp')->paginate(10);
 }
 ?>
 ==

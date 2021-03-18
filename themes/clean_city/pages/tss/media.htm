@@ -12,7 +12,7 @@ localeUrl[en] = "/fwta/medialibrary/"
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'tss')->paginate(1);
+    $this['medias'] = Mediateka::where('section', 'tss')->paginate(10);
 }
 ?>
 ==
