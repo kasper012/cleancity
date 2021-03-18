@@ -55,7 +55,7 @@ class BSPContactForm extends ComponentBase
         } else {
             $params = Input::all();
             Mail::send('ContactForm', $params, function($message) {
-                $message->to('ceo@gadimlie', 'Renova Soft');
+                $message->to(env('MAIL_TO', 'ceo@gadimlie.com'), 'Təmiz Şəhər');
                 $message->subject('New message from Website (Main Contact Form)');
             });
         }
