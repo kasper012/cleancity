@@ -4,7 +4,8 @@ use Cms\Classes\ComponentBase;
 use Validator;
 use October\Rain\Exception\ValidationException;
 use Input;
-use Mail;
+use Illuminate\Support\Facades\Mail;
+
 
 class MainContactForm extends ComponentBase
 {
