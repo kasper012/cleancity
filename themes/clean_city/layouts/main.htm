@@ -30,8 +30,6 @@ render = "none"
       <link href="{{ 'assets/css/bootstrap.min.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/prettyPhoto.css' | theme }}" rel="stylesheet">
       <link href="{{ 'assets/css/all.min.css' | theme }}" rel="stylesheet">
-
-      
       <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script> 
       {% framework extras %}
       
@@ -40,15 +38,14 @@ render = "none"
       <div class="wrapper home2">
          <!--Header Start-->
          <header class="header-style-2">
-            <nav class="navbar navbar-expand-xl">
+            <nav class="navbar navbar-expand-xl" >
                <a class="navbar-brand" href="{{ 'home' | page }}">
                    <img src="{{ 'assets/images/branding/logo.png' | theme }}" alt="">
                 </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item"> <a class="nav-link" href="{{ 'home' | page }}">{{ 'Əsas səhifə' | _ }}</a></li>
-
                     <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="javascript:void(0);"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Haqqımızda' | _ }}</a>
                      <ul class="dropdown-menu" >
@@ -61,7 +58,6 @@ render = "none"
                          <li><a href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
                      </ul>
                  </li>
-                
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{ 'projects/index' | page }}"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
                         <ul class="dropdown-menu" >
@@ -104,12 +100,11 @@ render = "none"
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ 'contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
                   </ul>
-
-                  <ul class="topnav-right">
-                     
-                     {% component 'extendedLocalePicker' %}
-                  </ul>
+               <ul class="topnav-right">
+                  {% component 'extendedLocalePicker' %}
+               </ul>
                </div>
+
             </nav>
          </header>
          <div id="search">

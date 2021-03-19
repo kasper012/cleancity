@@ -14,7 +14,7 @@ localeUrl[en] = "/pr/medialibrary"
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'pr')->orderBy('created_at', 'DESC')->paginate(10);
+    $this['medias'] = Mediateka::where('section', 'pr')->orderBy('created_at', 'DESC')->paginate(9);
 }
 ?>
 ==
