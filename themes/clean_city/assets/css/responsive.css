@@ -867,7 +867,7 @@ section#home-slider img {
 	height: auto;
 }
 ul.topnav-right, .topside-menu {
-	display: none;
+	/* display: none; */
 }
 .slider-caption {
 	top: 30px;
