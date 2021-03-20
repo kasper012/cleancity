@@ -42,6 +42,9 @@ render = "none"
                <a class="navbar-brand" href="{{ 'home' | page }}">
                    <img src="{{ 'assets/images/branding/logo.png' | theme }}" alt="">
                 </a>
+               <ul class="topnav-right">
+                  {% component 'extendedLocalePicker' %}
+               </ul>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                   <ul class="navbar-nav mr-auto">
@@ -100,9 +103,6 @@ render = "none"
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ 'contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
                   </ul>
-               <ul class="topnav-right">
-                  {% component 'extendedLocalePicker' %}
-               </ul>
                </div>
 
             </nav>

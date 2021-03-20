@@ -867,7 +867,7 @@ section#home-slider img {
 	height: auto;
 }
 ul.topnav-right, .topside-menu {
-	display: none;
+	/* display: none; */
 }
 .slider-caption {
 	top: 30px;
@@ -1090,7 +1090,7 @@ header.header-style-2 .navbar-brand, .footer-style-2 {
 	text-align: center;
 }
 header.header-style-2 .navbar-brand {
-	width: 240px;
+	width: 50%;
 }
 .header-style-2 .navbar-expand-lg .navbar-nav .nav-link {
 	padding: 15px 0;
@@ -1296,4 +1296,18 @@ section.page404.wf100.p80 img {
 
 .home-facts.counter .counter-box p.ctxt {font-size:14px;}
 
+}
+
+
+@media (max-width: 1200px) {
+	ul.topnav-right {
+		display: block;
+		margin-left: auto;
+		padding: 0;
+	}
+}
+@media (min-width: 1201px) and (max-width: 1600px){
+	ul.topnav-right {
+		order:3;
+	}	
 }
