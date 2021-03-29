@@ -277,6 +277,7 @@ a.con {
 	top: 0;
 	left: 100%;
 	background: #f6f6f6;
+	transition: .4s ease-in-out;
 }
 .header-style-2 .dropdown-menu a, .header-style-1 .dropdown-menu a {
 	color: #333;
@@ -420,7 +421,7 @@ Home Page Content Start
 	font-family: 'Roboto Slab', serif;
 	color: #fff;
 	line-height: 70px;
-	margin: 0 0 15px;
+	margin: 0 0 5px;
 }
 .home1 .slider-caption h1 {
 	margin-bottom: 22px;
@@ -430,7 +431,7 @@ Home Page Content Start
 	font-family: 'droidSans', serif;
 	color: #fff;
 	width: 60%;
-	margin: 0 0 37px;
+	/* margin: 0 0 37px; */
 }
 .slider-caption p strong {
 	display: inline-block;
@@ -470,6 +471,7 @@ Home Page Content Start
 	font-weight: 700;
 	text-transform: uppercase;
 }
+
 .slider-caption.h2slider a {
 	background: #fff;
 	border: 0px;
@@ -481,8 +483,43 @@ Home Page Content Start
 	font-weight: 500;
 	height: 53px;
 	line-height: 53px;
-	padding: 0 40px;
+	padding: 0  40px;
 	margin: 0 16px 0 0;
+}
+@media (max-width: 667px) {
+.slider-container {
+	margin-top: 20%;
+}
+.slider-caption.h2slider a {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 25px 40px;
+	margin: 0px 30px 10px 0px;
+}
+#home-slider .item {
+	padding-top: 70%;
+}
+}
+.slider-slogan {
+	margin-bottom: 50px !important;
+	width: 100% !important;
+}
+@media (max-width: 372px) {
+.slider-container {
+	margin-top: 15%;
+}
+.slider-caption.h2slider a {
+	height: 15px;
+	line-height: 15px;
+	padding: 10px 24px 25px;
+	margin: 10px 5px 0 10px;
+}
+.slider-slogan {
+	margin-bottom: 40px !important;
+}
+#home-slider .item {
+	padding-top: 85%;
+}
 }
 .slider-caption.h2slider p {
 	font-size: 36px;
@@ -533,13 +570,7 @@ section#home-slider img {
 	height: auto;
 }
 #home-slider.owl-theme .owl-nav {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	height: 50px;
-	z-index: 1;
-	margin: auto;
-	width: 100%;
+	display: none;
 }
 #home-slider.owl-theme .owl-nav [class*=owl-] {
 	width: 50px;
@@ -549,6 +580,8 @@ section#home-slider img {
 	border-radius: 100%;
 	font-size: 0;
 }
+
+
 #home-slider.owl-theme .owl-nav [class*=owl-]:hover {
 	background: #66bb6a;
 }
@@ -1574,6 +1607,7 @@ ul.topnav-right li {
 .language-switcher .dropdown-menu {
 	min-width: auto !important;
 	width: auto !important;
+	transition: .4s ease-in-out;
 }
 .language-switcher .nav-link {
 	padding: .5rem 1rem !important;
@@ -7022,6 +7056,9 @@ section.wf100.p80.fcampaigns {
 
 .dropdown:hover .dropdown-menu {
 	display: block;
+	transition: .4s ease-in-out;
+	
+
  }
 
 .blog-single-content video {

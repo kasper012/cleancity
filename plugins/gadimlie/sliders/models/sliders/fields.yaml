@@ -14,11 +14,8 @@ tabs:
             tab: Slayder
             form: 
                 fields: 
-                    title:
-                        label: Başlıq
-                        span: storm
                     slogan: 
-                        label: Sloqan
+                        label: Başlıq
                         span: storm
                     image: 
                         label: Şəkil

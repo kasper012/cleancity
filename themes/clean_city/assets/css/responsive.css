@@ -826,7 +826,7 @@ section.page404.wf100.p80 img {
 	margin: 0 0 10px;
 }
 .slider-caption p, .slider-caption.h2slider p {
-	display: none;
+	display: block;
 }
 .counter-box {
 	margin-bottom: 30px;
@@ -870,7 +870,7 @@ ul.topnav-right, .topside-menu {
 	/* display: none; */
 }
 .slider-caption {
-	top: 30px;
+	top: -15px;
 }
 .slider-caption strong {
 	font-size: 16px;
@@ -879,7 +879,7 @@ ul.topnav-right, .topside-menu {
 	font-size: 22px;
 }
 .about-pic, .slider-caption a, .slider-caption p {
-	display: none;
+	display: inline-block;
 }
 .blog-list .blog-post .blog-thumb, .about-txt ul li {
 	width: 100%;
@@ -1282,7 +1282,8 @@ section.page404.wf100.p80 img {
 	line-height: 200px;
 }
 .slider-caption {
-	display: none;
+	display: inline-block;
+	line-height: 35px;
 }
 .counter-box {
 	margin: 0 0 30px;
