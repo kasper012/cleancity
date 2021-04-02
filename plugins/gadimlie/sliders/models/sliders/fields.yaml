@@ -14,13 +14,14 @@ tabs:
             tab: Slayder
             form: 
                 fields: 
+
                     slogan: 
                         label: Başlıq
                         span: storm
                     image: 
                         label: Şəkil
-                        span: storn
-                        type: mediafinder
+                        span: storm
+                    type: mediafinder
                     btn_txt_1:
                         label: Birinci düymənin məzmunu
                         span: auto
