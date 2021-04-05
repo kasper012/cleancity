@@ -1,11 +1,13 @@
 title = "Karyera"
-url = "/haqqimizda/karyera"
+url = "/haqqimizda/karyera/"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "Careers"
-localeUrl[en] = "/about/careers"
+localeTitle[en] = "Career"
+localeUrl[en] = "/about/careers/"
+
+[jobs]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -23,6 +25,22 @@ localeUrl[en] = "/about/careers"
              <div class="col-lg-9 col-md-8">
                 <div class="blog-single-content">
                    {% content 'careers' %}
+
+                     {% if(jobs | length > 0) %}
+                     <h3>{{ 'Açıq vakansiyalar' |_}} </h3>
+                     {% endif %}
+                     {% for job in jobs %}
+                           <div class="pro-list-box">
+                              <div class="pro-txt row d-flex align-items-center w-100">
+                                 <div class="col-md-8">
+                                    <h4> <a href="{{ 'about/vacancy' | page({id: job.id}) }}">{{ job.title }}</a> </h4>
+                                 </div>
+                                 <div class="col-md-4 text-center">
+                                    <a href="{{ 'about/vacancy' | page({id: job.id}) }}" class="partibtn">{{ 'Daha ətraflı' |_ }}</a>
+                                 </div>
+                              </div>
+                           </div>
+                     {% endfor %}
                 </div>
              </div>
             <div class="col-lg-3 col-md-4">

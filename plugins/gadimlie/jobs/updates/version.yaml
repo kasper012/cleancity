@@ -1,0 +1,4 @@
+1.0.1: 
+    - 'Initialize plugin.'
+    - First version of Jobs
+    - create_jobs_table.php

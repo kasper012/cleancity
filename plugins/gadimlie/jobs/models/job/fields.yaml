@@ -1,0 +1,36 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    title:
+        label: Vakansiyanın adı
+        span: storm
+        cssClass: col-md-6
+    date_start:
+        label: Yerləşdirmə tarixi
+        type: datepicker
+        span: storm
+        mode: date
+        cssClass: col-md-3
+    date_finish:
+        label: Son müraciət tarixi
+        type: datepicker
+        span: storm
+        mode: date
+        cssClass: col-md-3
+    text:
+        label: Məzmun
+        type: richeditor
+        span: storm
+        cssClass: col-md-12
+
+
+
+    
+

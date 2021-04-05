@@ -3,13 +3,13 @@
   <div class="side-widget project-list-widget">
     <h5 class="text-center">{{ 'Balaxanı Sənayə Parkı' | _ }}</h5>
     <ul>
-      <li class="py-2"><a href="{{ 'bsp/about' | page }}" title="{{ 'BSP Haqqında' | _ }}">{{ 'BSP Haqqında' | _ }}</a>
+      <li class="py-2"><a {% if this.page.id == 'bsp-about' %} class="active" {% endif %} href="{{ 'bsp/about' | page }}" title="{{ 'BSP Haqqında' | _ }}">{{ 'BSP Haqqında' | _ }}</a>
       </li>
-      <li class="py-2"><a href="{{ 'bsp/documents' | page }}" title="{{ 'Sənədlər' | _ }}">{{ 'Sənədlər' | _ }}</a></li>
-      <li class="py-2"><a href="{{ 'bsp/news' | page }}" title="{{ 'Xəbərlər' | _ }}">{{ 'Xəbərlər' | _ }}</a></li>
-      <li class="py-2"><a href="{{ 'bsp/residents' | page }}" title="{{ 'Rezidentlərimiz' | _ }}">{{ 'Rezidentlərimiz' | _ }}</a></li>
-      <li class="py-2"><a href="{{ 'bsp/media' | page }}" title="{{ 'Mediateka' | _ }}">{{ 'Mediateka' | _ }}</a></li>
-      <li class="py-2"><a href="{{ 'bsp/contacts' | page }}" title="{{ 'Əlaqə' | _ }}">{{ 'Əlaqə' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-documents' %} class="active" {% endif %} href="{{ 'bsp/documents' | page }}" title="{{ 'Sənədlər' | _ }}">{{ 'Sənədlər' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-news' or this.page.id == 'bsp-news_detailed'%} class="active" {% endif %} href="{{ 'bsp/news' | page }}" title="{{ 'Xəbərlər' | _ }}">{{ 'Xəbərlər' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-residents' %} class="active" {% endif %} href="{{ 'bsp/residents' | page }}" title="{{ 'Rezidentlərimiz' | _ }}">{{ 'Rezidentlərimiz' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-media' %} class="active" {% endif %} href="{{ 'bsp/media' | page }}" title="{{ 'Mediateka' | _ }}">{{ 'Mediateka' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-contacts' %} class="active" {% endif %} href="{{ 'bsp/contacts' | page }}" title="{{ 'Əlaqə' | _ }}">{{ 'Əlaqə' | _ }}</a></li>
     </ul>
   </div>
   <!--Widget End-->

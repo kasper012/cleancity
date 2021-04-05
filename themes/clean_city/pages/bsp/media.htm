@@ -6,12 +6,13 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "BIP Medialibrary"
 localeUrl[en] = "/bip/medialibrary/:type?"
+[Mediateka]
 ==
 <?php
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'bsp'->orderBy('created_at', 'DESC'))->paginate(9);
+    $this['medias'] = Mediateka::where('section', 'bsp')->orderBy('created_at', 'DESC')->paginate(9);
 }
 ?>
 ==

@@ -3404,10 +3404,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	height: auto;
 }
 .team-grid .team-box:hover .team-info {
-	height: 120px;
+	height: 130px;
+}
+.team-grid .team-box:hover .team-info p {
+	opacity: 1;
 }
 .team-grid .team-box:hover .team-info ul {
 	opacity: 1;
+	
 }
 .team-box .team-info {
 	position: absolute;
@@ -3417,11 +3421,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	padding: 20px;
 	z-index: 999;
 	text-align: center;
-	height: 130px;
+	height: 120px;
 	transition: .3s ease-in-out;
 }
 .team-box .team-info p, .team-box .team-info h3 {
 	color: #fff;
+}
+.team-box .team-info p {
+	opacity: 0;
+	transition: 0.5s ease-in-out;
 }
 .team-box .team-info ul {
 	margin: 0px;
@@ -6471,6 +6479,16 @@ SideWidgets
 	font-family: 'Poppins', sans-serif;
 }
 .side-widget.archives ul li a:before, .project-list-widget ul li a:before {
+	content: "\f111";
+	font-family: FontAwesome;
+	color: #66bb6a;
+	font-size: 10px;
+	margin-right: 10px;
+}
+.side-widget.archives ul li a:before, .project-list-widget ul li a.active {
+	color: #66bb6a;
+}
+.side-widget.archives ul li a:before, .project-list-widget ul li a.active:before {
 	content: "\f00c";
 	font-family: FontAwesome;
 	color: #66bb6a;

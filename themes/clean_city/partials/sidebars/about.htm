@@ -1,24 +1,19 @@
 <div class="sidebar">
    <!--Widget Start-->
-   <div class="side-widget project-list-widget">
+   <div class="side-widget project-list-widget ">
       <h5 class="text-center">{{ company.name }}</h5>
       <ul>
-         <li class="py-2"><a href="{{ 'about/about' | page }}" title="{{ 'Bizim haqqımızda' | _ }}">{{ 'Bizim haqqımızda' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/structure' | page }}">{{ 'Təşkilatı struktur' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/appeals' | page }}">{{ 'Appelyasiya şürası' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/documents' | page }}">{{ 'Sənədlər' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/certificates' | page }}">{{ 'Siyasət və sertifikatlar' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/tenders' | page }}">{{ 'Tenderlər' | _ }}</a></li>
-         <li class="py-2"><a href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-about' %} class="active" {% endif %} href="{{ 'about/about' | page }}" title="{{ 'Bizim haqqımızda' | _ }}">{{ 'Bizim haqqımızda' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-structure' %} class="active" {% endif %} href="{{ 'about/structure' | page }}">{{ 'Təşkilatı struktur' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-appeals' %} class="active" {% endif %} href="{{ 'about/appeals' | page }}">{{ 'Appelyasiya şürası' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-documents' %} class="active" {% endif %} href="{{ 'about/documents' | page }}">{{ 'Sənədlər' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-certificates' %} class="active" {% endif %} href="{{ 'about/certificates' | page }}">{{ 'Siyasət və sertifikatlar' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-tenders' or this.page.id == 'about-tender_detailed'%} class="active" {% endif %} href="{{ 'about/tenders' | page }}">{{ 'Tenderlər' | _ }}</a></li>
+         <li class="py-2"><a {% if this.page.id == 'about-careers' or this.page.id == 'about-vacancy' %} class="active" {% endif %} href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
+         <li class="py-2"><a href="{{ company.receive | media }}">{{ 'Vətəndaşların qəbulu qrafiki' | _ }}</a></li>
       </ul>
    </div>
    <!--Widget End--> 
-   <!--Widget Start-->
-   <div class="side-widget side-volunteer-form">
-   <div class="sidebar-widget">
-      <a href="{{ company.receive | media }}" class="lm fsubmit">{{ 'Vətəndaşların qəbulu qrafiki' | _ }}</a> 
-   </div>
-   </div>
-   <!--Widget End--> 
+
 </div>
  

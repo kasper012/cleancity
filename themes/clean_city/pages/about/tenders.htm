@@ -34,7 +34,7 @@ localeUrl[en] = "/about/tenders"
                               <div class="pro-txt row d-flex align-items-center w-100">
                                  <div class="col-md-8">
                                     <ul class="event-meta">
-                                       <li>{{ tender.date_start | date('d/m/Y') }}</li>
+                                       <li>{{ tender.date_start | date('d/m/Y') }} - {{ tender.date_finish | date('d/m/Y') }} </li>
                                     </ul>
                                     <h4> <a href="{{ 'about/tender_detailed' | page({id: tender.id}) }}">{{ tender.title }}</a> </h4>
                                  </div>

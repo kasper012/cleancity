@@ -39,9 +39,7 @@ public function onStart() {
       $slugs[] = $type['slug'];
    }
 
-   if(!in_array($this->param('type'), $slugs) && $this->param('type')) {
-      return Redirect::to('/');
-   }
+
 
    $this['types'] = $types[$locale];
    

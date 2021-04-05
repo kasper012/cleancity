@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Vakansiya
+
+# Model Form Field configuration
+form: $/gadimlie/jobs/models/job/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Jobs\Models\Job
+
+# Default redirect location
+defaultRedirect: gadimlie/jobs/jobs
+
+# Create page
+create:
+    title: Yeni vakansiya
+    redirect: gadimlie/jobs/jobs/update/:id
+    redirectClose: gadimlie/jobs/jobs
+
+# Update page
+update:
+    title: Vakansiyanı dəyişmək
+    redirect: gadimlie/jobs/jobs
+    redirectClose: gadimlie/jobs/jobs
+
+# Preview page
+preview:
+    title: Vakansiyanı göstərmək

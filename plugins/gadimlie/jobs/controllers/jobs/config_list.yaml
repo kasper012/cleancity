@@ -1,0 +1,47 @@
+    # ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: $/gadimlie/jobs/models/job/columns.yaml
+
+# Model Class name
+modelClass: Gadimlie\Jobs\Models\Job
+
+# List Title
+title: Vakansiyaların idarə etməsi
+
+# Link URL for each record
+recordUrl: gadimlie/jobs/jobs/update/:id
+
+# Message to display if the list is empty
+noRecordsMessage: Vakansiya yoxdur
+
+# Records to display per page
+recordsPerPage: 20
+
+# Display page numbers with pagination, disable to improve performance
+showPageNumbers: true
+
+# Displays the list column set up button
+showSetup: true
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+# defaultSort:
+#     column: created_at
+#     direction: desc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: Axtar
