@@ -40,7 +40,7 @@ render = "none"
          <!--Header Start-->
          <header class="header-style-2">
             <nav class="navbar navbar-expand-xl" >
-               <a class="navbar-brand" href="{{ 'home' | page }}">
+               <a class="navbar-brand" href="{{ 'home' | page }}" style="background-color: {{ sliders.color }};">
                    <img src="{{ 'assets/images/branding/logo.png' | theme }}" alt="">
                 </a>
                <ul class="topnav-right">
@@ -129,7 +129,11 @@ render = "none"
                         <div class="footer-widget">
                            <h4>{{ 'Haqqımızda' | _ }}</h4>
                            <p>{{ company.slogan }}</p>
-                           <a href="{{ 'about/about' | page }}" class="lm">{{ 'Ətraflı' | _ }}</a> 
+                           <a href="{{ 'about/about' | page }}" class="lm">{{ 'Ətraflı' | _ }}</a>
+                           <br>
+                           {% for social in company.socials %}
+                           <a href="{{ social.url }}"><i class="{{ social.name }}"></i></a>
+                           {% endfor %}
                         </div>
                         <!--Footer Widget End--> 
                      </div>

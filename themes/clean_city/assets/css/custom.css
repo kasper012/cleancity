@@ -1415,6 +1415,10 @@ Footer Start
 .footer-widget a, .footer-widget p {
 	color: #cccccc;
 }
+.footer-widget a i {
+	padding: 10px;
+	font-size: 24px;
+}
 .footer-widget a:hover {
 	color: #9ccc65;
 }
@@ -1581,7 +1585,7 @@ header.header-style-2 .navbar {
 }
 header.header-style-2 .navbar-brand {
 	/* background: #33691e; */
-	background: white;
+
 	/* width: 270px; */
 	width: 200px;
 	text-align: center;

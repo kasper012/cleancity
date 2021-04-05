@@ -26,6 +26,7 @@ class Sliders extends ComponentBase
         $sliders->slider = $settings->slider;
         $sliders->breadcrumb_bg = $settings->breadcrumb_bg;
         $sliders->footer_bg = $settings->footer_bg;
+        $sliders->color = $settings->color;
  
          $this->page['sliders'] = $sliders;
     }

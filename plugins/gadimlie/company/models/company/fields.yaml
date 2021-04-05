@@ -110,5 +110,39 @@ tabs:
                 fields:
                     url:
                         type: mediafinder
-                        label: Sənəd əlavə et
+                        label: Sənəd 
+        socials:
+            tab: Əlaqə
+            type: repeater
+            prompt: Sosial şəbəkə əlavə et
+            form:
+                fields:
+                    name:
+                        label: Sosial şəbəkənin adı
+                        default: fab fa-
+                    url:
+                        label: Sosial şəbəkənin linki
+                
+        address:
+            tab: Əlaqə
+            label: Ünvan
+        gmaps:
+            tab: Əlaqə
+            label: Google xəritə linki
+        phone:
+            tab: Əlaqə
+            label: Telefon nömrəsi
+            type: repeater
+            prompt: Telefon əlavə et
+            form: 
+                fields:
+                    phone:
+        email:
+            tab: Əlaqə
+            label: Elektron ünvan
+            type: repeater
+            prompt: Elektron ünvan əlavə et
+            form: 
+                fields:
+                    email:
        

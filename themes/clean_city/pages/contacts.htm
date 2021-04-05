@@ -1,4 +1,4 @@
-title = "Elaqe"
+title = "Əlaqə"
 url = "/elaqe"
 layout = "main"
 description = "test"
@@ -7,7 +7,6 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Contacts"
 localeUrl[en] = "/contacts"
-
 [mainContactForm]
 ==
 
@@ -30,23 +29,22 @@ localeUrl[en] = "/contacts"
                    <address>
                       <ul>
                          <li>
-                            <strong class="add-title">{{ 'Ünvan' | _ }}:</strong>
-                            4700 Millenia Blvd # 175, Orlando, FL 32839, USA
+                            <strong class="add-title">{{ 'Ünvan' | _ }}: </strong>{{ company.address }}
+                              
                          </li>
                          <li>
                             <strong class="add-title">{{ 'Əlaqə' | _ }}:</strong>
-                            <p><strong>Phone:</strong> +1 321 2345 678-9</p>
-                            <p><strong>Fax:</strong> +1 321 2345 876-7</p>
+                            <p><strong>{{'Telefon' | _}}:</strong>  {% for phone in company.phone %}{{ phone.phone }}<br> {% endfor %}</p>
+
                          </li>
                          <li>
-                            <strong class="add-title">{{ 'Əlavə məlumat' | _ }}:</strong>
-                            <p><strong>Email:</strong> info@ecova.com</p>
-                            <p>contact@ecova.com</p>
+                            <p><strong>{{'Elektron ünvan'}}:</strong> </p>
+                           <p>{% for email in company.email %} {{ email.email }}<br> {% endfor %}</p>
                          </li>
                       </ul>
                    </address>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.1472855409647!2d49.8757142153892!3d40.38342817936891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d1f130cd89d%3A0x1265ccd0ea4a6e17!2zVMmZbWl6IMWeyZloyZlyIEFTQw!5e0!3m2!1sen!2sus!4v1614512156156!5m2!1sen!2sus"></iframe>
+                <iframe src="{{ company.gmaps }}"></iframe>
              </div>
           </div>
        </div>

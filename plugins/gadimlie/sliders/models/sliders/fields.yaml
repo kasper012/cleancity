@@ -35,6 +35,10 @@ tabs:
                     btn_url_2: 
                         label: Ikinci düymənin linki
                         span: auto
+        color:
+            tab: Fonlar
+            label: Yuxarı hissədəki logo fonun rəngi
+            type: colorpicker
         breadcrumb_bg: 
             tab: Fonlar
             type: mediafinder

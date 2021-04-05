@@ -14,14 +14,12 @@ class Company extends Model
 
     public $translatable = [
       'name',
-      
       'structure_person',
       'appeal_board',
-      
       'documents',
-
       'certificates',
-      'slogan'
+      'slogan',
+      'address',
     ];    
 
     public $settingsCode = 'gadimlie_company_settings';

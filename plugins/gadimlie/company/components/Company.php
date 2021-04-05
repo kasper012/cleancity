@@ -36,6 +36,12 @@ class Company extends ComponentBase
         $company->slogan = $settings->slogan;
         $company->image = $settings->image;
         $company->video = $settings->video;
+        $company->phone = $settings->phone;
+        $company->email = $settings->email;
+        $company->address = $settings->address;
+        $company->gmaps = $settings->gmaps;
+        $company->socials = $settings->socials;
+
 
         $this->page['company'] = $company;
     }
