@@ -8,6 +8,7 @@ fields:
 
 tabs:
     fields:
+
         slider:
             type: repeater
             prompt: Yeni şəkil
@@ -34,7 +35,16 @@ tabs:
                     btn_url_2: 
                         label: Ikinci düymənin linki
                         span: auto
-                    
+        breadcrumb_bg: 
+            tab: Fonlar
+            type: mediafinder
+            label: Breadcrumb üçün şəkil
+            comment: Tövsiyə olunan ölçülər - 1920x350px
+        footer_bg:
+            tab: Fonlar
+            label: Footer (saytın aşağı hissə) üçün şəkil
+            type: mediafinder
+            comment: Tövsiyə olunan ölçülər - 1920x490px
                     
                     
 

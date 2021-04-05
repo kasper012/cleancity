@@ -15,7 +15,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Əsas səhifə üçün slayderlər',
+            'name' => 'Saytdaki şəkillər',
             'description' => 'Sliders',
             'author' => 'gadimlie',
             'icon' => 'icon-building',
@@ -59,7 +59,7 @@ class Plugin extends PluginBase
     {
         return [
             'sliders' => [
-                'label' => 'Əsas səhifə üçün slayderlər',
+                'label' => 'Saytdaki şəkillər',
                 'description' => '',
                 'category' => 'Gadimlie Studio',
                 'class' => 'Gadimlie\Sliders\Models\Sliders',

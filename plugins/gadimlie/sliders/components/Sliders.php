@@ -24,6 +24,8 @@ class Sliders extends ComponentBase
         $settings = Settings::instance();
         $sliders = new Model();
         $sliders->slider = $settings->slider;
+        $sliders->breadcrumb_bg = $settings->breadcrumb_bg;
+        $sliders->footer_bg = $settings->footer_bg;
  
          $this->page['sliders'] = $sliders;
     }

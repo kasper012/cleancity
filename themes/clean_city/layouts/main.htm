@@ -1,5 +1,5 @@
 [Company]
-
+[Sliders]
 [extendedLocalePicker]
 [projects]
 
@@ -8,6 +8,7 @@ postsPerPage = 3
 filter_type = "none"
 parent = "pr/news"
 render = "none"
+
 ==
 {% spaceless %}
 <!doctype html>
@@ -119,7 +120,7 @@ render = "none"
          {% page %}
 
          <!--Footer Start-->
-         <footer class="footer">
+         <footer class="footer" style="background: url({{ sliders.footer_bg | media }}) no-repeat;background-size: cover">
             <div class="footer-top wf100">
                <div class="container">
                   <div class="row">
