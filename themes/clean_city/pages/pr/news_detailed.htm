@@ -30,6 +30,8 @@ public function onStart() {
         <div class="col-lg-9 col-md-8">
           <!--Blog Single Content Start-->
           <div class="blog-single-content">
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v10.0"
+              nonce="DkqO2ZfW"></script>
             <h3> {{ post.title }} </h3>
             <p><i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}  </p>
             <p>{{ post.content | raw }} </p>
@@ -44,6 +46,7 @@ public function onStart() {
               </div>
               {% endfor %}
 
+            </div>
           </div>
 
         </div>
