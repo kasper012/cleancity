@@ -38,18 +38,21 @@ public function onStart() {
             <p><i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}  </p>
             <p>{{ post.content | raw }} </p>
           </div>
-          <div class="small-gallery">
-            <div class="row">
-              {% for image in post.featured_images %}
-              <div class="col-md-4 mb-4">
-                <a class="gallery-item" href="{{ image.path }}"
-                  style="background-image: url({{ image.path }})"
-                  data-fancybox="gallery"></a>
+            <div class="demo" style="margin: 0 auto">
+              <div class="item">
+                <div class="clearfix" style="max-height: 100%;">
+                  <ul id="image-gallery" class="gallery list-unstyled cS-hidden image-row">
+                    {% for image in post.featured_images %}
+                    <li data-thumb="{{ image.path }}">
+                      <a class="gallery-item" href="{{ image.path }}" style="" data-fancybox="gallery">
+                        <img src="{{ image.path }}" width="100%" height="100%" />
+                      </a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
               </div>
-              {% endfor %}
-
             </div>
-          </div>
         </div>
 
         <div class="col-lg-3 col-md-4">

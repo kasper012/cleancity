@@ -182,9 +182,11 @@ render = "none"
                            <p>{{ company.slogan }}</p>
                            <a href="{{ 'about/about' | page }}" class="lm">{{ 'Ətraflı' | _ }}</a>
                            <br>
-                           {% for social in company.socials %}
-                           <a href="{{ social.url }}"><i class="{{ social.name }}"></i></a>
-                           {% endfor %}
+                           <div class="mt-3">
+                              {% for social in company.socials %}
+                              <a href="{{ social.url }}" ><i class="{{ social.name }}"></i></a>
+                              {% endfor %}
+                           </div>
                         </div>
                         <!--Footer Widget End--> 
                      </div>

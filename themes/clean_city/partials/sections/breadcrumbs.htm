@@ -5,7 +5,12 @@
           <li><a href="{{ 'home' | page }}">{{ 'Əsas səhifə' | _ }}</a></li>
           {% if parents %}
                 {% for child in parents %}
-                    <li><a href="{{ child.link | page }}">{{ child.title }}</a></li>
+                  {% if child.link == 'about/documents' %}
+                     <li><a href="{{ child.link | page({'type': ''}) }}">{{ child.title }}</a></li>
+                  {% else %}
+                     <li><a href="{{ child.link | page }}">{{ child.title }}</a></li>
+                  {% endif %}
+                    
                 {% endfor %}
           {% endif %}
           <li><a href="javascript:void(0);">{{ this.page.title }}</a></li>

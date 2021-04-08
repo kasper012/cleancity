@@ -6,11 +6,27 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "News"
 localeUrl[en] = "/news/:id"
+
+[ssbuttons]
+fa = "maxcdn"
+twitter = 1
+facebook = 1
+google+ = 1
+stumbleupon = 1
+linkedin = 1
+order_twitter = 1
+order_facebook = 2
+order_google+ = 3
+order_stumbleupon = 4
+order_linkedin = 5
 ==
 <?php
 use Radiantweb\Problog\Models\Post;
 public function onStart() {
     $this['post'] = $post = Post::find($this->param('id'));
+
+$url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 }
 ?>
 ==
@@ -30,16 +46,14 @@ public function onStart() {
         <div class="col-lg-9 col-md-8">
           <!--Blog Single Content Start-->
           <div class="blog-single-content">
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v10.0"
-              nonce="DkqO2ZfW"></script>
             <h3> {{ post.title }} </h3>
             <p><i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}  </p>
             <p>{{ post.content | raw }} </p>
           </div>
-        <!-- Experiment -->
+
             <div class="demo" style="margin: 0 auto">
               <div class="item">
-                <div class="clearfix" style="max-height: 100%;">
+                <div class="clearfix" style="max-height: 50%;">
                   <ul id="image-gallery" class="gallery list-unstyled cS-hidden image-row">
                     {% for image in post.featured_images %}
                     <li data-thumb="{{ image.path }}">
@@ -54,8 +68,8 @@ public function onStart() {
                 </div>
               </div>
             </div>
-        <!-- End of experiment -->
 
+            {% component 'ssbuttons' %}
       </div>
       <div class="col-lg-3 col-md-4">
         {% partial 'sidebars/pr' %}

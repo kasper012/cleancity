@@ -11,6 +11,7 @@ localeUrl[en] = "/about/documents/:type?"
 public function onStart() {
    
    $locale = app()->getLocale();
+
    
    $types = [
       'az' => [
@@ -38,81 +39,100 @@ public function onStart() {
    foreach($types[$locale] as $type) {
       $slugs[] = $type['slug'];
    }
-
-
-
    $this['types'] = $types[$locale];
    
    foreach($types[$locale] as $key => $type) {
       if($type['slug'] == $this->param('type')) {
          $order = $key;
+         $this['typeName'] = $types[$locale][$order]['name'];
          $this['type'] = $types['az'][$order]['slug'];
       }
    }
-   
+
+   // 
+   // dd($this['type']);
+   if($this['type']) {
+      $this['parents'] = [
+         [
+            'title' => ( $locale == 'az'? 'Haqqımızda' : 'About us' ),
+            'link'=> 'about/about'
+         ],
+         [
+            'title' => ( $locale == 'az'? 'Sənədlər' : 'Documents' ),
+            'link'=> 'about/documents'
+         ]
+      ];
+      if ($type) {
+      $this->page->title = $this['typeName'];
+      }
+   } else {
+      $this['parents'] = [
+         [
+         'title' => ($locale == 'az'? 'Haqqımızda' : 'About us'),
+         'link'=> 'about/about'
+         ]
+      ];
+   }
 }
 ?>
 ==
 {% partial 'sections/breadcrumbs'
-    parents=[
-            {
-                'title': ('Haqqımızda' | _),
-                'link': 'about/about'
-            },
-        ] 
+parents=parents
 %}
 
 <section class="wf100 p80 blog">
-    <div class="blog-details">
-       <div class="container">
-          <div class="row">
-             <div class="col-lg-9 col-md-8">
-                <div class="blog-single-content">
+   <div class="blog-details">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-9 col-md-8">
+               <div class="blog-single-content">
                   {% if type %}
-                     {% for document in company.documents if (type == document.type) %}
-                        <div class="single-counter-box">
-                           <div class="container w-100">
-                              <div class="row d-flex align-items-center">
-                                 <div class="col-md-9"><strong>{{ document.name }}</strong></div>
-                                 <div class="col-md-3 text-center"> 
-                                    <a href="{{ document.url | media }}" download>{{ 'Yüklə' | _ }}</a>   
-                                 </div>
-                              </div>
+                  {% for document in company.documents if (type == document.type) %}
+                  <div class="single-counter-box">
+                     <div class="container w-100">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-md-9"><strong>{{ document.name }}</strong></div>
+                           <div class="col-md-3 text-center">
+                              <a href="{{ document.url | media }}" download>{{ 'Yüklə' | _ }}</a>
                            </div>
                         </div>
-                     {% endfor %}
+                     </div>
+                  </div>
+                  {% endfor %}
                   {% else %}
-                     {% for document in company.documents  %}
-                        <div class="single-counter-box">
-                           <div class="container w-100">
-                              <div class="row d-flex align-items-center">
-                                 <div class="col-md-9"><strong>{{ document.name }}</strong></div>
-                                 <div class="col-md-3 text-center"> 
-                                    <a href="{{ document.url | media }}" download>{{ 'Yüklə' | _ }}</a>   
-                                 </div>
-                              </div>
+                  {% for document in company.documents %}
+                  <div class="single-counter-box">
+                     <div class="container w-100">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-md-9"><strong>{{ document.name }}</strong></div>
+                           <div class="col-md-3 text-center">
+                              <a href="{{ document.url | media }}" download>{{ 'Yüklə' | _ }}</a>
                            </div>
                         </div>
-                     {% endfor %}
+                     </div>
+                  </div>
+                  {% endfor %}
                   {% endif %}
-                </div>
-             </div>
 
-             <div class="col-lg-3 col-md-4">
+               </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
 
                <div class="sidebar">
                   <div class="side-widget project-list-widget">
                      <h5>{{ 'Sənədlər' | _ }}</h5>
                      <ul>
                         {% for type in types %}
-                           <li><a href="{{ 'about/documents' | page({type: type.slug}) }}" title="{{ type.name }}">{{ type.name }}</a></li>
+                        <li><a href="{{ 'about/documents' | page({type: type.slug}) }}" title="{{ type.name }}" {% if this.page.title == type.name %}class="active" {% endif %}>{{
+                              type.name }}</a></li>
                         {% endfor %}
                      </ul>
                   </div>
                </div>
                {% partial 'sidebars/about' %}
             </div>
-          </div>
-       </div>
-    </div>
- </section>
+         </div>
+      </div>
+   </div>
+</section>
