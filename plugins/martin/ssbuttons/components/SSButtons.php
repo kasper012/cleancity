@@ -9,7 +9,7 @@
 
         use \Martin\SSButtons\Classes\Shared;
         
-        public $defaultSort = ['twitter', 'facebook', 'google+', 'stumbleupon', 'linkedin'];
+        public $defaultSort = ['twitter', 'facebook'];
 
         public function componentDetails() {
             return [

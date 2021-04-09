@@ -10,7 +10,7 @@
         public function onRunShared() {
 
             # LOAD FA CSS
-            if($this->property('fa') == 'maxcdn') {
+            if($this->property('fab') == 'maxcdn') {
                 $this->addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
             }
 

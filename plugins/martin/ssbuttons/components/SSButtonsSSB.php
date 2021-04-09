@@ -39,7 +39,7 @@
             $properties = $this->definePropertiesShared();
             
             # REMOVE FA ON THIS COMPONENT
-            unset($properties['fa']);
+            unset($properties['fab']);
 
             # THEME
             $properties['theme'] = [

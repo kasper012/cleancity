@@ -1,7 +1,11 @@
-<div class="SocialSharingButtons">
+<div class="SocialSharingButtons" >
     {% for button in __SELF__.property('buttons_order') %}
         {% if(__SELF__.property(button)) %}
-            <a href="{{ __SELF__.property('buttons_parameters')[button]['href'] }}" title="{{ __SELF__.property('buttons_parameters')[button]['title'] }}" target="_blank" class="{{ __SELF__.property('buttons_parameters')[button]['class']['ssbuttons'] }}"><i class="{{ __SELF__.property('buttons_parameters')[button]['icon'] }}"></i>&nbsp;&nbsp;{{ __SELF__.property('buttons_parameters')[button]['label'] }}</a>
+            <a  href="{{ __SELF__.property('buttons_parameters')[button]['href'] }}" title="{{ __SELF__.property('buttons_parameters')[button]['title'] }}" target="_blank" class="{{ __SELF__.property('buttons_parameters')[button]['class']['ssbuttons'] }}">
+                <div class="" style="width: 100%; background-color: blue;color: white;padding: 3px 5px 6px;border-radius: 7px;">
+                    <span>Share on &nbsp</span><i style="font-size: 1.5rem;" class="{{ __SELF__.property('buttons_parameters')[button]['icon'] }}"></i>
+                </div>
+            </a>
         {% endif %}
     {% endfor %}
 </div>
