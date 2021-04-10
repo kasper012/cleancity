@@ -10,6 +10,13 @@ localeUrl[en] = "/press-releases/:id"
 [proBlogPost]
 slug = ":slug"
 searchpage = "pr/press"
+
+[ssbuttons]
+fa = "maxcdn"
+twitter = 1
+facebook = 1
+order_twitter = 1
+order_facebook = 2
 ==
 <?php
 use Radiantweb\Problog\Models\Post;
@@ -53,6 +60,7 @@ public function onStart() {
                 </div>
               </div>
             </div>
+            {% component 'ssbuttons' %}
         </div>
 
         <div class="col-lg-3 col-md-4">

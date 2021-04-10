@@ -52,6 +52,7 @@
     margin-right: 0;
     width: 100%;
 }
+
 .lSSlideWrapper.usingCss .lSFade > * {
     opacity: 0;
     -webkit-transition-delay: 0s;
