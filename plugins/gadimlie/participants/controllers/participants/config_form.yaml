@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Participant
+
+# Model Form Field configuration
+form: $/gadimlie/participants/models/participant/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Participants\Models\Participant
+
+# Default redirect location
+defaultRedirect: gadimlie/participants/participants
+
+# Create page
+create:
+    title: Yeni İştirakçı
+    redirect: gadimlie/participants/participants/update/:id
+    redirectClose: gadimlie/participants/participants
+
+# Update page
+update:
+    title: İştirakçını dəyişmək
+    redirect: gadimlie/participants/participants
+    redirectClose: gadimlie/participants/participants
+
+# Preview page
+preview:
+    title: İştirakçıni göstərmək
