@@ -1,0 +1,23 @@
+title = "TSS Participant detailed"
+url = "/tss/participant-detailed"
+layout = "main"
+is_hidden = 0
+
+[Tss]
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Layihələr' | _),
+                'link': 'projects/index'
+            }
+        ] 
+%}
+{% for member in tss.participant if member.name == "" %}
+  <div>
+    <img src="{{ member.work | media }}" alt="">
+    <h3>
+      {{ member.name }}
+    </h3>
+  </div>
+{% endfor %}

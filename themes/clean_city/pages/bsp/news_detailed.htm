@@ -11,7 +11,15 @@ localeUrl[en] = "/bip/news/:id"
 postsPerPage = 10
 filter_type = "none"
 parent = "bsp/news"
+searchpage = "blog"
 render = "none"
+
+[ssbuttons]
+fa = "maxcdn"
+twitter = 1
+facebook = 1
+order_twitter = 1
+order_facebook = 2
 ==
 <?php
 use Radiantweb\Problog\Models\Post;
@@ -54,7 +62,11 @@ public function onStart() {
                 </div>
               </div>
             </div>
+            {% component 'ssbuttons' %}
         </div>
+
+
+        
 
         <div class="col-lg-3 col-md-4">
           {% partial 'sidebars/bsp' %}

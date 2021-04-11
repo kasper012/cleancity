@@ -1,0 +1,34 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+
+    
+    profile_img:
+        label: İştirakçı şəkili
+        type: mediafinder
+        span: storm
+        cssClass: col-md-6
+        
+
+    images: 
+            label: Galereya
+            type: repeater
+            span: storm
+            
+            prompt: Qalereyaya şəkil əlavə et
+            form:
+                fields:
+                    image: 
+                        label: Şəkil
+                        type: mediafinder
+                    image_description:
+                        label: Şəkilin adı
+    
+

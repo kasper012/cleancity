@@ -1,0 +1,20 @@
+title = "Project test"
+url = "/test"
+layout = "main"
+is_hidden = 0
+
+
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Layihələr' | _),
+                'link': 'projects/index'
+            }
+        ] 
+%}
+{% for project in projects %}
+{% for image in project.images %}
+  <img src="{{ image.image | media }}" alt="{{ project.title }}">
+{% endfor %}
+{% endfor %}

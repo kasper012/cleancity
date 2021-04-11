@@ -17,6 +17,7 @@
                     'icon'  => 'fab fa-twitter',
                     'label' => 'Twitter',
                     'image' => 'twitter',
+                    'color' => '#1DA1F2'
                 ],
 
                 'facebook' => [
@@ -26,6 +27,7 @@
                     'icon'  => 'fab fa-facebook',
                     'label' => 'Facebook',
                     'image' => 'facebook',
+                    'color' => '#4267B2'
                 ],
 
                 'google+' => [
