@@ -13,6 +13,7 @@ use Radiantweb\Problog\Models\Author as ProblogAuthor;;
 use Radiantweb\Problog\Models\Category;
 use Radiantweb\Problog\Models\Tag;
 use Radiantweb\Problog\Classes\TagProcessor;
+use Radiantweb\Problog\Models\Post;
 use Twig\Lexer;
 
 class Plugin extends PluginBase
@@ -73,6 +74,49 @@ class Plugin extends PluginBase
                     'type' => 'textarea'
                 ]
             ]);
+        });
+
+        \Event::listen('offline.sitesearch.query', function ($query) {
+
+            // The controller is used to generate page URLs.
+            $controller = \Cms\Classes\Controller::getController() ?? new \Cms\Classes\Controller();
+    
+            // Search your plugin's contents
+            $items = Post::where('title', 'like', "%${query}%")
+                        ->orWhere('content', 'like', "%${query}%")
+                        ->get();
+    
+            // Now build a results array
+            $results = $items->map(function ($item) use ($query, $controller) {
+    
+                // If the query is found in the title, set a relevance of 2
+                $relevance = mb_stripos($item->title, $query) !== false ? 2 : 1;
+                
+                // Optional: Add an age penalty to older results. This makes sure that
+                // newer results are listed first.
+                // if ($relevance > 1 && $item->created_at) {
+                //    $ageInDays = $item->created_at->diffInDays(\Illuminate\Support\Carbon::now());
+                //    $relevance -= \OFFLINE\SiteSearch\Classes\Providers\ResultsProvider::agePenaltyForDays($ageInDays);
+                // }
+    
+                return [
+                    'title'     => $item->title,
+                    'text'      => $item->content,
+                    'url'       => $controller->pageUrl('pr/news_detailed', ['id' => $item->id]),
+                    'thumb'     => optional($item->images)->first(), // Instance of System\Models\File
+                    'relevance' => $relevance, // higher relevance results in a higher
+                                               // position in the results listing
+                    // 'meta' => 'data',       // optional, any other information you want
+                                               // to associate with this result
+                    // 'model' => $item,       // optional, pass along the original model
+                ];
+            });
+
+    
+            return [
+                'provider' => 'Posts', // The badge to display for this result
+                'results'  => $results,
+            ];
         });
     }
 

@@ -4,7 +4,7 @@ layout = "main"
 is_hidden = 0
 
 [searchResults]
-resultsPerPage = 10
+resultsPerPage = 10000
 showProviderBadge = 1
 noResultsMessage = "Your search did not return any results."
 visitPageMessage = "Visit page"
@@ -22,7 +22,9 @@ visitPageMessage = "Visit page"
                 </div>
             </div>
             <div class="col-md-12">
-                {% component 'searchResults' %}
+                <div class="row">
+                    {% component 'searchResults' %}
+                </div>
             </div>
         </div>
     </div>
