@@ -119,8 +119,9 @@ secondaryTabs:
             commentAbove: radiantweb.problog::lang.backend.post.fields.category_note
             placeholder: none
 
-        tags:
-            tab: radiantweb.problog::lang.backend.post.fields.tab.taxonomy
-            type: livetag
-            commentAbove: radiantweb.problog::lang.backend.post.fields.tag_note
+        pressRelease:
+            tab: radiantweb.problog::lang.backend.post.fields.tab.publish   
+            label: Press Reliz?
+            type: checkbox
             placeholder: none
+            
