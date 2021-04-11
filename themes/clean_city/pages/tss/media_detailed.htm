@@ -5,7 +5,7 @@ is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "WA Medialibrary "
-localeUrl[en] = "/fwta/medialibrary/"
+localeUrl[en] = "/fwta/medialibrary/:id"
 ==
 <?php
 
@@ -13,11 +13,10 @@ use Gadimlie\Company\Models\Mediateka;
 public function onStart() {
     $mediateka = Mediateka::find($this->param('id'));
     $this['mediateka'] = $mediateka;
+    $this['medias'] = Mediateka::where('section', 'tss')->orderBy('created_at', 'DESC');
+
 }
 
-public function onStart () {
-    $this['medias'] = Mediateka::where('section', 'tss')->orderBy('created_at', 'DESC');
-}
 ?>
 ==
 {% partial 'sections/breadcrumbs'
@@ -33,26 +32,23 @@ public function onStart () {
     <div class="blog-details">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-12">
+                <div class="col-lg-9 col-md-12">
                     <!--Blog Single Content Start-->
                     <div class="blog-single-content">
-
+                        <h3 class="d-flex justify-content-center">{{ mediateka.title }}</h3>
                         <div class="demo" style="margin: 0 auto">
                             <div class="item">
                                 <div class="clearfix" style="max-height: 50%;">
                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden image-row">
-                                    {% for media in medias %}
-                                    {% if media.type == 'photo' %}
-                                    {% for image in media.gallery %}
-                                        <li data-thumb="{{ image.photo | media }}">
-                                            <a class="gallery-item" href="{{ image.photo | media }}" style=""
+                                    {% for gallery in mediateka.gallery %}
+                                        <li data-thumb="{{ gallery.photo | media }}">
+                                            <a class="gallery-item" href="{{ gallery.photo | media }}" style=""
                                                 data-fancybox="gallery" data-caption="{{ image.image_description }}">
-                                                <img src="{{ image.photo | media }}" width="100%" height="100%" />
+                                                <img src="{{ gallery.photo | media }}" width="100%" height="100%" />
                                             </a>
                                         </li>
                                     {% endfor %}
-                                    {% endif %}
-                                    {% endfor %}
+
                                     </ul>
                                 </div>
                             </div>
@@ -63,7 +59,7 @@ public function onStart () {
                         {% endif %} -->
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12">
+                <div class="col-md-3">
                     {% partial 'sidebars/tss' %}
                 </div>
             </div>
