@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string('parent')->nullable();
             $table->text('excerpt')->nullable();
             $table->text('content')->nullable();
+            $table->boolean('pressRelease')->nullable();
             $table->datetime('published_at')->nullable();
             $table->boolean('published')->default(false);
             $table->text('meta_title')->nullable();
