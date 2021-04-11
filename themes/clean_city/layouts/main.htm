@@ -163,8 +163,8 @@ render = "none"
          </header>
          <div id="search">
             <button type="button" class="close">×</button>
-            <form class="search-overlay-form">
-               <input type="search" value="" placeholder="type keyword(s) here" />
+            <form action="{{ 'search' | page }}" method="get" class="search-overlay-form">
+               <input name="q" type="search" value="" placeholder="{{ 'Axtarış...' | _ }}" />
                <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
             </form>
          </div>

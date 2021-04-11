@@ -15,7 +15,7 @@ use Gadimlie\Participants\Models\Participant;
 
         $years = [];
 
-        foreach($this['participants'] as $member) {
+        foreach(Participant::all() as $member) {
             if($member['year'])
                 $years = array_merge($member['year'], $years);
         }
