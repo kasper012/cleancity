@@ -8,19 +8,46 @@ fields:
         disabled: true
         hidden: true
 
-
-    
+    name:
+        label: İştirakçının adı
+        span: storm
+        cssClass: col-md-4
+   
     profile_img:
         label: İştirakçı şəkili
         type: mediafinder
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-4
         
-
+    year:
+        label: Sərgi ili
+        span: storm
+        cssClass: col-md-4
+        type: dropdown
+        options:
+            2012: 2012
+            2013: 2013
+            2014: 2014
+            2015: 2015
+            2016: 2016
+            2017: 2017
+            2018: 2018
+            2019: 2019
+            2020: 2020
+            2021: 2021
+            2022: 2022
+            2023: 2023
+            2024: 2024
+            2025: 2025
+            2026: 2026
+            2027: 2027
+            2028: 2028
+            2029: 2029
+            2030: 2030
+ 
     images: 
             label: Galereya
             type: repeater
-            span: storm
             
             prompt: Qalereyaya şəkil əlavə et
             form:

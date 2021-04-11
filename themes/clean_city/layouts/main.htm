@@ -96,6 +96,7 @@ render = "none"
                 </a>
                <ul class="topnav-right">
                   {% component 'extendedLocalePicker' %}
+                  <li> <a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a> </li>
                </ul>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-bars"></i> </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
@@ -112,7 +113,7 @@ render = "none"
                          <li><a href="{{ 'about/tenders' | page }}">{{ 'Tenderlər' | _ }}</a></li>
                          <li><a href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
                      </ul>
-                 </li>
+                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{ 'projects/index' | page }}"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Layihələr' | _ }}</a>
                         <ul class="dropdown-menu" >
@@ -155,6 +156,7 @@ render = "none"
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ 'contacts' | page }}">{{ 'Əlaqə' | _ }}</a></li>
                   </ul>
+
                </div>
 
             </nav>

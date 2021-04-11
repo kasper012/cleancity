@@ -1,0 +1,61 @@
+title = "TSS İştirakçılar"
+url = "/tss/p-2"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "WA Participant"
+localeUrl[en] = "/fwta/p-2"
+
+[Tss]
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('TSS' | _),
+                'link': 'tss/about'
+            }
+        ] 
+%}
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 ">
+                    <div class=" filter-gallery">
+                        <div id="filters" class="button-group pull-right">
+                            {% set array = tss.participant |sort((a, b) => a.year <=> b.year) %}
+                            {% for member in array %}
+                                {% if member.year != range %}
+                                    {% set range = member.year %}
+                                    <button class="button" data-filter="#{{member.year}}">{{member.year}}</button>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="team-grid team-small-grid">
+                        <div class="">
+                        <div class="isotope row" >
+                            {% for member in tss.participant %}
+                            <div class="item col-lg-4 col-md-6 col-sm-6 px-2" id="{{ member.year }}">
+                                <div class="team-box" style="background-image: url({{ member.image | media }});">
+                                    <div class="team-info pt-5" style="color: white !important">
+                                        <h5>{{ member.name }}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                    {% partial 'sidebars/tss' %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
