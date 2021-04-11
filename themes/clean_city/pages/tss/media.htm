@@ -37,13 +37,9 @@ public function onStart () {
 
                             <div class="col-md-4 col-sm-4">
                                 {% for image in media.gallery %}
-                                <a href="{{ 'tss/media_detailed' | page({id: media.id}) }}">
-                                    <img src="{{ image.photo | media }}" alt="">
-                                    
                                         <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}" style="background-image: url({{ image.photo | media }});">
-                                            <a href="{{ 'tss/media_detailed' | page({id: media.id}) }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-images"></i></a>
+                                            <a href="{{ 'tss/media_detailed' | page({id: media.id}) }}"><i class="fas fa-images"></i></a>
                                         </div>
-                                </a>
                                 {% endfor %}
                                 <p class="gallery-title">{{ media.title }}</p>
                              </div>
