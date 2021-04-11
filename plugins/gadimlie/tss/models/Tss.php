@@ -18,6 +18,10 @@ class tss extends Model
 
     ];    
 
+    protected $jsonable = [
+        'images',
+    ];
+
     public $settingsCode = 'gadimlie_tss_settings';
 
     public $settingsFields = 'fields.yaml';

@@ -31,7 +31,7 @@ tabs:
                     year:
                         label: Sərgi ili
                         span: storm
-                        type: dropdown
+                        type: checkboxlist
                         options:
                             2012: 2012
                             2013: 2013

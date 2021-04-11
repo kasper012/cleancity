@@ -1,13 +1,30 @@
 title = "TSS İştirakçılar"
-url = "/tss/ishtirakchilar"
+url = "/tss/ishtirakchilar/:year?"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "WA Participant"
-localeUrl[en] = "/fwta/participants"
+localeUrl[en] = "/fwta/participants/:year?"
 
-[Tss]
+
+==
+use Gadimlie\Participants\Models\Participant;
+    public function onStart() {
+        $this['participants'] = ($this->param('year')) ? Participant::where('year', 'like', '%'.$this->param('year').'%')->get() : Participant::all();
+
+        $years = [];
+
+        foreach($this['participants'] as $member) {
+            if($member['year'])
+                $years = array_merge($member['year'], $years);
+        }
+
+        $years = array_unique($years);
+        if($years) sort($years);
+
+        $this['years'] = $years;
+    }
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -24,29 +41,28 @@ localeUrl[en] = "/fwta/participants"
                 <div class="col-lg-9 col-md-8 ">
                     <div class=" filter-gallery">
                         <div id="filters" class="button-group pull-right">
-                            {% set array = tss.participant |sort((a, b) => a.year <=> b.year) %}
-                            {% for member in array %}
-                                {% if member.year != range %}
-                                    {% set range = member.year %}
-                                    <button class="button" data-filter="#{{member.year}}">{{member.year}}</button>
-                                {% endif %}
+                            {% for year in years %}
+                                <a class="button" href="{{ this.page.fileName | page({year: year}) }}" {% if this.param['year'] == year %} style="color:#66BB66" {% endif %}>{{ year }}</a>
                             {% endfor %}
+                                <a class="button" href="{{ this.page.fileName | page({year: ''}) }}" {% if not this.param['year'] %} style="color:#66BB66" {% endif %}>{{ 'Hamısı' | _ }}</a>
                         </div>
                         <div class="clearfix"></div>
                         <div class="team-grid team-small-grid">
-                        <div class="">
-                        <div class="isotope row" >
-                            {% for member in tss.participant %}
-                            <div class="item col-lg-4 col-md-6 col-sm-6 px-2" id="{{ member.year }}">
-                                <div class="team-box" style="background-image: url({{ member.image | media }});">
-                                    <div class="team-info pt-5" style="color: white !important">
-                                        <h5>{{ member.name }}</h5>
-                                    </div>
+                            <div class="">
+                                <div class="isotope row" >
+                                    {% for member in participants %}
+                                        <div class="item col-lg-4 col-md-6 col-sm-6 px-2" id="{{ year }}">
+                                            <a href="{{ 'tss/participant-detailed' | page({id: member.id}) }}">
+                                                <div class="team-box" style="background-image: url({{ member.profile_img | media }});">
+                                                    <div class="team-info pt-5" style="color: white !important">
+                                                        <h5>{{ member.name }}</h5>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
                                 </div>
                             </div>
-                            {% endfor %}
-                        </div>
-                        </div>
                         </div>
                     </div>
                 </div>

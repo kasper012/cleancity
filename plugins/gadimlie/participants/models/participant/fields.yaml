@@ -18,12 +18,28 @@ fields:
         type: mediafinder
         span: storm
         cssClass: col-md-4
-        
+         
+    images: 
+            label: Galereya
+            type: repeater
+            span: storm
+            cssClass: col-md-8
+            stretch: true
+            
+            prompt: Qalereyaya şəkil əlavə et
+            form:
+                fields:
+                    image: 
+                        label: Şəkil
+                        type: mediafinder
+                    image_description:
+                        label: Şəkilin adı
     year:
         label: Sərgi ili
         span: storm
         cssClass: col-md-4
-        type: dropdown
+        type: checkboxlist
+        size: auto
         options:
             2012: 2012
             2013: 2013
@@ -44,18 +60,5 @@ fields:
             2028: 2028
             2029: 2029
             2030: 2030
- 
-    images: 
-            label: Galereya
-            type: repeater
-            
-            prompt: Qalereyaya şəkil əlavə et
-            form:
-                fields:
-                    image: 
-                        label: Şəkil
-                        type: mediafinder
-                    image_description:
-                        label: Şəkilin adı
-    
+
 

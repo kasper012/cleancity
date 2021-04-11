@@ -8,7 +8,7 @@ columns:
         searchable: true
         span: storm
         cssClass: col-md-6
-    title:
+    name:
         label: İştirakçının adı
         searchable: true
         span: storm
