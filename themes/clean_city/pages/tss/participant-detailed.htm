@@ -55,6 +55,18 @@ public function onStart() {
             {% endif %} -->
 
           </div>
+          {% if participant.video %}
+          <div class="blog-post">
+            <div class="blog-video">
+            <iframe width="560" height="315" src="{{ participant.video }}" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+              <h4>{{ participant.video_title }}</h4>
+            </div>
+            <div class="blog-txt">
+            </div>
+          </div>
+          {% endif %}
         </div>
         <div class="col-lg-3 col-md-4">
           {% partial 'sidebars/tss' %}

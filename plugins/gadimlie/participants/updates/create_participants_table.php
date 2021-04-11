@@ -16,6 +16,8 @@ class CreateParticipantsTable extends Migration
             
             $table->text('profile_img')->nullable();
             $table->text('images')->nullable();
+            $table->text('video')->nullable();
+            $table->text('video_title')->nullable();
 
             $table->text('year')->nullable();
             $table->timestamps();

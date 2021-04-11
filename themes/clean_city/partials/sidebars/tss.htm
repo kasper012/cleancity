@@ -6,7 +6,7 @@
       <li class="py-2"><a {% if this.page.id == 'tss-about' %} class="active" {% endif %} href="{{ 'tss/about' | page }}" title="{{ 'TSS Haqqında' | _ }}">{{ 'TSS Haqqında' | _ }}</a>
       </li>
       <li class="py-2"><a {% if this.page.id == 'tss-museum' %} class="active" {% endif %} href="{{ 'tss/museum' | page }}" title="{{ 'Muzey' | _ }}" >{{ 'Tullatıdan Sənətə Muzeyi' | _ }}</a>
-      <li class="py-2"><a {% if this.page.id == 'tss-participants' %} class="active" {% endif %} href="{{ 'tss/participants' | page }}" title="{{ 'İştirakçılar' | _ }}">{{ 'İştirakçılar' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'tss-participants'or this.page.id == 'tss-participant-detailed' %} class="active" {% endif %} href="{{ 'tss/participants' | page }}" title="{{ 'İştirakçılar' | _ }}">{{ 'İştirakçılar' | _ }}</a></li>
       <li class="py-2"><a {% if this.page.id == 'tss-media' or this.page.id == 'tss-media_detailed' %} class="active" {% endif %} href="{{ 'tss/media' | page }}" title="{{ 'Mediateka' | _ }}">{{ 'Foto və video' | _ }}</a></li>
       <li class="py-2"><a {% if this.page.id == 'tss-tour' %} class="active" {% endif %} href="{{ 'tss/tour' | page }}" title="{{ 'Muzeyə Virtual Tur' | _ }}">{{ 'Muzeyə Virtual Tur' | _ }}</a></li>
       </li>

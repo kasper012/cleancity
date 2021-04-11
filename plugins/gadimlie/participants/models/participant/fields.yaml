@@ -18,6 +18,14 @@ fields:
         type: mediafinder
         span: storm
         cssClass: col-md-4
+    video: 
+            label: Video link
+            span: storm
+            cssClass: col-md-8
+    video_title:
+            label: Video başlıqı
+            span: storm
+            cssClass: col-md-8
          
     images: 
             label: Galereya
@@ -34,6 +42,7 @@ fields:
                         type: mediafinder
                     image_description:
                         label: Şəkilin adı
+
     year:
         label: Sərgi ili
         span: storm
