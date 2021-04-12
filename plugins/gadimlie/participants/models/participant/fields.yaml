@@ -22,6 +22,8 @@ fields:
             label: Video link
             span: storm
             cssClass: col-md-8
+            placeholder: https://www.youtube.com/embed/
+            comment: Youtube linki 'https://www.youtube.com/embed/'-dan başlamalıdı
     video_title:
             label: Video başlıqı
             span: storm

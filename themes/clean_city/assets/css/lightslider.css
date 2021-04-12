@@ -136,9 +136,10 @@
     border-radius: 5px;
 }
 .lSSlideOuter .lSPager.lSGallery img {
-    display: block;
-    height: auto;
-    max-width: 100%;
+    display: block !important;
+    height: 130px !important;
+    object-fit: cover !important;
+    max-width: 100% !important;
 }
 .lSSlideOuter .lSPager.lSGallery:before, .lSSlideOuter .lSPager.lSGallery:after {
     content: " ";
@@ -399,3 +400,6 @@
     margin-top: -100%;
 }
 
+.lSSlideOuter .lSGallery li.active a img {
+    height: 74px !important;
+}

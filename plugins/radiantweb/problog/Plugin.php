@@ -193,7 +193,7 @@ class Plugin extends PluginBase
                 'description' => 'radiantweb.problog::lang.settings.description',
                 'icon'        => 'icon-edit',
                 'class'       => 'Radiantweb\Problog\Models\Settings',
-                'category'    => 'Gadimlie Studio',
+                'category'    => 'Renova Soft',
                 'order'       => 100,
                 'permissions' => ['radiantweb.problog.access_problog_settings']
             ]

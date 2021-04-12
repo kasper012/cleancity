@@ -61,7 +61,7 @@ class Plugin extends PluginBase
             'bsp' => [
                 'label' => 'Balaxanı sənayə parkı',
                 'description' => '',
-                'category' => 'Gadimlie Studio',
+                'category' => 'Renova Soft',
                 'class' => 'Gadimlie\Bsp\Models\Bsp',
                 'order' => 100,
                 'icon' => 'icon-tree',

@@ -61,7 +61,7 @@ class Plugin extends PluginBase
             'sliders' => [
                 'label' => 'Saytdaki şəkillər',
                 'description' => '',
-                'category' => 'Gadimlie Studio',
+                'category' => 'Renova Soft',
                 'class' => 'Gadimlie\Sliders\Models\Sliders',
                 'order' => 100,
                 'icon' => 'icon-image',

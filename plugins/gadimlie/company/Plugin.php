@@ -62,7 +62,7 @@ class Plugin extends PluginBase
             'company' => [
                 'label' => 'Şirkət haqqında məlumat',
                 'description' => '',
-                'category' => 'Gadimlie Studio',
+                'category' => 'Renova Soft',
                 'class' => 'Gadimlie\Company\Models\Company',
                 'order' => 100,
                 'icon' => 'icon-building-o',
