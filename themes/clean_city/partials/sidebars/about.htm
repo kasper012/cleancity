@@ -10,7 +10,7 @@
          <li class="py-2"><a {% if this.page.id == 'about-certificates' %} class="active" {% endif %} href="{{ 'about/certificates' | page }}">{{ 'Siyasət və sertifikatlar' | _ }}</a></li>
          <li class="py-2"><a {% if this.page.id == 'about-tenders' or this.page.id == 'about-tender_detailed'%} class="active" {% endif %} href="{{ 'about/tenders' | page }}">{{ 'Tenderlər' | _ }}</a></li>
          <li class="py-2"><a {% if this.page.id == 'about-careers' or this.page.id == 'about-vacancy' %} class="active" {% endif %} href="{{ 'about/careers' | page }}">{{ 'Karyera' | _ }}</a></li>
-         <li class="py-2"><a href="{{ company.receive | media }}">{{ 'Vətəndaşların qəbulu qrafiki' | _ }}</a></li>
+         <li class="py-2"><a href="{{ company.receive | media }}" target="_blank">{{ 'Vətəndaşların qəbulu qrafiki' | _ }}</a></li>
       </ul>
    </div>
    <!--Widget End--> 
