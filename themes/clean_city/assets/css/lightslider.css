@@ -393,7 +393,7 @@
   cursor: grabbing;
 }
 
-/* Gadimlie Studio */
+/* Changes */
 
 
 .usingCss {
@@ -402,4 +402,12 @@
 
 .lSSlideOuter .lSGallery li.active a img {
     height: 75px !important;
+}
+.lslide .gallery-item {
+    display: flex;
+    justify-content: center;
+}
+.lslide .gallery-item img {
+    max-height: 500px;
+    max-width: 500px;
 }
