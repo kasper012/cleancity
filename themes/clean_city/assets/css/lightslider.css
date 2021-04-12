@@ -137,7 +137,7 @@
 }
 .lSSlideOuter .lSPager.lSGallery img {
     display: block !important;
-    height: 130px !important;
+    height: 75px !important;
     object-fit: cover !important;
     max-width: 100% !important;
 }
@@ -401,5 +401,5 @@
 }
 
 .lSSlideOuter .lSGallery li.active a img {
-    height: 74px !important;
+    height: 75px !important;
 }
