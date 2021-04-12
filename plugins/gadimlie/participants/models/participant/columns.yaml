@@ -13,5 +13,7 @@ columns:
         searchable: true
         span: storm
         cssClass: col-md-6
+    year:
+        label: Sərgi ili
 
 
