@@ -6,46 +6,46 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "BIP Residents"
 localeUrl[en] = "/bip/residents"
-[Bsp]
+[residents]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
-            {
+        {
                 'title': ('BSP' | _),
                 'link': 'bsp/about'
-            }
-        ] 
+        }
+    ]
 %}
-<section class="wf100 p80 blog">
-    <div class="blog-details">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-8">
+<section class="online-shop wf100 pt80">
+    <div class="container">
 
-                    <div class="team-grid team-small-grid">
-                        <div class="">
-                            <div class="row">
-                                {% for resident in bsp.participant %}
-                                <div class="col-lg-4 col-md-6 col-sm-6">
-                                    <div class="team-box"
-                                        style="background-image: url({{ resident.image | media }})">
-                                        <div class="team-info">
-                                            <h5>{{ resident.name }}</h5>
-                                            <p>{{ resident.post }}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div> 
+        <div class="row">
+
+            <div class="col-md-9 col-xs-12">
+                <div class="row">
+                    {% for resident in residents %}
+                    <div class="col-md-6 col-sm-9">
+                        <div class="blog-post">
+                            <div class="blog-thumb" style="background-image: url({{ resident.image | media}});"></div>
+                            <div class="post-txt">
+                                <h5><a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}">{{ resident.title }}</a>
+                                </h5>
+
+                                <a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}" class="read-post">{{
+                                    'Ətraflı oxu'
+                                    | _
+                                    }}</a>
+                            </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-
-                <div class="col-lg-3 col-md-4">
-                    {% partial 'sidebars/bsp' %}
-                </div>
-
             </div>
+
+            <div class="col-md-3 col-sm-12">
+                {% partial 'sidebars/bsp' %}
+            </div>
+
         </div>
     </div>
 </section>

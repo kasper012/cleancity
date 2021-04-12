@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Resident
+
+# Model Form Field configuration
+form: $/gadimlie/residents/models/resident/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Residents\Models\Resident
+
+# Default redirect location
+defaultRedirect: gadimlie/residents/residents
+
+# Create page
+create:
+    title: Yeni Rezident
+    redirect: gadimlie/residents/residents/update/:id
+    redirectClose: gadimlie/residents/residents
+
+# Update page
+update:
+    title: Rezidenti dəyişmək
+    redirect: gadimlie/residents/residents
+    redirectClose: gadimlie/residents/residents
+
+# Preview page
+preview:
+    title: Rezidentni göstərmək

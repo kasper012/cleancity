@@ -7,7 +7,7 @@
       </li>
       <li class="py-2"><a {% if this.page.id == 'bsp-documents' %} class="active" {% endif %} href="{{ 'bsp/documents' | page }}" title="{{ 'Sənədlər' | _ }}">{{ 'Sənədlər' | _ }}</a></li>
       <li class="py-2"><a {% if this.page.id == 'bsp-news' or this.page.id == 'bsp-news_detailed'%} class="active" {% endif %} href="{{ 'bsp/news' | page }}" title="{{ 'Xəbərlər' | _ }}">{{ 'Xəbərlər' | _ }}</a></li>
-      <li class="py-2"><a {% if this.page.id == 'bsp-residents'%} class="active" {% endif %} href="{{ 'bsp/residents' | page }}" title="{{ 'Rezidentlərimiz' | _ }}">{{ 'Rezidentlərimiz' | _ }}</a></li>
+      <li class="py-2"><a {% if this.page.id == 'bsp-residents' or this.page.id == 'bsp-resident-detailed' %} class="active" {% endif %} href="{{ 'bsp/residents' | page }}" title="{{ 'Rezidentlərimiz' | _ }}">{{ 'Rezidentlərimiz' | _ }}</a></li>
       <li class="py-2"><a {% if this.page.id == 'bsp-media' or this.page.id == 'bsp-media_detailed' %} class="active" {% endif %} href="{{ 'bsp/media' | page }}" title="{{ 'Mediateka' | _ }}">{{ 'Mediateka' | _ }}</a></li>
       <li class="py-2"><a {% if this.page.id == 'bsp-contacts' %} class="active" {% endif %} href="{{ 'bsp/contacts' | page }}" title="{{ 'Əlaqə' | _ }}">{{ 'Əlaqə' | _ }}</a></li>
     </ul>
