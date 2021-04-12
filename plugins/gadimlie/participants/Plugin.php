@@ -86,6 +86,7 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-envira',
                 'permissions' => ['gadimlie.participants.*'],
                 'order'       => 500,
+
             ],
         ];
     }

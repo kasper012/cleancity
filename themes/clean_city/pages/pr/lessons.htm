@@ -6,6 +6,7 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Master-Classes"
 localeUrl[en] = "/pr/master-classes"
+[lessons]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -15,24 +16,34 @@ localeUrl[en] = "/pr/master-classes"
         }
     ]
 %}
-<section class="wf100 p80 blog">
-    <div class="blog-details">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-8">
-                    <!--Blog Single Content Start-->
-                    <div class="blog-single-content">
-                        
-                        {% content 'ustad-dersleri' %}
-                       
+<section class="online-shop wf100 pt80">
+    <div class="container">
+
+        <div class="row">
+        
+            <div class="col-md-9 col-xs-12">
+                <div class="row">
+                    {% for lesson in lessons %}
+                    <div class="col-md-6 col-sm-9">
+                        <div class="blog-post">
+                            <div class="blog-thumb" style="background-image: url({{ lesson.image | media}});"></div>
+                            <div class="post-txt">
+                                <h5><a href="{{ 'pr/lesson-detailed' | page({id: lesson.id}) }}">{{ lesson.title }}</a></h5>
+        
+                                <a href="{{ 'pr/lesson-detailed' | page({id: lesson.id}) }}" class="read-post">{{ 'Ətraflı oxu'
+                                    | _
+                                    }}</a>
+                            </div>
+                        </div>
                     </div>
+                    {% endfor %}
                 </div>
-
-                <div class="col-lg-3 col-md-4">
-                    {% partial 'sidebars/pr' %}
-                </div>
-
             </div>
+        
+            <div class="col-md-3 col-sm-12">
+                {% partial 'sidebars/pr' %}
+            </div>
+        
         </div>
     </div>
 </section>

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Lesson
+
+# Model Form Field configuration
+form: $/gadimlie/lessons/models/lesson/fields.yaml
+
+# Model Class name
+modelClass: Gadimlie\Lessons\Models\Lesson
+
+# Default redirect location
+defaultRedirect: gadimlie/lessons/lessons
+
+# Create page
+create:
+    title: Yeni Dərs
+    redirect: gadimlie/lessons/lessons/update/:id
+    redirectClose: gadimlie/lessons/lessons
+
+# Update page
+update:
+    title: Dərsi dəyişmək
+    redirect: gadimlie/lessons/lessons
+    redirectClose: gadimlie/lessons/lessons
+
+# Preview page
+preview:
+    title: Dərsni göstərmək

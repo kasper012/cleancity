@@ -24,7 +24,7 @@ order_linkedin = 5
 use Radiantweb\Problog\Models\Post;
 public function onStart() {
     $this['post'] = $post = Post::find($this->param('id'));
-
+    
 $url = "http" . (($_SERVER['SERVER_PORT'] == 443) ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 }

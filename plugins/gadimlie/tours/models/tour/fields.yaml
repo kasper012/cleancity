@@ -1,0 +1,53 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+        hidden: true
+
+    title:
+        label: Turun adı
+        span: auto
+    youtube:
+        label: Video (Youtube link)
+        span: auto
+        placeholder: https://www.youtube.com/embed/
+        comment: Youtube linki 'https://www.youtube.com/embed/'-dan başlamalıdı
+
+    # date_start:
+    #     label: Başlama tarixi
+    #     span: auto
+    #     type: datepicker
+
+    # date_finish:
+    #     label: Bitirmə tarixi
+    #     span: auto
+    #     type: datepicker
+
+    # excerpt:
+    #     label: Turun təsviri
+    #     type: textarea
+
+    image:
+        label: Şəkil başlıq
+        type: mediafinder
+        
+    description:
+        label: Tur haqqında məlumat
+        type: richeditor
+
+    images: 
+            label: Galereya
+            type: repeater
+            
+            prompt: Qalereyaya şəkil əlavə et
+            form:
+                fields:
+                    image: 
+                        label: Şəkil
+                        type: mediafinder
+    
+

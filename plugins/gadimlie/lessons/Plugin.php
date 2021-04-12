@@ -1,11 +1,11 @@
-<?php namespace Gadimlie\Tenders;
+<?php namespace Gadimlie\Lessons;
 
 use Backend;
-use Gadimlie\Tenders\Models\Tender;
+use Gadimlie\Lessons\Models\Lesson;
 use System\Classes\PluginBase;
 
 /**
- * tenders Plugin Information File
+ * lessons Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -17,10 +17,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'tenders',
+            'name'        => 'lessons',
             'description' => 'No description provided yet...',
             'author'      => 'gadimlie',
-            'icon'        => 'icon-files-o'
+            'icon'        => 'icon-book'
         ];
     }
 
@@ -47,8 +47,8 @@ class Plugin extends PluginBase
             $controller = \Cms\Classes\Controller::getController() ?? new \Cms\Classes\Controller();
     
             // Search your plugin's contents
-            $items = Tender::where('title', 'like', "%${query}%")
-                        ->orWhere('text', 'like', "%${query}%")
+            $items = Lesson::where('title', 'like', "%${query}%")
+                        ->orWhere('description', 'like', "%${query}%")
                         ->get();
     
             // Now build a results array
@@ -67,7 +67,7 @@ class Plugin extends PluginBase
                 return [
                     'title'     => $item->title,
                     'text'      => $item->content,
-                    'url'       => $controller->pageUrl('about/tender_detailed', ['id' => $item->id]),
+                    'url'       => $controller->pageUrl('lessons/detailed', ['id' => $item->id]),
                     'thumb'     => optional($item->images)->first(), // Instance of System\Models\File
                     'relevance' => $relevance, // higher relevance results in a higher
                                                // position in the results listing
@@ -79,7 +79,7 @@ class Plugin extends PluginBase
 
     
             return [
-                'provider' => 'Tenders', // The badge to display for this result
+                'provider' => 'Lessons', // The badge to display for this result
                 'results'  => $results,
             ];
         });
@@ -93,7 +93,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Gadimlie\Tenders\Components\Tender' => 'tenders',
+            'Gadimlie\Lessons\Components\Lesson' => 'lessons',
         ];
     }
 
@@ -107,8 +107,8 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'gadimlie.tenders.some_permission' => [
-                'tab' => 'tenders',
+            'gadimlie.lessons.some_permission' => [
+                'tab' => 'lessons',
                 'label' => 'Some permission'
             ],
         ];
@@ -122,13 +122,12 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'tenders' => [
-                'label'       => 'Tenderlər',
-                'url'         => Backend::url('gadimlie/tenders/tenders'),
-                'icon'        => 'icon-files-o',
-                'permissions' => ['gadimlie.tenders.*'],
+            'lessons' => [
+                'label'       => 'Ustad dərsləri',
+                'url'         => Backend::url('gadimlie/lessons/lessons'),
+                'icon'        => 'icon-book',
+                'permissions' => ['gadimlie.lessons.*'],
                 'order'       => 500,
-
             ],
         ];
     }
