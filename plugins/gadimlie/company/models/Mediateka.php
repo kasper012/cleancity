@@ -14,7 +14,8 @@ class Mediateka extends Model
   
       public $translatable = [
         'title',
-        'video'
+        'video_title',
+        'gallery'
       ];   
 
     /**

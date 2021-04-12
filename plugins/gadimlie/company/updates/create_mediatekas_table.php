@@ -14,6 +14,7 @@ class CreateMediatekasTable extends Migration
             $table->text('title')->nullable();
             $table->text('gallery')->nullable();
             $table->text('video')->nullable();
+
             $table->text('type')->nullable();
             $table->text('section')->nullable();
             $table->timestamps();

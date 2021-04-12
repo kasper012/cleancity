@@ -26,6 +26,10 @@ fields:
         label: Video link
         span: storm
         cssClass: col-md-12
+    video_title:
+        label: Video başlıq
+        span: storm
+        cssClass: col-md-12
                     
     type:
         label: Media növü
