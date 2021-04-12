@@ -16,11 +16,12 @@ fields:
         prompt: Şəkil əlavə et
         form:
             fields:
+                title:
+                    label: Şəkilin adı
                 photo:
                     type: mediafinder
                     label: Şəkil
-                    span: storm
-                    cssClass: col-md-12
+
     video:
         label: Video link
         span: storm

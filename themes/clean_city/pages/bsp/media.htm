@@ -1,14 +1,14 @@
 title = "BSP Mediateka"
-url = "/bsp/mediateka/:type?"
+url = "/bsp/mediateka/"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "BIP Medialibrary"
-localeUrl[en] = "/bip/medialibrary/:type?"
-[Mediateka]
+localeTitle[en] = "WA Medialibrary "
+localeUrl[en] = "/bsp/medialibrary/"
 ==
 <?php
+
 use Gadimlie\Company\Models\Mediateka;
 
 public function onStart () {
@@ -17,14 +17,14 @@ public function onStart () {
 ?>
 ==
 {% partial 'sections/breadcrumbs'
-    parents=[
-            {
-                'title': ('BSP' | _),
-                'link': ''
-            }
-        ] 
+parents=[
+{
+'title': ('BSP' | _),
+'link': ''
+}
+]
 %}
-
+<!--Blog Start-->
 <section class="wf100 p80 blog">
     <div class="blog-details">
         <div class="container">
@@ -33,70 +33,81 @@ public function onStart () {
                     <div class="row">
                         {% for media in medias %}
 
-                            {% if media.type == 'photo' %}
+                        {% if media.type == 'photo' %}
 
-                            <div class="col-md-4 col-sm-4">
-                                {% for image in media.gallery %}
-                                    <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}" style="background-image: url({{ image.photo | media }});">
-                                        <a href="{{ image.photo | media }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-images"></i></a>
-                                    </div>
-                                {% endfor %}
-                                <p class="gallery-title">{{ media.title }}</p>
-                             </div>
+                        <div class="col-md-4 col-sm-4">
+                            {% for image in media.gallery %}
+                            <div class="gallery-img {% if loop.index != 1 %} d-none {% endif %}"
+                                style="background-image: url({{ image.photo | media }});">
+                                <a href="{{ 'bsp/media_detailed' | page({id: media.id}) }}"><i
+                                        class="fas fa-images"></i></a>
+                            </div>
+                            {% endfor %}
+                            <p class="gallery-title">{{ media.title }}</p>
+                        </div>
 
-                            {% elseif media.type == 'video' %}
+                        {% elseif media.type == 'video' %}
 
-                            <div class="col-md-4 col-sm-4">
-                                <div class="gallery-img" style="background-image: url({{ media.gallery.0.photo | media }});">
-                                    <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i class="fas fa-video"></i></a>
-                                </div>
-                                <p class="gallery-title">{{ media.title }}</p>
-                             </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="gallery-img"
+                                style="background-image: url({{ media.gallery.0.photo | media }});">
+                                <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i
+                                        class="fas fa-video"></i></a>
+                            </div>
+                            <p class="gallery-title">{{ media.title }}</p>
+                        </div>
 
-                            {% endif %}
+                        {% endif %}
 
                         {% endfor %}
+
                     </div>
-            {% if medias.lastPage > 1 %}
-            {% set startPage = medias.currentPage - 1 %}
-            {% set endPage = medias.currentPage + 1 %}
-            
-            {% if startPage <= 0 %} {% set endPage=endPage - (startPage - 1) %} {% set startPage=1 %} {% endif %} {% if endPage>
-                medias.lastPage %}
-                {% set endPage = medias.lastPage %}
-                {% endif %}
-                <div class="gt-pagination">
-                    <nav>
-                        <ul class="pagination">
-                            {% if medias.currentPage - 3 >= 1 %}
-                            <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page=1"
-                                    aria-label="Previous">1</a> </li>
-                            <li class="page-item disabled"> <a class="page-link" href="#" aria-label="Previous">...</a></li>
-                            {% elseif medias.currentPage == 3 %}
-                            <li class="page-item"> <a class="page-link" href="{{ this.page.baseFileName|page() }}?page=1"
-                                    aria-label="Previous">1</a> </li>
-                            {% endif %}
-            
-                            {% for page in range(startPage, endPage) %}
-                            <li class="page-item {{ medias.currentPage == page ? 'active' : null }}">
-                                <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{page}}">{{ page }}</a>
-                            </li>
-                            {% endfor %}
-            
-                            {% if medias.currentPage <= medias.lastPage - 3 %} <li class="page-item disabled"> <a class="page-link"
-                                    href="#" aria-label="Next">...</a></li>
-                                <li class="page-item"> <a class="page-link"
-                                        href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}" aria-label="Next">{{
-                                        medias.lastPage }}</a></li>
-                                {% elseif medias.lastPage - medias.currentPage == 3 %}
-                                <li class="page-item"> <a class="page-link"
-                                        href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}"
-                                        aria-label="Next">{{medias.lastPage}}</a></li>
-                                {% endif %}
-                        </ul>
-                    </nav>
-                </div>
-                {% endif %}
+                    {% if medias.lastPage > 1 %}
+                    {% set startPage = medias.currentPage - 1 %}
+                    {% set endPage = medias.currentPage + 1 %}
+
+                    {% if startPage <= 0 %} {% set endPage=endPage - (startPage - 1) %} {% set startPage=1 %} {% endif
+                        %} {% if endPage>
+                        medias.lastPage %}
+                        {% set endPage = medias.lastPage %}
+                        {% endif %}
+                        <div class="gt-pagination">
+                            <nav>
+                                <ul class="pagination">
+                                    {% if medias.currentPage - 3 >= 1 %}
+                                    <li class="page-item"> <a class="page-link"
+                                            href="{{ this.page.baseFileName|page() }}?page=1"
+                                            aria-label="Previous">1</a> </li>
+                                    <li class="page-item disabled"> <a class="page-link" href="#"
+                                            aria-label="Previous">...</a></li>
+                                    {% elseif medias.currentPage == 3 %}
+                                    <li class="page-item"> <a class="page-link"
+                                            href="{{ this.page.baseFileName|page() }}?page=1"
+                                            aria-label="Previous">1</a> </li>
+                                    {% endif %}
+
+                                    {% for page in range(startPage, endPage) %}
+                                    <li class="page-item {{ medias.currentPage == page ? 'active' : null }}">
+                                        <a class="page-link" href="{{ this.page.baseFileName|page() }}?page={{page}}">{{
+                                            page }}</a>
+                                    </li>
+                                    {% endfor %}
+
+                                    {% if medias.currentPage <= medias.lastPage - 3 %} <li class="page-item disabled">
+                                        <a class="page-link" href="#" aria-label="Next">...</a></li>
+                                        <li class="page-item"> <a class="page-link"
+                                                href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}"
+                                                aria-label="Next">{{
+                                                medias.lastPage }}</a></li>
+                                        {% elseif medias.lastPage - medias.currentPage == 3 %}
+                                        <li class="page-item"> <a class="page-link"
+                                                href="{{ this.page.baseFileName|page() }}?page={{medias.lastPage}}"
+                                                aria-label="Next">{{medias.lastPage}}</a></li>
+                                        {% endif %}
+                                </ul>
+                            </nav>
+                        </div>
+                        {% endif %}
                 </div>
 
                 <div class="col-lg-3 col-md-4">
@@ -106,3 +117,4 @@ public function onStart () {
         </div>
     </div>
 </section>
+<!--Blog End-->

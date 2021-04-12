@@ -1,11 +1,11 @@
-title = "TSS Mediateka"
-url = "/tss/mediateka/:id"
+title = "BSP Mediateka"
+url = "/bsp/mediateka/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "WA Medialibrary "
-localeUrl[en] = "/fwta/medialibrary/:id"
+localeTitle[en] = "BIP Medialibrary "
+localeUrl[en] = "/bip/medialibrary/:id"
 ==
 <?php
 
@@ -13,7 +13,7 @@ use Gadimlie\Company\Models\Mediateka;
 public function onStart() {
     $mediateka = Mediateka::find($this->param('id'));
     $this['mediateka'] = $mediateka;
-    $this['medias'] = Mediateka::where('section', 'tss')->orderBy('created_at', 'DESC');
+    $this['medias'] = Mediateka::where('section', 'bsp')->orderBy('created_at', 'DESC');
 
 }
 
@@ -22,7 +22,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('TSS' | _),
+                'title': ('BSP' | _),
                 'link': ''
             }
         ] 
@@ -60,7 +60,7 @@ public function onStart() {
                     </div>
                 </div>
                 <div class="col-md-3">
-                    {% partial 'sidebars/tss' %}
+                    {% partial 'sidebars/bsp' %}
                 </div>
             </div>
         </div>
