@@ -22,7 +22,7 @@ tabs:
                     image: 
                         label: Şəkil
                         span: storm
-                    type: mediafinder
+                        type: mediafinder
                     btn_txt_1:
                         label: Birinci düymənin məzmunu
                         span: auto
