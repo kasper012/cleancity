@@ -11,44 +11,29 @@ fields:
     name:
         label: İştirakçının adı
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-6
    
     profile_img:
         label: İştirakçı şəkili
         type: mediafinder
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-6
+
+
     video: 
             label: Video link
             span: storm
-            cssClass: col-md-8
+            cssClass: col-md-12
             placeholder: https://www.youtube.com/embed/
             comment: Youtube linki 'https://www.youtube.com/embed/'-dan başlamalıdı
     video_title:
             label: Video başlıqı
             span: storm
-            cssClass: col-md-8
-         
-    images: 
-            label: Galereya
-            type: repeater
-            span: storm
-            cssClass: col-md-8
-            stretch: true
-            
-            prompt: Qalereyaya şəkil əlavə et
-            form:
-                fields:
-                    image: 
-                        label: Şəkil
-                        type: mediafinder
-                    image_description:
-                        label: Şəkilin adı
-
+            cssClass: col-md-12
     year:
         label: Sərgi ili
         span: storm
-        cssClass: col-md-4
+        cssClass: col-md-3
         type: checkboxlist
         size: auto
         options:
@@ -71,5 +56,26 @@ fields:
             2028: 2028
             2029: 2029
             2030: 2030
+
+
+         
+    images: 
+            label: Galereya
+            type: repeater
+            span: storm
+            cssClass: col-md-9
+            stretch: true
+            
+            prompt: Qalereyaya şəkil əlavə et
+            form:
+                fields:
+                    image: 
+                        label: Şəkil
+                        type: mediafinder
+                    image_description:
+                        label: Şəkilin adı
+
+
+
 
 
