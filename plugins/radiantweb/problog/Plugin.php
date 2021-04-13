@@ -154,32 +154,32 @@ class Plugin extends PluginBase
                 'permissions' => ['radiantweb.problog.*'],
                 'order'       => 500,
 
-                'sideMenu' => [
-                    'posts' => [
-                        'label'       => 'radiantweb.problog::lang.sidemenu.posts',
-                        'icon'        => 'icon-list-ul',
-                        'url'         => Backend::url('radiantweb/problog/posts'),
-                        'permissions' => ['radiantweb.problog.access_problog_posts'],
-                    ],
-                    'series' => [
-                        'label'       => 'radiantweb.problog::lang.sidemenu.series',
-                        'icon'        => 'icon-list-alt',
-                        'url'         => Backend::url('radiantweb/problog/series'),
-                        'permissions' => ['radiantweb.problog.access_problog_posts'],
-                    ],
-                    'categories' => [
-                        'label'       => 'radiantweb.problog::lang.sidemenu.categories',
-                        'icon'        => 'icon-list-alt',
-                        'url'         => Backend::url('radiantweb/problog/categories'),
-                        'permissions' => ['radiantweb.problog.access_problog_posts'],
-                    ],
-                    'tags' => [
-                        'label'       => 'radiantweb.problog::lang.sidemenu.tags',
-                        'icon'        => 'icon-tags',
-                        'url'         => Backend::url('radiantweb/problog/tags'),
-                        'permissions' => ['radiantweb.problog.access_problog_posts'],
-                    ],
-                ]
+                // 'sideMenu' => [
+                //     'posts' => [
+                //         'label'       => 'radiantweb.problog::lang.sidemenu.posts',
+                //         'icon'        => 'icon-list-ul',
+                //         'url'         => Backend::url('radiantweb/problog/posts'),
+                //         'permissions' => ['radiantweb.problog.access_problog_posts'],
+                //     ],
+                //     'series' => [
+                //         'label'       => 'radiantweb.problog::lang.sidemenu.series',
+                //         'icon'        => 'icon-list-alt',
+                //         'url'         => Backend::url('radiantweb/problog/series'),
+                //         'permissions' => ['radiantweb.problog.access_problog_posts'],
+                //     ],
+                //     'categories' => [
+                //         'label'       => 'radiantweb.problog::lang.sidemenu.categories',
+                //         'icon'        => 'icon-list-alt',
+                //         'url'         => Backend::url('radiantweb/problog/categories'),
+                //         'permissions' => ['radiantweb.problog.access_problog_posts'],
+                //     ],
+                //     'tags' => [
+                //         'label'       => 'radiantweb.problog::lang.sidemenu.tags',
+                //         'icon'        => 'icon-tags',
+                //         'url'         => Backend::url('radiantweb/problog/tags'),
+                //         'permissions' => ['radiantweb.problog.access_problog_posts'],
+                //     ],
+                // ]
 
             ]
         ];

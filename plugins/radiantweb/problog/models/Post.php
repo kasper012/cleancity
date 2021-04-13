@@ -69,12 +69,12 @@ class Post extends Model
         'title' => 'required',
         'user' => 'required',
         'content' => 'required',
-        'categories_id' => 'required'
+        // 'categories_id' => 'required'
     ];
 
 
     public $customMessages = [
-       'categories_id.required' => 'You must select a Category!',
+    //    'categories_id.required' => 'You must select a Category!',
     ];
 
     /*
