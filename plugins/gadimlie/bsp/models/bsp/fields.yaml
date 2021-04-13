@@ -1,0 +1,45 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+
+fields:
+    
+
+tabs:
+    fields:
+        participant:
+            type: repeater
+            prompt: Yeni rezident
+            tab: Rezidentlər
+            form: 
+                fields: 
+                    name:
+                        label: Rezidentin adı
+                        span: storm
+                    post: 
+                        label: Rezidentin vəzifəsi
+                        span: storm
+                    image: 
+                        label: Rezidentin şəkili
+                        span: storn
+                        type: mediafinder
+        document:
+            type: repeater
+            tab: Sənədlər
+            prompt: Yeni sənəd əlavə etmək
+            form: 
+                fields:
+                    name:
+                        label: Sənədin adı
+                        span: storm
+                    url: 
+                        label: Sənəd
+                        span: storm
+                        type: mediafinder
+
+
+
+        
+        
+                
