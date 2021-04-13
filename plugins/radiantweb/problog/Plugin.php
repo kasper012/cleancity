@@ -188,15 +188,7 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
         return [
-            'settings' => [
-                'label'       => 'ProBlog',
-                'description' => 'radiantweb.problog::lang.settings.description',
-                'icon'        => 'icon-edit',
-                'class'       => 'Radiantweb\Problog\Models\Settings',
-                'category'    => 'Renova Soft',
-                'order'       => 100,
-                'permissions' => ['radiantweb.problog.access_problog_settings']
-            ]
+
         ];
     }
 
