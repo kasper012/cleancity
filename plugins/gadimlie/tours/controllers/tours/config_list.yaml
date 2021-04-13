@@ -15,7 +15,7 @@ title: Turlarin idarə etməsi
 recordUrl: gadimlie/tours/tours/update/:id
 
 # Message to display if the list is empty
-noRecordsMessage: Dərs yoxdur
+noRecordsMessage: Tur yoxdur
 
 # Records to display per page
 recordsPerPage: 20

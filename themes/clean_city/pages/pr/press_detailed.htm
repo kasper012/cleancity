@@ -42,8 +42,10 @@ public function onStart() {
           <!--Blog Single Content Start-->
           <div class="blog-single-content">
             <h3> {{ post.title }} </h3>
-            <p><i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}  </p>
-            <p>{{ post.content | raw }} </p>
+            <p>
+              <i class="fas fa-calendar-alt" style="color: green"></i> {{ post.published_at | date ('d/m/Y') }}
+              <i class="fas fa-clock" style="color: green"></i> {{ post.published_at | date ('H:i') }}
+            </p>            <p>{{ post.content | raw }} </p>
           </div>
             <div class="demo" style="margin: 0 auto">
               <div class="item">
