@@ -23,6 +23,9 @@ class BSPContactForm extends ComponentBase
 
     public function onSend()
     {
+
+
+
         $customMessages = [
             'fullname.required' => trans('gadimlie.forms::lang.fullname.required'),
             'subject.required' => trans('gadimlie.forms::lang.subject.required'),
@@ -46,6 +49,7 @@ class BSPContactForm extends ComponentBase
                 'msg' => 'required',
             ], $customMessages
         );
+
 
         if ($validation->fails()) {
             return $flash_message = [
