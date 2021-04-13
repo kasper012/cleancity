@@ -4,6 +4,9 @@
 
 columns:
 
+    id:
+        label: id
+        searchable: true
     title:
         label: radiantweb.problog::lang.backend.post.columns.title
         searchable: true
