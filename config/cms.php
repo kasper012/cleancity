@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'backendTimezone' => 'Asia/Jerusalem',
+    'backendTimezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------

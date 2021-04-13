@@ -363,7 +363,7 @@ Home Page Content Start
 }
 /***************  Home 1 Slider Start  *****************/
 
-/* Gadimlie Studio */
+/* Changes */
 .blog-img {
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -374,7 +374,7 @@ Home Page Content Start
 		padding-top: 65%;
 		border-radius: 5px;
 }
-/* End Gadimlie Studio */
+/* End of changes */
 .item {
 	position: relative;
 }
@@ -7070,7 +7070,7 @@ section.wf100.p80.fcampaigns {
 	-webkit-transition: all ease-in-out 0.3s;
 } */
 
-/* Gadimlie Studio */
+/* Changes */
 
 .dropdown:hover .dropdown-menu {
 	display: block;

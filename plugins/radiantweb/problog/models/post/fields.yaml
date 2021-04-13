@@ -100,8 +100,7 @@ secondaryTabs:
             span: full
             type: datepicker
             mode: datetime
-            default: now
-            options:
+            default: 09:00
 
         published:
             tab: radiantweb.problog::lang.backend.post.fields.tab.publish
