@@ -12,10 +12,10 @@ class CreateJobsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
 
-            $table->text('title')->nullable();
-            $table->text('date_start')->nullable();
-            $table->text('date_finish')->nullable();
-            $table->text('text')->nullable();
+            $table->text('title');
+            $table->text('date_start');
+            $table->text('date_finish');
+            $table->text('text');
             $table->timestamps();
         });
     }

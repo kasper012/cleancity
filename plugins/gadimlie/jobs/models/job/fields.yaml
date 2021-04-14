@@ -11,23 +11,30 @@ fields:
     title:
         label: Vakansiyanın adı
         span: storm
+        required: true
         cssClass: col-md-6
     date_start:
         label: Yerləşdirmə tarixi
         type: datepicker
         span: storm
         mode: date
+        default: now
+        required: true
+        disabled: true
         cssClass: col-md-3
     date_finish:
         label: Son müraciət tarixi
         type: datepicker
         span: storm
         mode: date
+        default: now
+        required: true
         cssClass: col-md-3
     text:
         label: Məzmun
         type: richeditor
         span: storm
+        required: true
         cssClass: col-md-12
 
 
