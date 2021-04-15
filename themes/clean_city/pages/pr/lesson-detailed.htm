@@ -13,7 +13,7 @@ localeUrl[en] = "pr/master-classes/:id"
 use Gadimlie\Lessons\Models\Lesson;
 public function onStart() {
     $lesson = Lesson::find($this->param('id'));
-    $this->page->title = $lesson->title;
+  //  $this->page->title = $lesson->title;
     $this['lesson'] = $lesson;
 }
 ?>

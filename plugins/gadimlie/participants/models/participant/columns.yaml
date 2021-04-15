@@ -3,11 +3,8 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
-        span: storm
-        cssClass: col-md-6
+
+
     name:
         label: İştirakçının adı
         searchable: true
@@ -15,5 +12,6 @@ columns:
         cssClass: col-md-6
     year:
         label: Sərgi ili
-
+        span: storm
+        cssClass: col-md-6
 

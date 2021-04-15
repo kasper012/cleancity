@@ -3,16 +3,20 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
+
     title:
         label: Başlıq
         searchable: true
+        span: storm
+        cssClass: col-md-5
     type: 
         label: Media növü
         searchable: true
+        span: storm
+        cssClass: col-md-5
     section:
         label: İstifadə olunacaq bölmə
         searchable: true
+        span: storm
+        cssClass: col-md-5
 

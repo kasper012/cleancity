@@ -3,15 +3,11 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
-        span: storm
-        cssClass: col-md-6
+
     title:
         label: Layihənin adı
         searchable: true
         span: storm
-        cssClass: col-md-6
+        cssClass: col-md-12
 
 

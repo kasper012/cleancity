@@ -13,7 +13,7 @@ localeUrl[en] = "pr/tours/:id"
 use Gadimlie\Tours\Models\Tour;
 public function onStart() {
     $tour = Tour::find($this->param('id'));
-    $this->page->title = $tour->title;
+  //  $this->page->title = $tour->title; 
     $this['tour'] = $tour;
 }
 ?>
@@ -21,7 +21,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('Ustad dərsləri' | _),
+                'title': ('İctimaiyyətlə əlaqələr' | _),
                 'link': 'tours/index'
             }
         ] 
@@ -32,7 +32,7 @@ public function onStart() {
             <div class="row">
                 <div class="col-lg-9 col-md-12">
                     <!--Blog Single Content Start-->
-                    <div class="blog-single-content">
+                    <div class="blog-single-content mb-5">
                         {{ tour.description | raw }}
                         <div class="demo" style="margin: 0 auto">
                             <div class="item">
@@ -52,7 +52,6 @@ public function onStart() {
                         {% if tour.youtube %}
                             <iframe src="{{ tour.youtube }}"></iframe>
                         {% endif %}
-
                     </div>
                     <div class="comment-form">
                         <h4>{{ 'Bizimlə Əlaqə Saxlayın' | _ }}</h4>
