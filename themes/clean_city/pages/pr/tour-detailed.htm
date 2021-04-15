@@ -33,7 +33,6 @@ public function onStart() {
                 <div class="col-lg-9 col-md-12">
                     <!--Blog Single Content Start-->
                     <div class="blog-single-content">
-                        <h3>{{ tour.title }}</h3>
                         {{ tour.description | raw }}
                         <div class="demo" style="margin: 0 auto">
                             <div class="item">
@@ -51,7 +50,6 @@ public function onStart() {
                             </div>
                         </div>
                         {% if tour.youtube %}
-                            <h5>{{ 'Video' | _ }}</h5>
                             <iframe src="{{ tour.youtube }}"></iframe>
                         {% endif %}
 

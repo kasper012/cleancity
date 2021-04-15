@@ -10,6 +10,7 @@ tabs:
             label: radiantweb.problog::lang.backend.post.fields.title
             span: left
             placeholder: New post title
+            required: true
 
         slug:
             tab: radiantweb.problog::lang.backend.post.fields.tab.general
@@ -26,6 +27,7 @@ tabs:
             label: radiantweb.problog::lang.backend.post.fields.excerpt
             type: textarea
             size: small
+            required: true
 
         featured_images:
             tab: radiantweb.problog::lang.backend.post.fields.tab.general
@@ -35,6 +37,7 @@ tabs:
                 mode: image
                 image-width: 200
                 image-height: 200
+                required: true
 
         # featured_media:
         #     tab: radiantweb.problog::lang.backend.post.fields.tab.general
@@ -44,6 +47,7 @@ tabs:
         content:
             tab: radiantweb.problog::lang.backend.post.fields.tab.content
             type: richeditor
+            required: true
 
         # meta_title:
         #     tab: radiantweb.problog::lang.backend.post.fields.tab.metas
@@ -100,13 +104,14 @@ secondaryTabs:
             span: full
             type: datepicker
             mode: datetime
-            default: 09:00
+            default: now
 
         published:
             tab: radiantweb.problog::lang.backend.post.fields.tab.publish
             label: radiantweb.problog::lang.backend.post.fields.published
             span: full
             type: checkbox
+            default: true
             
 
         # series:
@@ -126,4 +131,5 @@ secondaryTabs:
             label: Press Reliz?
             type: checkbox
             placeholder: none
+            default: true
             

@@ -19,7 +19,6 @@ fields:
         span: storm
         mode: date
         default: now
-        required: true
         disabled: true
         cssClass: col-md-3
     date_finish:

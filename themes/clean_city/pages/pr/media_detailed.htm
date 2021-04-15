@@ -56,16 +56,18 @@ parents=[
                         </div>
                     </div>
                     {% if mediateka.video %}
+                    {% for video in mediateka.video %}
                     <div class="blog-post">
                         <div class="blog-video">
-                            <iframe width="560" height="315" src="{{ mediateka.video }}" frameborder="0"
+                            <iframe width="560" height="315" src="{{ video.video }}" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
                         <div class="blog-txt">
-                            <h3>{{ mediateka.video_title }}</h3>
+                            <h3>{{ video.title }}</h3>
                         </div>
                     </div>
+                    {% endfor %}
                     {% endif %}
                 </div>
                 <div class="col-md-3">

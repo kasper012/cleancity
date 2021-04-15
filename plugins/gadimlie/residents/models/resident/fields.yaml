@@ -11,6 +11,7 @@ fields:
     title:
         label: Rezidentin adı
         span: auto
+        required: true
     youtube:
         label: Video (Youtube link)
         span: auto
@@ -38,6 +39,7 @@ fields:
     description:
         label: Rezident haqqında məlumat
         type: richeditor
+        required: true
 
     images: 
             label: Galereya

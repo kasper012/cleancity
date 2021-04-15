@@ -11,26 +11,7 @@ fields:
         label: Başlıq
         span: storm
         cssClass: col-md-12
-    gallery:
-        type: repeater
-        prompt: Şəkil əlavə et
-        form:
-            fields:
-                title:
-                    label: Şəkilin adı
-                photo:
-                    type: mediafinder
-                    label: Şəkil
-
-    video:
-        label: Video link
-        span: storm
-        cssClass: col-md-12
-    video_title:
-        label: Video başlıq
-        span: storm
-        cssClass: col-md-12
-                    
+        required: true
     type:
         label: Media növü
         type: dropdown
@@ -48,5 +29,32 @@ fields:
             pr: İctimaiyyətlə əlaqələr
             bsp: Balaxanı Sənayə Parkı
             tss: Tullantıdan sənətə sərgisi
+
+    video:
+        type: repeater
+        label: Video 
+        prompt: Video əlavə et
+        form:
+            fields:
+                title:
+                    label: Videonun başlıqı
+                video:
+                    label: Video linki
+
+
+    gallery:
+        label: Galareya
+        type: repeater
+        prompt: Şəkil əlavə et
+        form:
+            fields:
+                title:
+                    label: Şəkilin adı
+                photo:
+                    type: mediafinder
+                    label: Şəkil
+
+                    
+
 
     

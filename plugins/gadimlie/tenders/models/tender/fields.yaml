@@ -11,7 +11,8 @@ fields:
     title:
         label: Tenderin adı
         span: storm
-        cssClass: col-xs-11
+        cssClass: col-xs-12
+        required: true
 
     date_start:
         label: Başlama tarixi
@@ -27,8 +28,12 @@ fields:
 
       
     text:
-        label: Layihə haqqında məlumat
+        label: Tender haqqında məlumat
         type: richeditor
+        required: true
+        span: storm
+        cssClass: col-md-12
+
 
     
 

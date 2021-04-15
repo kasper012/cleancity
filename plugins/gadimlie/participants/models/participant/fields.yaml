@@ -12,12 +12,14 @@ fields:
         label: İştirakçının adı
         span: storm
         cssClass: col-md-6
+        required: true
    
     profile_img:
         label: İştirakçı şəkili
         type: mediafinder
         span: storm
         cssClass: col-md-6
+        required: true
 
 
     video: 
@@ -32,6 +34,7 @@ fields:
             cssClass: col-md-12
     year:
         label: Sərgi ili
+        required: true
         span: storm
         cssClass: col-md-3
         type: checkboxlist
@@ -61,6 +64,7 @@ fields:
          
     images: 
             label: Galereya
+            required: true
             type: repeater
             span: storm
             cssClass: col-md-9
