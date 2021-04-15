@@ -5,7 +5,7 @@ is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "İnformation tours"
-localeUrl[en] = "pr/tours/:id"
+localeUrl[en] = "pr/information-tours/:id"
 
 [bspContactForm]
 ==
@@ -13,7 +13,7 @@ localeUrl[en] = "pr/tours/:id"
 use Gadimlie\Tours\Models\Tour;
 public function onStart() {
     $tour = Tour::find($this->param('id'));
-  //  $this->page->title = $tour->title; 
+ // $this->page->title = $tour->title; 
     $this['tour'] = $tour;
 }
 ?>
