@@ -35,6 +35,7 @@ fields:
     image:
         label: Şəkil başlıq
         type: mediafinder
+        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
         
     description:
         label: Layihə haqqında məlumat
@@ -51,5 +52,6 @@ fields:
                     image: 
                         label: Şəkil
                         type: mediafinder
+                        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
     
 

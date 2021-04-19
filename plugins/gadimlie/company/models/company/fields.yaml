@@ -61,6 +61,7 @@ tabs:
                         label: Təşkilati struktur üzvün şəkili
                         span: storm
                         cssClass: col-md-12
+                        comment: Tövsiyə olunan ölçülər - 1x1.41 (məsələn, 210x297 və ya 800x1128)
         structure_image:
             tab: Təşkilatı struktur 
             type: mediafinder

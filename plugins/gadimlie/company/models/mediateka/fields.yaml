@@ -53,6 +53,8 @@ fields:
                 photo:
                     type: mediafinder
                     label: Şəkil
+                    comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
+
 
                     
 

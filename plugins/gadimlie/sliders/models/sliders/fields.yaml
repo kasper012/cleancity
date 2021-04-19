@@ -23,6 +23,7 @@ tabs:
                         label: Şəkil
                         span: storm
                         type: mediafinder
+                        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
                     btn_txt_1:
                         label: Birinci düymənin məzmunu
                         span: auto
@@ -43,12 +44,12 @@ tabs:
             tab: Fonlar
             type: mediafinder
             label: Breadcrumb üçün şəkil
-            comment: Tövsiyə olunan ölçülər - 1920x350px
+            comment: Tövsiyə olunan ölçülər - 1520x370px
         footer_bg:
             tab: Fonlar
             label: Footer (saytın aşağı hissə) üçün şəkil
             type: mediafinder
-            comment: Tövsiyə olunan ölçülər - 1920x490px
+            comment: Tövsiyə olunan ölçülər - 1520x560px
                     
                     
 

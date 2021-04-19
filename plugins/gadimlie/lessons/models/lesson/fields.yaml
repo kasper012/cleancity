@@ -35,6 +35,8 @@ fields:
     image:
         label: Şəkil başlıq
         type: mediafinder
+        comment: Tövsiyə olunan ölçülər - 4x3 (məsələn, 800x600 və ya 4000x3000)
+
         
     description:
         label: Dərs haqqında məlumat
@@ -51,5 +53,6 @@ fields:
                     image: 
                         label: Şəkil
                         type: mediafinder
+                        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
     
 

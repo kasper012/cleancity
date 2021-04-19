@@ -20,6 +20,7 @@ fields:
         span: storm
         cssClass: col-md-6
         required: true
+        comment: Tövsiyə olunan ölçülər - 1x1.41 (məsələn, 210x297 və ya 800x1128)
 
 
     video: 
@@ -76,6 +77,7 @@ fields:
                     image: 
                         label: Şəkil
                         type: mediafinder
+                        comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
                     image_description:
                         label: Şəkilin adı
 
