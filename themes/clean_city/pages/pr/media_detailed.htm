@@ -1,11 +1,11 @@
-title = "PR Mediateka"
-url = "/pr/mediateka/:id"
+title = "Foto və video"
+url = "/pr/foto-ve-video/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "PR Medialibrary "
-localeUrl[en] = "/pr/medialibrary/:id"
+localeTitle[en] = "Photo and video"
+localeUrl[en] = "/pr/photo-and-video/:id"
 ==
 <?php
 
@@ -22,7 +22,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
 parents=[
 {
-'title': ('PR' | _),
+'title': ('İctimaiyyətlə əlaqələr' | _),
 'link': ''
 }
 ]

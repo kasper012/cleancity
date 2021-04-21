@@ -1,10 +1,10 @@
-title = "TSS Mediateka"
+title = "Foto və video"
 url = "/tss/mediateka/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
-localeTitle[en] = "WA Medialibrary "
+localeTitle[en] = "Photo and video "
 localeUrl[en] = "/fwta/medialibrary/:id"
 ==
 <?php
@@ -22,7 +22,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('TSS' | _),
+                'title': ('Tullantıdan Sənətə Sərgisi' | _),
                 'link': ''
             }
         ] 

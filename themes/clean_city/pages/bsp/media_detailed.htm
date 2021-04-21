@@ -1,11 +1,11 @@
 title = "BSP Mediateka"
-url = "/bsp/mediateka/:id"
+url = "/bsp/foto-ve-video/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "BIP Medialibrary "
-localeUrl[en] = "/bip/medialibrary/:id"
+localeUrl[en] = "/bip/photo-and-video/:id"
 ==
 <?php
 
@@ -22,7 +22,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('BSP' | _),
+                'title': ('Balaxanı Sənayə Parkı' | _),
                 'link': ''
             }
         ] 
