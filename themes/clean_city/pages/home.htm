@@ -167,7 +167,7 @@ use Radiantweb\Problog\Models\Post;
    <div class="container">
       <div id="partner-logos" class="owl-carousel owl-theme">
          {% for partner in company.partners %}
-         <div class="item" style="background-image: url({{ partner.image }});"></div>
+         <div class="item" style="background-image: url({{ partner.image | media }});"></div>
          {% endfor %}
       </div>
    </div>
