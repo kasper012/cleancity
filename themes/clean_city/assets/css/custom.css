@@ -7088,3 +7088,7 @@ section.wf100.p80.fcampaigns {
 .SocialSharingButtons {
 	padding-bottom: 30px;
 }
+
+.fancybox-caption__body {
+	font-size: 17px;
+}

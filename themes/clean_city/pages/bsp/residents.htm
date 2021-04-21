@@ -28,13 +28,11 @@ localeUrl[en] = "/bip/residents"
                         <div class="blog-post">
                             <div class="blog-thumb" style="background-image: url({{ resident.image | media}});"></div>
                             <div class="post-txt">
-                                <h5><a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}">{{ resident.title }}</a>
+                                <h5 class="d-flex justify-content-center"><a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}">{{ resident.title }}</a>
                                 </h5>
-
-                                <a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}" class="read-post">{{
-                                    'Ətraflı oxu'
-                                    | _
-                                    }}</a>
+                                <div class="d-flex justify-content-center">
+                                    <a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}" class="read-post">{{ 'Ətraflı oxu' | _ }}</a>
+                                </div>
                             </div>
                         </div>
                     </div>

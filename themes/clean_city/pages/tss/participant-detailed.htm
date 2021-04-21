@@ -18,7 +18,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('Tullatıdan Sənətə Sərgisi' | _),
+                'title': ('Tullantıdan Sənətə Sərgisi' | _),
                 'link': 'tss/about'
             }
         ] 
@@ -34,7 +34,22 @@ public function onStart() {
               <img src="{{ participant.profile_img | media }}" alt="">
             </div> -->
             <h2 class="d-flex justify-content-center mb-5">{{ participant.name }}</h2>
-
+            <h5>{{ 'Sərgidə iştirak illəri' | _ }}:{% for year in participant.year %}
+              {% if loop.first and loop.last %}
+              <span ">
+                {{ year }}
+              </span>
+              {% elseif loop.last %}
+              <span >
+                {{ year }}
+              </span>
+              {% else  %}
+              <span>
+                {{ year }},
+              </span>
+              {% endif %}
+            {% endfor %}
+            </h5>
             <div class="demo" style="margin: 0 auto">
               <div class="item">
                 <div class="clearfix" style="max-height: 50%;">
