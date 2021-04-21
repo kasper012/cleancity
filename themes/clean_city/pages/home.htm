@@ -166,18 +166,9 @@ use Radiantweb\Problog\Models\Post;
 <div class="partner-logos wf100">
    <div class="container">
       <div id="partner-logos" class="owl-carousel owl-theme">
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-1.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-2.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-3.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-4.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-5.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-6.png' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-7.png' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-8.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-9.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-10.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-11.jpg' | theme }});"></div>
-         <div class="item" style="background-image: url({{ 'assets/images/partners/logo-12.jpg' | theme }});"></div>
+         {% for partner in company.partners %}
+         <div class="item" style="background-image: url({{ 'partners.image' | theme }});"></div>
+         {% endfor %}
       </div>
    </div>
 </div>

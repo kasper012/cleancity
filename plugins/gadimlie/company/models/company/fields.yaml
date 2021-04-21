@@ -41,6 +41,15 @@ tabs:
             cssClass: col-md-6
 
         
+        partners:
+            tab: Partnyorlar
+            type: repeater
+            prompt: Yeni partnyor əlavə et
+            form:
+                fields:
+                    image:
+                        type: mediafinder
+                        comment: Tövsiyə olunan ölçülər ~ 1,92x1 (məsələn, 137x71)
         
         structure_person:
             type: repeater

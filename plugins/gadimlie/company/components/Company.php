@@ -31,7 +31,8 @@ class Company extends ComponentBase
 
         $company->documents = $settings->documents;
         $company->certificates = $settings->certificates;
-        
+        $company->partners = $settings->partners;
+
         $company->receive = $settings->receive;
         $company->slogan = $settings->slogan;
         $company->image = $settings->image;

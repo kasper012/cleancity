@@ -5,6 +5,7 @@
 .header-style-1 .navbar-brand {
 	padding: 19px 20px;
 }
+
 .nav-item .dropdown-toggle::after {
 	display: none;
 }
