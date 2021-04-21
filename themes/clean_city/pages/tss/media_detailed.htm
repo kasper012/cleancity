@@ -1,11 +1,11 @@
 title = "Foto və video"
-url = "/tss/mediateka/:id"
+url = "/tss/foto-ve-video/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
 localeTitle[en] = "Photo and video "
-localeUrl[en] = "/fwta/medialibrary/:id"
+localeUrl[en] = "/fwta/photo-and-video/:id"
 ==
 <?php
 
@@ -23,7 +23,7 @@ public function onStart() {
     parents=[
             {
                 'title': ('Tullantıdan Sənətə Sərgisi' | _),
-                'link': ''
+                'link': 'tss/about'
             }
         ] 
 %}

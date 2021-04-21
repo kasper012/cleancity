@@ -1,9 +1,10 @@
-title = "TSS İştirakçı"
+title = "İştirakçı"
 url = "/tss/ishtirakchi/:id"
 layout = "main"
 is_hidden = 0
 
 [viewBag]
+localeTitle[en] = "Participant"
 localeUrl[en] = "/fwta/participant/:id"
 ==
 <?php
@@ -17,7 +18,7 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
     parents=[
             {
-                'title': ('TSS' | _),
+                'title': ('Tullatıdan Sənətə Sərgisi' | _),
                 'link': 'tss/about'
             }
         ] 

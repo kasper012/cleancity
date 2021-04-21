@@ -13,7 +13,7 @@ localeUrl[en] = "/bip/residents/:id"
 use Gadimlie\Residents\Models\Resident;
 public function onStart() {
     $resident = Resident::find($this->param('id'));
-    $this->page->title = $resident->title;
+   // $this->page->title = $resident->title;
     $this['resident'] = $resident;
 }
 ?>
@@ -21,8 +21,8 @@ public function onStart() {
 {% partial 'sections/breadcrumbs'
 parents=[
     {
-        'title': ('Ustad dərsləri' | _),
-        'link': 'residents/index'
+        'title': ('Balaxanı Sənayə Parkı' | _),
+        'link': 'bsp/about'
     }
 ]
 %}
@@ -34,7 +34,6 @@ parents=[
                 <div class="col-lg-9 col-md-12">
                     <!--Blog Single Content Start-->
                     <div class="blog-single-content">
-                        <h3>{{ resident.title }}</h3>
                         {{ resident.description | raw }}
                         <div class="demo" style="margin: 0 auto">
                             <div class="item">

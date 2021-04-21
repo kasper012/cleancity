@@ -6488,6 +6488,8 @@ SideWidgets
 	color: #66bb6a;
 	font-size: 10px;
 	margin-right: 10px;
+	position: relative;
+	bottom: 2px;
 }
 .side-widget.archives ul li a:before, .project-list-widget ul li a.active {
 	color: #66bb6a;
