@@ -7,7 +7,6 @@ is_hidden = 0
 localeTitle[en] = "Master Class"
 localeUrl[en] = "pr/master-class/:id"
 
-[bspContactForm]
 ==
 <?php
 use Gadimlie\Lessons\Models\Lesson;
@@ -59,7 +58,7 @@ public function onStart() {
                     </div>
                     <div class="comment-form">
                         <h4>{{ 'Bizimlə Əlaqə Saxlayın' | _ }}</h4>
-                        {% component "bspContactForm" %}
+                        {% component "lessonContactForm" %}
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12">

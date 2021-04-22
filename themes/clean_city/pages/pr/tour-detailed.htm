@@ -7,7 +7,7 @@ is_hidden = 0
 localeTitle[en] = "İnformation tour"
 localeUrl[en] = "pr/information-tours/:id"
 
-[bspContactForm]
+
 ==
 <?php
 use Gadimlie\Tours\Models\Tour;
@@ -55,7 +55,7 @@ public function onStart() {
                     </div>
                     <div class="comment-form">
                         <h4>{{ 'Bizimlə Əlaqə Saxlayın' | _ }}</h4>
-                        {% component "bspContactForm" %}
+                        {% component "tourContactForm" %}
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12">

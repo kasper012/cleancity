@@ -6,12 +6,12 @@ use October\Rain\Exception\ValidationException;
 use Input;
 use Illuminate\Support\Facades\Mail;
 
-class TSSContactForm extends ComponentBase
+class TourContactForm extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'TSSContactForm Component',
+            'name'        => 'TourContactForm Component',
             'description' => 'No description provided yet...'
         ];
     }
@@ -56,9 +56,10 @@ class TSSContactForm extends ComponentBase
             ];
         } else {
             $params = Input::all();
+
             Mail::send('ContactForm', $params, function($message) {
                 $message->to(env('MAIL_TO', 'subayev@gadimlie.com'), 'Təmiz Şəhər');
-                $message->subject('Veb saytdan yeni mesaj (TSS)');
+                $message->subject('Veb saytdan yeni mesaj ( Məlumat turu )');
             });
         }
 
