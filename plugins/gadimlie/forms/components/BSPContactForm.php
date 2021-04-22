@@ -4,7 +4,7 @@ use Cms\Classes\ComponentBase;
 use Validator;
 use October\Rain\Exception\ValidationException;
 use Input;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 class BSPContactForm extends ComponentBase
 {
@@ -59,7 +59,7 @@ class BSPContactForm extends ComponentBase
         } else {
             $params = Input::all();
             Mail::send('ContactForm', $params, function($message) {
-                $message->to(env('MAIL_TO', 'ceo@gadimlie.com'), 'Təmiz Şəhər');
+                $message->to(env('MAIL_TO', 'subayev@gadimlie.com'), 'Təmiz Şəhər');
                 $message->subject('New message from Website (BSP)');
             });
         }

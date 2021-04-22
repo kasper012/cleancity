@@ -4,7 +4,7 @@ use Cms\Classes\ComponentBase;
 use Validator;
 use October\Rain\Exception\ValidationException;
 use Input;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 class TSSContactForm extends ComponentBase
 {
@@ -45,7 +45,7 @@ class TSSContactForm extends ComponentBase
                 'subject' => 'required|string',
                 'email' => 'required|email',
                 'phone' => 'required',
-                'msg' => 'required',
+                'msg' => 'required',             
             ], $customMessages
         );
 
@@ -57,8 +57,8 @@ class TSSContactForm extends ComponentBase
         } else {
             $params = Input::all();
             Mail::send('ContactForm', $params, function($message) {
-                $message->to(env('MAIL_TO', 'ceo@gadimlie.com'), 'Təmiz Şəhər');
-                $message->subject('New message from Website (Main Contact Form)');
+                $message->to(env('MAIL_TO', 'subayev@gadimlie.com'), 'Təmiz Şəhər');
+                $message->subject('New message from Website (TSS)');
             });
         }
 

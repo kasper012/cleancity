@@ -36,7 +36,8 @@ class MainContactForm extends ComponentBase
         $flash_message = [
             'status' => 200,
             'msg' => null
-        ];        
+        ];
+
 
         $validation = Validator::make(
             $form = Input::all(), [
@@ -56,7 +57,7 @@ class MainContactForm extends ComponentBase
         } else {
             $params = Input::all();
             Mail::send('ContactForm', $params, function($message) {
-                $message->to(env('MAIL_TO', 'ceo@gadimlie.com'), 'Təmiz Şəhər');
+                $message->to(env('MAIL_TO', 'subayev@gadimlie.com'), 'Təmiz Şəhər');
                 $message->subject('New message from Website (Main Contact Form)');
             });
         }
