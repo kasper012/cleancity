@@ -47,16 +47,16 @@ parents=[
                         </div>
 
                         {% elseif media.type == 'video' %}
-
+                        {% for video in media.video %}
                         <div class="col-md-4 col-sm-4">
                             <div class="gallery-img"
                                 style="background-image: url({{ media.gallery.0.photo | media }});">
-                                <a href="{{ media.video }}" data-fancybox="gallery" data-caption="{{ media.title }}"><i
+                                <a href="{{ video.video }}" data-fancybox="gallery" data-caption="{{ video.title }}"><i
                                         class="fas fa-video"></i></a>
                             </div>
-                            <p class="gallery-title">{{ media.title }}</p>
+                            <p class="gallery-title">{{ video.title }}</p>
                         </div>
-
+                        {% endfor %}
                         {% endif %}
 
                         {% endfor %}
