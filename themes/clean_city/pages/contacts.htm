@@ -30,12 +30,10 @@ localeUrl[en] = "/contacts"
                       <ul>
                          <li>
                             <strong class="add-title">{{ 'Ünvan' | _ }}: </strong>{{ company.address }}
-                              
                          </li>
                          <li>
                             <strong class="add-title">{{ 'Əlaqə' | _ }}:</strong>
                             <p><strong>{{'Telefon' | _}}:</strong>  {% for phone in company.phone %}{{ phone.phone }}<br> {% endfor %}</p>
-
                          </li>
                          <li>
                             <p><strong>{{'Elektron ünvan'}}:</strong> </p>

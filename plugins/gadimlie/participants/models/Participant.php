@@ -15,6 +15,7 @@ class Participant extends Model
     
     public $translatable = [
         'name',
+        'images'
     ];
 
     /**
