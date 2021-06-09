@@ -29,46 +29,51 @@ public function onStart() {
       <div class="row">
         <div class="col-lg-9 col-md-12">
           <!--Blog Single Content Start-->
-          <div class="blog-single-content">
+          <h2 class="d-flex justify-content-center mb-5">{{ participant.name }}</h2>
+          <div class="blog-single-content row">
+            <div class="col-md-6 align-items-end justify-content-center">
+              <h3></h3>
+              <h5>{{ 'Sərgidə iştirak illəri' | _ }}:{% for year in participant.year %}
+                {% if loop.first and loop.last %}
+                <span ">
+                  {{ year }}
+                </span>
+                {% elseif loop.last %}
+                <span >
+                  {{ year }}
+                </span>
+                {% else  %}
+                <span>
+                  {{ year }},
+                </span>
+                {% endif %}
+              {% endfor %}
+              </h5>
+              <h5>{{ 'Əsərin adı' |_ }}: <span>{% for image in participant.images %}{{ image.image_description }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
+              <h5>{{ 'Konsepsiya' |_ }}: <span>{% for image in participant.images %}{{ image.concept }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
+            </div>
             <!-- <div class="blog-single-thumb">
               <img src="{{ participant.profile_img | media }}" alt="">
             </div> -->
-            <h2 class="d-flex justify-content-center mb-5">{{ participant.name }}</h2>
-            <h5>{{ 'Sərgidə iştirak illəri' | _ }}:{% for year in participant.year %}
-              {% if loop.first and loop.last %}
-              <span ">
-                {{ year }}
-              </span>
-              {% elseif loop.last %}
-              <span >
-                {{ year }}
-              </span>
-              {% else  %}
-              <span>
-                {{ year }},
-              </span>
-              {% endif %}
-            {% endfor %}
-            </h5>
-            <div class="demo" style="margin: 0 auto">
-              <div class="item">
-                <div class="clearfix" style="max-height: 50%;">
-                  <ul id="image-gallery" class="gallery list-unstyled cS-hidden image-row">
-                    {% for image in participant.images %}
-                    <li data-thumb="{{ image.image | media }}">
-                      <a class="gallery-item" href="{{ image.image | media }}" style="" data-fancybox="gallery" data-caption="{{ image.image_description }}">
-                        <img src="{{ image.image | media }}" width="100%" height="100%"  />
-                      </a>
-                    </li>
-                    {% endfor %}
-                  </ul>
+            <div class="col-md-6">
+
+              <div class="demo" style="margin: 0 auto">
+                <div class="item">
+                  <div class="clearfix" style="max-height: 50%;">
+                    <ul id="image-gallery" class="gallery list-unstyled cS-hidden image-row">
+                      {% for image in participant.images %}
+                      <li data-thumb="{{ image.image | media }}">
+                        <a class="gallery-item" href="{{ image.image | media }}" style="" data-fancybox="gallery" data-caption="{{ image.image_description }}">
+                          <img src="{{ image.image | media }}" width="100%" height="100%"  />
+                        </a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- {% if project.youtube %}
-            <h5>{{ 'Video' | _ }}</h5>
-            <iframe src="{{ project.youtube }}"></iframe>
-            {% endif %} -->
+          </div>
+
 
           </div>
           {% if participant.video %}

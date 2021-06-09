@@ -80,6 +80,8 @@ fields:
                         comment: Tövsiyə olunan ölçülər - 3x2 (məsələn, 1500x1000 və ya 3000x2000)
                     image_description:
                         label: Şəkilin adı
+                    concept:
+                        label: Konsepsiya
 
 
 
