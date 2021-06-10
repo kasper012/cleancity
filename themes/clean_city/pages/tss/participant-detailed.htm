@@ -50,7 +50,7 @@ public function onStart() {
               {% endfor %}
               </h5>
               <h5>{{ 'Əsərin adı' |_ }}: <span>{% for image in participant.images %}{{ image.image_description }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
-              <h5>{{ 'Konsepsiya' |_ }}: <span>{% for image in participant.images %}{{ image.concept }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
+              <h5>{{ 'Konsepsiya' |_ }}: <span>{% for image in participant.images %}{{ image.concept | raw }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
             </div>
             <!-- <div class="blog-single-thumb">
               <img src="{{ participant.profile_img | media }}" alt="">

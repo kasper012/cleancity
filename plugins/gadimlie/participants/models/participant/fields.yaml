@@ -82,6 +82,7 @@ fields:
                         label: Şəkilin adı
                     concept:
                         label: Konsepsiya
+                        type: richeditor
 
 
 
