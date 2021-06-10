@@ -45,6 +45,8 @@ render = "none"
       <script src="{{ 'assets/js/jquery-3.3.1.min.js' | theme }}"></script>
       <!-- Slider -->
    <link rel="stylesheet" href="{{ 'assets/css/lightslider.css' | theme }}" />
+      <!-- Slick Slider (Image data) -->
+      <link rel="stylesheet" href="{{ 'assets/css/slick.css' | theme }}" />
    <style>
       ul {
          list-style: none outside none;
@@ -82,6 +84,7 @@ render = "none"
          $('#image-gallery').lightSlider({
             gallery: true,
             item: 1,
+            pause: 5000,
             thumbItem: 9,
             slideMargin: 0,
             speed: 500,
@@ -273,6 +276,12 @@ render = "none"
       <script src="{{ 'assets/js/jquery.prettyPhoto.js' | theme }}"></script> 
       <script src="{{ 'assets/js/isotope.min.js' | theme }}"></script> 
       <script src="{{ 'assets/js/custom.js' | theme }}"></script>
+
+      <!-- SlickSlider (image-data) -->
+
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script type="text/javascript" src="{{ 'assets/slick.min.js' | theme }}"></script>
+      <script type="text/javascript" src="{{ 'assets/slick.js' | theme }}"></script>
 
    </body>
 </html>
