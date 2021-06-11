@@ -35,7 +35,7 @@ public function onStart() {
               <h3></h3>
               <h5>{{ 'Sərgidə iştirak illəri' | _ }}:{% for year in participant.year %}
                 {% if loop.first and loop.last %}
-                <span ">
+                <span>
                   {{ year }}
                 </span>
                 {% elseif loop.last %}
@@ -53,12 +53,18 @@ public function onStart() {
               <h5 class="image-data">{{ 'Əsərin adı' |_ }}:
                 {% for image in participant.images %}
                 <span>
-                  {{ image.image_description }}{% if loop.last %} {% else %}, {% endif %} 
+                  {{ image.image_description }}
                 </span>
                 {% endfor %}
                </h5>
               </div>
-              <h5>{{ 'Konsepsiya' |_ }}: <span>{% for image in participant.images %}{{ image.concept | raw }}{% if loop.last %} {% else %}, {% endif %} {% endfor %}</span> </h5>
+              <h5 class="image-data">{{ 'Konsepsiya' |_ }}: 
+                {% for image in participant.images %}
+                
+                  {{ image.concept | raw }}
+                 
+                  {% endfor %}
+              </h5>
             </div>
             <!-- <div class="blog-single-thumb">
               <img src="{{ participant.profile_img | media }}" alt="">

@@ -84,15 +84,28 @@ render = "none"
          $('#image-gallery').lightSlider({
             gallery: true,
             item: 1,
-            pause: 2950,
+            pause: 3000,
             thumbItem: 9,
             slideMargin: 0,
-            speed: 500,
+            speed: 1000,
             auto: true,
             loop: true,
             onSliderLoad: function () {
                $('#image-gallery').removeClass('cS-hidden');
             }
+         });
+      });
+   </script>
+   <script>
+      $(document).ready(function(){
+         $('.image-data').slick({
+            arrows: false,
+            dots: false,
+            adaptiveHeight: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 1000,
          });
       });
    </script>
@@ -279,7 +292,7 @@ render = "none"
 
       <!-- SlickSlider (image-data) -->
 
-      <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+      <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
       <script type="text/javascript" src="{{ 'assets/js/slick.min.js' | theme }}"></script>
       <script type="text/javascript" src="{{ 'assets/js/slick.js' | theme }}"></script>
 
