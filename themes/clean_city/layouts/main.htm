@@ -72,6 +72,29 @@ render = "none"
       .demo {
          width: 100%;
       }
+/* Gadimlie Studio */
+#slideset1 {height: 10em; position: relative}
+#slideset1 > * {visibility: hidden; position: absolute;
+   {% for image in participant.images %}
+      {% if loop.last %}
+       top: 0; left: 0; animation: calc({{ loop.index }}*3s) autoplay1 infinite}
+      {% else %}
+      {% endif %}
+  {% endfor %}
+  @keyframes autoplay1 {
+  0% {visibility: visible}
+  {% for image in participant.images %}
+      {% if loop.last %}
+   {{ 100/loop.index }}% {visibility: hidden}
+      {% else %}
+      {% endif %}
+  {% endfor %}
+}
+
+{% for image in participant.images %}
+#slideset1 > *:nth-child({{ loop.index }}) {animation-delay: calc({{ loop.index0 }}*3s)}
+{% endfor %}
+
    </style>
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="{{ 'assets/js/lightslider.js' | theme }}"></script>
@@ -87,7 +110,7 @@ render = "none"
             pause: 3000,
             thumbItem: 9,
             slideMargin: 0,
-            speed: 1000,
+            speed: 0.0001,
             auto: true,
             loop: true,
             onSliderLoad: function () {

@@ -49,22 +49,16 @@ public function onStart() {
                 {% endif %}
               {% endfor %}
               </h5>
-              <div class="image-data-wrapper ">
-              <h5 class="image-data">{{ 'Əsərin adı' |_ }}:
+
+
+              <div id=slideset1>
                 {% for image in participant.images %}
-                <span>
-                  {{ image.image_description }}
-                </span>
+                <div>
+                  <h5 style="color: #555555">{{ 'Şəkilin adı' |_ }}: {{ image.image_description }}</h5> 
+                  <h5 style="color: #555555">{{ 'Konsepsiya' |_ }}:{{ image.concept | raw }} </h5>
+                </div>
                 {% endfor %}
-               </h5>
               </div>
-              <h5 class="image-data">{{ 'Konsepsiya' |_ }}: 
-                {% for image in participant.images %}
-                
-                  {{ image.concept | raw }}
-                 
-                  {% endfor %}
-              </h5>
             </div>
             <!-- <div class="blog-single-thumb">
               <img src="{{ participant.profile_img | media }}" alt="">
