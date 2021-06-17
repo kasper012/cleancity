@@ -72,39 +72,29 @@ render = "none"
       .demo {
          width: 100%;
       }
-/* Gadimlie Studio */
-#slideset1 {height: 10em; position: relative}
-#slideset1 > * {visibility: hidden; position: absolute;
-   {% for image in participant.images %}
-      {% if loop.last %}
-       top: 0; left: 0; animation: calc({{ loop.index }}*3s) autoplay1 infinite}
-      {% else %}
-      {% endif %}
-  {% endfor %}
-  @keyframes autoplay1 {
-  0% {visibility: visible}
-  {% for image in participant.images %}
-      {% if loop.last %}
-   {{ 100/loop.index }}% {visibility: hidden}
-      {% else %}
-      {% endif %}
-  {% endfor %}
-}
-
-{% for image in participant.images %}
-#slideset1 > *:nth-child({{ loop.index }}) {animation-delay: calc({{ loop.index0 }}*3s)}
-{% endfor %}
 
    </style>
+   
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
    <script src="{{ 'assets/js/lightslider.js' | theme }}"></script>
    <script>
       $(document).ready(function () {
-         $("#content-slider").lightSlider({
+         var contentSliderConcept = $('#concept-gallery').lightSlider({
+            item: 1,
+            pause: 3000,
+            enableDrag: false,
+            slideMargin: 0,
+            speed: 0.0001,
+            auto: true,
+            controls: false,
+            dots: false,
+            enableTouch: false,
             loop: true,
-            keyPress: true
+            onSliderLoad: function () {
+               $('#concept-gallery').removeClass('cS-hidden');
+            }
          });
-         $('#image-gallery').lightSlider({
+         var galerySlider = $('#image-gallery').lightSlider({
             gallery: true,
             item: 1,
             pause: 3000,
@@ -115,8 +105,13 @@ render = "none"
             loop: true,
             onSliderLoad: function () {
                $('#image-gallery').removeClass('cS-hidden');
+            },
+            onBeforeSlide: function(el) {
+               current = (el.getCurrentSlideCount() + galerySlider.find('.clone').length / 2) - 1
+               contentSliderConcept.goToSlide(current)
             }
          });
+         
       });
    </script>
 

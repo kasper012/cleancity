@@ -52,12 +52,46 @@ public function onStart() {
 
 
               <div id=slideset1>
-                {% for image in participant.images %}
-                <div>
-                  <h5 style="color: #555555">{{ 'Şəkilin adı' |_ }}: {{ image.image_description }}</h5> 
-                  <h5 style="color: #555555">{{ 'Konsepsiya' |_ }}:{{ image.concept | raw }} </h5>
-                </div>
-                {% endfor %}
+                <ul id="concept-gallery" class="gallery list-unstyled cS-hidden image-row">
+                  {% for image in participant.images %}
+                      <li data-thumb="{{ image.image | media }}">
+                        <div class="gallery-item">
+                          <img src="{{ image.image | media }}" width="100%" height="100%"  />
+                          <div class="text">
+                            <h5 style="color: #555555">{{ 'Şəkilin adı' |_ }}: {{ image.image_description }}</h5> 
+                            <h5 style="color: #555555">{{ 'Konsepsiya' |_ }}:{{ image.concept | raw }} </h5>
+                          </div>
+                        </div>
+                      </li>
+                      {% endfor %}
+                </ul>
+               
+                <style>
+                  
+                  #concept-gallery .gallery-item {
+                    position: relative;
+                  }
+
+                  #concept-gallery .gallery-item img {
+                    height: 0 !important;
+                    width: 0 !important;
+                  }
+
+                  #concept-gallery .gallery-item text {
+                    position: absolute;
+                    top: 0;
+
+                  }
+
+
+                  #concept-gallery .lslide .gallery-item {
+                    justify-content: flex-start !important;
+                  }
+                  .lSSlideOuter .lSPager.lSpg {
+                    display: none !important;
+                  }
+                </style>
+
               </div>
             </div>
             <!-- <div class="blog-single-thumb">
