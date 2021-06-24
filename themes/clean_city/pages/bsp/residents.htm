@@ -26,7 +26,7 @@ localeUrl[en] = "/bip/residents"
                     {% for resident in residents %}
                     <div class="col-md-6 col-sm-9">
                         <div class="blog-post">
-                            <div class="blog-thumb" style="background-image: url({{ resident.image | media}});"></div>
+                            <a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}"><div class="blog-thumb" style="background-image: url({{ resident.image | media}});"></div></a>
                             <div class="post-txt">
                                 <h5 class="d-flex justify-content-center"><a href="{{ 'bsp/resident-detailed' | page({id: resident.id}) }}">{{ resident.title }}</a>
                                 </h5>

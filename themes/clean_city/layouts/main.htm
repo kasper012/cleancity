@@ -79,6 +79,7 @@ render = "none"
    <script src="{{ 'assets/js/lightslider.js' | theme }}"></script>
    <script>
       $(document).ready(function () {
+      {% if this.page.id == 'tss-participant-detailed' %}
          var contentSliderConcept = $('#concept-gallery').lightSlider({
             item: 1,
             pause: 3000,
@@ -111,8 +112,28 @@ render = "none"
                contentSliderConcept.goToSlide(current)
             }
          });
-         
       });
+      {% else %}
+      $("#content-slider").lightSlider({
+            loop: true,
+            keyPress: true
+         });
+         $('#image-gallery').lightSlider({
+            gallery: true,
+            item: 1,
+            pause: 2950,
+            thumbItem: 9,
+            slideMargin: 0,
+            speed: 500,
+            auto: true,
+            loop: true,
+            onSliderLoad: function () {
+               $('#image-gallery').removeClass('cS-hidden');
+            }
+         });
+      });
+      {% endif %}
+      
    </script>
 
       <!-- End of slider -->
