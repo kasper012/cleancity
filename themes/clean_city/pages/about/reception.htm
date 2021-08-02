@@ -1,0 +1,36 @@
+title = "Vətəndaşların qəbulu"
+url = "/vetendaslarin-qebulu"
+layout = "main"
+is_hidden = 0
+
+[viewBag]
+localeTitle[en] = "Reception shcedule"
+localeUrl[en] = "/reception-shcedule"
+==
+{% partial 'sections/breadcrumbs'
+    parents=[
+            {
+                'title': ('Haqqımızda' | _),
+                'link': 'about/reception-shcedule'
+            }
+        ] 
+%}
+
+<!--Blog Start-->
+<section class="wf100 p80 blog">
+    <div class="blog-details">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-9 col-md-8">
+               <a class="structure-image-item" href="{{ company.receive | media }}" style="background-image: url({{ company.receive | media }});" data-fancybox="gallery"></a>
+             </div>
+             
+             <div class="col-lg-3 col-md-4">
+               {% partial 'sidebars/about' %}
+            </div>
+
+          </div>
+       </div>
+    </div>
+ </section>
+ <!--Blog End-->
