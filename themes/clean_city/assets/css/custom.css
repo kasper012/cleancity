@@ -5375,7 +5375,7 @@ ul.children {
 
 .structure-image-item {
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	display: inline-block;
 	width: 100%;
