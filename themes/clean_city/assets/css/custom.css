@@ -7092,3 +7092,9 @@ section.wf100.p80.fcampaigns {
 .fancybox-caption__body {
 	font-size: 17px;
 }
+.footer-widget p {
+	text-align: justify;
+}
+.home2-about .h2-about-txt p {
+	text-align: justify;
+}
