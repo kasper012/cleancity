@@ -59,7 +59,7 @@ class ReceptionContactForm extends ComponentBase
         } else {
             $params = Input::all();
 
-            $emails = ['subayev@gadimlie.com', 'adyl.syubaev@gmail.com'];
+            $emails = ['info@tamizshahar.az', 'e.ismayilov@tamizshahar.az'];
             Mail::send('ReceptionForm', $params,  function ($message) use ($emails)
             {
                 $message->from('subayev@gadimlie.com', 'Təmiz Şəhər ASC');
