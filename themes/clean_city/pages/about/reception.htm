@@ -6,6 +6,8 @@ is_hidden = 0
 [viewBag]
 localeTitle[en] = "Reception shcedule"
 localeUrl[en] = "/reception-shcedule"
+
+[receptionForm]
 ==
 {% partial 'sections/breadcrumbs'
     parents=[
@@ -23,12 +25,14 @@ localeUrl[en] = "/reception-shcedule"
           <div class="row">
              <div class="col-lg-9 col-md-8">
                <a class="structure-image-item" href="{{ company.receive | media }}" style="background-image: url({{ company.receive | media }});" data-fancybox="gallery"></a>
-             </div>
+               {% component 'receptionForm' %}
+            </div>
+
              
              <div class="col-lg-3 col-md-4">
                {% partial 'sidebars/about' %}
             </div>
-
+            
           </div>
        </div>
     </div>

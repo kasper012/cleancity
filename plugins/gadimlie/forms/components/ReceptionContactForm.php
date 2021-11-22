@@ -6,12 +6,12 @@ use October\Rain\Exception\ValidationException;
 use Input;
 use Illuminate\Support\Facades\Mail;
 
-class TourContactForm extends ComponentBase
+class ReceptionContactForm extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'TourContactForm Component',
+            'name'        => 'ReceptionContactForm Component',
             'description' => 'No description provided yet...'
         ];
     }
@@ -21,9 +21,10 @@ class TourContactForm extends ComponentBase
         return [];
     }
 
-
     public function onSend()
     {
+
+
 
         $customMessages = [
             'fullname.required' => trans('gadimlie.forms::lang.fullname.required'),
@@ -41,13 +42,14 @@ class TourContactForm extends ComponentBase
 
         $validation = Validator::make(
             $form = Input::all(), [
-                'fullname' => 'required|string',
-                'subject' => 'required|string',
+                'name' => 'required|string',
+                'surname' => 'required|string',
                 'email' => 'required|email',
                 'phone' => 'required',
-                'msg' => 'required',             
+                'msg' => 'required',
             ], $customMessages
         );
+
 
         if ($validation->fails()) {
             return $flash_message = [
@@ -56,10 +58,9 @@ class TourContactForm extends ComponentBase
             ];
         } else {
             $params = Input::all();
-
-            Mail::send('ContactForm', $params, function($message) {
-                $message->to(env('MAIL_TO', 'subayev@gadimlie.com'), 'Təmiz Şəhər');
-                $message->subject('Veb saytdan yeni mesaj ( Məlumat turu )');
+            Mail::send('ReceptionForm', $params, function($message) {
+                $message->to(env('MAIL_TO'),'subayev@gadimlie.com');
+                $message->subject('Qəbula yeni yazılma');
             });
         }
 

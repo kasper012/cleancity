@@ -56,6 +56,7 @@ class Plugin extends PluginBase
             'Gadimlie\Forms\Components\TSSContactForm' => 'tssContactForm',
             'Gadimlie\Forms\Components\TourContactForm' => 'tourContactForm',
             'Gadimlie\Forms\Components\LessonContactForm' => 'lessonContactForm',
+            'Gadimlie\Forms\Components\ReceptionContactForm' => 'receptionForm',
 
         ];
     }
