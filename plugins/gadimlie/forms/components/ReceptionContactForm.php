@@ -50,7 +50,7 @@ class ReceptionContactForm extends ComponentBase
             ], $customMessages
         );
 
-
+        
         if ($validation->fails()) {
             return $flash_message = [
                 'status' => 406,
@@ -58,9 +58,13 @@ class ReceptionContactForm extends ComponentBase
             ];
         } else {
             $params = Input::all();
-            Mail::send('ReceptionForm', $params, function($message) {
-                $message->to(env('MAIL_TO'),'subayev@gadimlie.com');
-                $message->subject('Qəbula yeni yazılma');
+
+            $emails = ['subayev@gadimlie.com', 'adyl.syubaev@gmail.com'];
+            Mail::send('ReceptionForm', $params,  function ($message) use ($emails)
+            {
+                $message->from('subayev@gadimlie.com', 'Təmiz Şəhər ASC');
+                $message->to( $emails);
+                $message->subject("Qəbula yeni yazılma");
             });
         }
 
