@@ -9,8 +9,8 @@
        line-height: 49px;
        padding: 0 20px;
        width: 100%;
- ">
-         <option value="Kimin qəbuluna yazılmaq istəyirsiniz?" selected="true" disabled="disabled" >Kimin qəbuluna yazılmaq istəyirsiniz?</option>
+ " required>
+         <option value="" selected="true" disabled="disabled" >Kimin qəbuluna yazılmaq istəyirsiniz?</option>
           <option value="İdarə Heyətinin sədri Etibar Abbasov">İdarə Heyətinin sədri Etibar Abbasov</option>
          <option value="İdarə Heyətinin sədrinin müavini Sabit Zeyniyev">İdarə Heyətinin sədrinin müavini Sabit Zeyniyev</option>
           <option value="İdarə Heyəti sədrinin müşaviri  Bəxtiyar Alışov">İdarə Heyəti sədrinin müşaviri  Bəxtiyar Alışov</option>
@@ -19,32 +19,32 @@
       </li>
        </select>
       <li class="half pr-15">
-         <input name="name" type="text" class="form-control" placeholder="{{ 'Ad' | _ }}">
+         <input name="name" type="text" class="form-control" placeholder="{{ 'Ad' | _ }}" required>
       </li>
       <li class="half pl-15">
-         <input name="surname" type="text" class="form-control" placeholder="{{ 'Soyad:*' | _ }}">
+         <input name="surname" type="text" class="form-control" placeholder="{{ 'Soyad:*' | _ }}" required>
       </li>
       <li class="half pr-15">
          <input name="fathername" type="text" class="form-control" placeholder="{{ 'Ata adı' | _ }}">
       </li>
         <li class="half pl-15">
-           <input name="passport_seriya" type="text" class="form-control" placeholder="{{ 'Şəxsiyyat vəsiqəsinin seriyası:*' | _ }}">
+           <input name="passport_seriya" type="text" class="form-control" placeholder="{{ 'Şəxsiyyat vəsiqəsinin seriyası:*' | _ }}" required>
         </li>
         <li class="half pr-15">
-            <input name="passport_number" type="text" class="form-control" placeholder="{{ 'Şəxsiyyat vəsiqəsinin nömrəsi:* ' | _ }}">
+            <input name="passport_number" type="text" class="form-control" placeholder="{{ 'Şəxsiyyat vəsiqəsinin nömrəsi:* ' | _ }}" required>
          </li>
          <li class="half pl-15">
-            <input name="email" type="email" class="form-control" placeholder="{{ 'e-Poçt ünvanı:*' | _ }}">
+            <input name="email" type="email" class="form-control" placeholder="{{ 'e-Poçt ünvanı:*' | _ }}" required>
          </li>
 
         <li class="half pr-15">
-         <input name="address" type="text" class="form-control" placeholder="{{ 'Ünvanınız, yaxud işlədiyiniz yer: *' | _ }}">
+         <input name="address" type="text" class="form-control" placeholder="{{ 'Ünvanınız, yaxud işlədiyiniz yer: *' | _ }}" required>
       </li>
          <li class="half pl-15">
-            <input name="phone" class="form-control" placeholder="{{ 'Telefon: *' | _ }}">
+            <input name="phone" class="form-control" placeholder="{{ 'Telefon: *' | _ }}" required>
          </li>
          <li class="full">
-            <textarea name="msg" class="textarea-control" placeholder="{{ 'Qəbul zamanı müzakirə olunacaq məsələ haqqında qisa məlumat: *' | _ }}"></textarea>
+            <textarea name="msg" class="textarea-control" placeholder="{{ 'Qəbul zamanı müzakirə olunacaq məsələ haqqında qisa məlumat: *' | _ }}" required></textarea>
          </li>
         <li class="full">
            <input type="submit" value="{{ 'Göndər' | _ }}" class="fsubmit" data-attach-loading>
